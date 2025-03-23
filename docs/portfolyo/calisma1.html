@@ -195,7 +195,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
     </ul>
     </div>
-    
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#a" id="toc-a" class="nav-link active" data-scroll-target="#a">(a)</a></li>
+  <li><a href="#deneme12" id="toc-deneme12" class="nav-link" data-scroll-target="#deneme12">deneme12</a></li>
+  <li><a href="#b" id="toc-b" class="nav-link" data-scroll-target="#b">(b)</a></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -223,401 +231,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<p><br>
+(AEaDD1dakiler C6rnek olarak verilmiEtir.)</p>
+<p>Bu C’alD1Emada 3 gC6revimiz var. Bu gC6revler….. Bunlara sD1rayla aEaDD1da cevap arD1yoruz.</p>
+<section id="a" class="level2">
+<h2 class="anchored" data-anchor-id="a">(a)</h2>
+</section>
+<section id="deneme12" class="level2">
+<h2 class="anchored" data-anchor-id="deneme12">deneme12</h2>
+<p>##deneme34</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>my_summary_stats <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.numeric</span>(x)) {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"Hata: Girdi sayisal bir vektor olmalidir."</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean =</span> <span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">median =</span> <span class="fu">median</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">sd =</span> <span class="fu">sd</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">min =</span> <span class="fu">min</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">max =</span> <span class="fu">max</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># mtcars veri seti için döngü ile uygulama</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (col_name <span class="cf">in</span> <span class="fu">colnames</span>(mtcars)) {</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  column_data <span class="ot">&lt;-</span> mtcars[[col_name]]  <span class="co"># Sütunun verisini al</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">==="</span>, col_name, <span class="st">"===</span><span class="sc">\n</span><span class="st">"</span>)  <span class="co"># Sütun adını yazdır</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  stats <span class="ot">&lt;-</span> <span class="fu">my_summary_stats</span>(column_data)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">data.frame</span>(<span class="at">Value =</span> <span class="fu">unlist</span>(stats)))</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>
-=== mpg ===
-           Value
-mean   20.090625
-median 19.200000
-sd      6.026948
-min    10.400000
-max    33.900000
-
-=== cyl ===
-          Value
-mean   6.187500
-median 6.000000
-sd     1.785922
-min    4.000000
-max    8.000000
-
-=== disp ===
-          Value
-mean   230.7219
-median 196.3000
-sd     123.9387
-min     71.1000
-max    472.0000
-
-=== hp ===
-           Value
-mean   146.68750
-median 123.00000
-sd      68.56287
-min     52.00000
-max    335.00000
-
-=== drat ===
-           Value
-mean   3.5965625
-median 3.6950000
-sd     0.5346787
-min    2.7600000
-max    4.9300000
-
-=== wt ===
-           Value
-mean   3.2172500
-median 3.3250000
-sd     0.9784574
-min    1.5130000
-max    5.4240000
-
-=== qsec ===
-           Value
-mean   17.848750
-median 17.710000
-sd      1.786943
-min    14.500000
-max    22.900000
-
-=== vs ===
-           Value
-mean   0.4375000
-median 0.0000000
-sd     0.5040161
-min    0.0000000
-max    1.0000000
-
-=== am ===
-           Value
-mean   0.4062500
-median 0.0000000
-sd     0.4989909
-min    0.0000000
-max    1.0000000
-
-=== gear ===
-           Value
-mean   3.6875000
-median 4.0000000
-sd     0.7378041
-min    3.0000000
-max    5.0000000
-
-=== carb ===
-        Value
-mean   2.8125
-median 2.0000
-sd     1.6152
-min    1.0000
-max    8.0000</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(mtcars, <span class="dv">2</span>, my_summary_stats)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>$mpg
-$mpg$mean
-[1] 20.09062
-
-$mpg$median
-[1] 19.2
-
-$mpg$sd
-[1] 6.026948
-
-$mpg$min
-[1] 10.4
-
-$mpg$max
-[1] 33.9
-
-
-$cyl
-$cyl$mean
-[1] 6.1875
-
-$cyl$median
-[1] 6
-
-$cyl$sd
-[1] 1.785922
-
-$cyl$min
-[1] 4
-
-$cyl$max
-[1] 8
-
-
-$disp
-$disp$mean
-[1] 230.7219
-
-$disp$median
-[1] 196.3
-
-$disp$sd
-[1] 123.9387
-
-$disp$min
-[1] 71.1
-
-$disp$max
-[1] 472
-
-
-$hp
-$hp$mean
-[1] 146.6875
-
-$hp$median
-[1] 123
-
-$hp$sd
-[1] 68.56287
-
-$hp$min
-[1] 52
-
-$hp$max
-[1] 335
-
-
-$drat
-$drat$mean
-[1] 3.596563
-
-$drat$median
-[1] 3.695
-
-$drat$sd
-[1] 0.5346787
-
-$drat$min
-[1] 2.76
-
-$drat$max
-[1] 4.93
-
-
-$wt
-$wt$mean
-[1] 3.21725
-
-$wt$median
-[1] 3.325
-
-$wt$sd
-[1] 0.9784574
-
-$wt$min
-[1] 1.513
-
-$wt$max
-[1] 5.424
-
-
-$qsec
-$qsec$mean
-[1] 17.84875
-
-$qsec$median
-[1] 17.71
-
-$qsec$sd
-[1] 1.786943
-
-$qsec$min
-[1] 14.5
-
-$qsec$max
-[1] 22.9
-
-
-$vs
-$vs$mean
-[1] 0.4375
-
-$vs$median
-[1] 0
-
-$vs$sd
-[1] 0.5040161
-
-$vs$min
-[1] 0
-
-$vs$max
-[1] 1
-
-
-$am
-$am$mean
-[1] 0.40625
-
-$am$median
-[1] 0
-
-$am$sd
-[1] 0.4989909
-
-$am$min
-[1] 0
-
-$am$max
-[1] 1
-
-
-$gear
-$gear$mean
-[1] 3.6875
-
-$gear$median
-[1] 4
-
-$gear$sd
-[1] 0.7378041
-
-$gear$min
-[1] 3
-
-$gear$max
-[1] 5
-
-
-$carb
-$carb$mean
-[1] 2.8125
-
-$carb$median
-[1] 2
-
-$carb$sd
-[1] 1.6152
-
-$carb$min
-[1] 1
-
-$carb$max
-[1] 8</code></pre>
+<pre><code>[1] 2</code></pre>
 </div>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>my_summary_stats<span class="ot">&lt;-</span><span class="cf">function</span>(y){</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    ortalamalar<span class="ot">&lt;-</span><span class="fu">c</span>()</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    medianlar<span class="ot">&lt;-</span><span class="fu">c</span>()</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    sapmalar<span class="ot">&lt;-</span><span class="fu">c</span>()</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    minimumlar<span class="ot">&lt;-</span><span class="fu">c</span>()</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    maximumlar<span class="ot">&lt;-</span><span class="fu">c</span>()</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    ozellikler<span class="ot">&lt;-</span><span class="fu">c</span>()</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (x <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(y)) {</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="fu">is.numeric</span>(y[[x]])) {</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>       ortalamalar<span class="ot">&lt;-</span><span class="fu">c</span>(ortalamalar,<span class="fu">mean</span>(y[[x]]))</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>       medianlar<span class="ot">&lt;-</span><span class="fu">c</span>(medianlar,<span class="fu">median</span>(y[[x]]))</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>       sapmalar<span class="ot">&lt;-</span><span class="fu">c</span>(sapmalar,<span class="fu">sd</span>(y[[x]]))</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>       minimumlar<span class="ot">&lt;-</span><span class="fu">c</span>(minimumlar,<span class="fu">min</span>(y[[x]]))</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>       maximumlar<span class="ot">&lt;-</span><span class="fu">c</span>(maximumlar,<span class="fu">max</span>(y[[x]]))</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>       ozellikler<span class="ot">&lt;-</span><span class="fu">c</span>(ozellikler,<span class="fu">names</span>(y[x]))</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>      }}</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    formul_sonuc<span class="ot">&lt;&lt;-</span><span class="fu">data.frame</span>(ozellikler,ortalamalar,medianlar,sapmalar,minimumlar,maximumlar)</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(formul_sonuc)}</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="fu">my_summary_stats</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   ozellikler ortalamalar medianlar    sapmalar minimumlar maximumlar
-1         mpg   20.090625    19.200   6.0269481     10.400     33.900
-2         cyl    6.187500     6.000   1.7859216      4.000      8.000
-3        disp  230.721875   196.300 123.9386938     71.100    472.000
-4          hp  146.687500   123.000  68.5628685     52.000    335.000
-5        drat    3.596563     3.695   0.5346787      2.760      4.930
-6          wt    3.217250     3.325   0.9784574      1.513      5.424
-7        qsec   17.848750    17.710   1.7869432     14.500     22.900
-8          vs    0.437500     0.000   0.5040161      0.000      1.000
-9          am    0.406250     0.000   0.4989909      0.000      1.000
-10       gear    3.687500     4.000   0.7378041      3.000      5.000
-11       carb    2.812500     2.000   1.6152000      1.000      8.000</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>apply_my_summary_stats<span class="ot">&lt;-</span><span class="cf">function</span>(y){</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>numerik_kolon<span class="ot">&lt;-</span>y[<span class="fu">sapply</span>(y,is.numeric)]</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>      ortalamalar<span class="ot">&lt;-</span><span class="fu">apply</span>(numerik_kolon,<span class="dv">2</span>,mean)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>      medianlar<span class="ot">&lt;-</span><span class="fu">apply</span>(numerik_kolon,<span class="dv">2</span>,median)</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>      sapmalar<span class="ot">&lt;-</span><span class="fu">apply</span>(numerik_kolon,<span class="dv">2</span>,sd)</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>      minimumlar<span class="ot">&lt;-</span><span class="fu">apply</span>(numerik_kolon,<span class="dv">2</span>,min)</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>      maximumlar<span class="ot">&lt;-</span><span class="fu">apply</span>(numerik_kolon,<span class="dv">2</span>,max)</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>      ozellikler<span class="ot">=</span><span class="fu">names</span>(numerik_kolon)</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  formul_sonuc<span class="ot">&lt;&lt;-</span><span class="fu">data.frame</span>(ozellikler,ortalamalar,medianlar,sapmalar,minimumlar,maximumlar)</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(formul_sonuc)}</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="fu">apply_my_summary_stats</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     ozellikler ortalamalar medianlar    sapmalar minimumlar maximumlar
-mpg         mpg   20.090625    19.200   6.0269481     10.400     33.900
-cyl         cyl    6.187500     6.000   1.7859216      4.000      8.000
-disp       disp  230.721875   196.300 123.9386938     71.100    472.000
-hp           hp  146.687500   123.000  68.5628685     52.000    335.000
-drat       drat    3.596563     3.695   0.5346787      2.760      4.930
-wt           wt    3.217250     3.325   0.9784574      1.513      5.424
-qsec       qsec   17.848750    17.710   1.7869432     14.500     22.900
-vs           vs    0.437500     0.000   0.5040161      0.000      1.000
-am           am    0.406250     0.000   0.4989909      0.000      1.000
-gear       gear    3.687500     4.000   0.7378041      3.000      5.000
-carb       carb    2.812500     2.000   1.6152000      1.000      8.000</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">my_summary_stats</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   ozellikler ortalamalar medianlar    sapmalar minimumlar maximumlar
-1         mpg   20.090625    19.200   6.0269481     10.400     33.900
-2         cyl    6.187500     6.000   1.7859216      4.000      8.000
-3        disp  230.721875   196.300 123.9386938     71.100    472.000
-4          hp  146.687500   123.000  68.5628685     52.000    335.000
-5        drat    3.596563     3.695   0.5346787      2.760      4.930
-6          wt    3.217250     3.325   0.9784574      1.513      5.424
-7        qsec   17.848750    17.710   1.7869432     14.500     22.900
-8          vs    0.437500     0.000   0.5040161      0.000      1.000
-9          am    0.406250     0.000   0.4989909      0.000      1.000
-10       gear    3.687500     4.000   0.7378041      3.000      5.000
-11       carb    2.812500     2.000   1.6152000      1.000      8.000</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dslabs)     </span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(na_example)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">is.na</span>(na_example))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 145</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>degistir<span class="ot">&lt;-</span><span class="fu">ifelse</span>(<span class="fu">is.na</span>(na_example),<span class="dv">2025</span>,na_example)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">is.na</span>(degistir))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(degistir<span class="sc">==</span><span class="dv">2025</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 145</code></pre>
-</div>
-</div>
+</section>
+<section id="b" class="level2">
+<h2 class="anchored" data-anchor-id="b">(b)</h2>
 
 
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
