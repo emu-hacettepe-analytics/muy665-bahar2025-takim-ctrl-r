@@ -1,5 +1,5 @@
 ---
-title: "CalD1Ema 1"
+title: "Çalışma 1"
 ---
 
 \
@@ -8,8 +8,11 @@ title: "CalD1Ema 1"
 Bu C'alD1Emada 3 gC6revimiz var. Bu gC6revler..... Bunlara sD1rayla aEaDD1da cevap arD1yoruz.
 
 ## (a)
+
 ## deneme12
+
 ##deneme34
+
 ```{r}
 1 + 1
 ```
