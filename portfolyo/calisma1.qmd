@@ -1,14 +1,15 @@
 ---
-title: "Çalışma 1"
+title: "CalD1Ema 1"
 ---
 
 \
-(Aşağıdakiler örnek olarak verilmiştir.)
+(AEaDD1dakiler C6rnek olarak verilmiEtir.)
 
-Bu çalışmada 3 görevimiz var. Bu görevler..... Bunlara sırayla aşağıda cevap arıyoruz.
+Bu C'alD1Emada 3 gC6revimiz var. Bu gC6revler..... Bunlara sD1rayla aEaDD1da cevap arD1yoruz.
 
 ## (a)
 ## deneme12
+##deneme34
 ```{r}
 1 + 1
 ```
