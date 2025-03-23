@@ -10,6 +10,10 @@ Takım Üyelerimizin detaylı özgemişlerinin yer aldığı kişisel sayfaları
 
 2.  [Ekin Uzunhasanoğlu Sarıgül](/takim/ekin.qmd)
 
-3.  [Frederico Rodrigues de Paula Santos](/takim/fred.qmd)
+3.  [Sefa Çelik](/takim/sefa.qmd)
 
-4.  [Sebastian Szymański](/takim/szymanski.qmd)
+4.  [Feyza Dönmez Bozok](/takim/feyza.qmd)
+
+5.  [Özge Avşar](/takim/ozge.qmd)
+
+6.  [Mehmet Gençağa](/takim/mehmet.qmd)

@@ -222,7 +222,7 @@
     "href": "index.html#takım-üyeleri",
     "title": "Takım: Ctrl + R",
     "section": "Takım Üyeleri",
-    "text": "Takım Üyeleri\n\nServet Meriç Kürşad\nEkin Uzunhasanoğlu Sarıgül\nFrederico Rodrigues de Paula Santos\nSebastian Szymański"
+    "text": "Takım Üyeleri\n\nServet Meriç Kürşad\nEkin Uzunhasanoğlu Sarıgül\nSefa Çelik\nFeyza Dönmez Bozok\nÖzge Avşar\nMehmet Gençağa"
   },
   {
     "objectID": "portfolyo.html",
@@ -240,7 +240,7 @@
     "href": "takim.html",
     "title": "Takım Üyeleri",
     "section": "",
-    "text": "Takım Üyelerimizin detaylı özgemişlerinin yer aldığı kişisel sayfalarına gitmek için sol menüyü veya aşağıdaki linkleri kullanabilirsiniz.\n\nTakım Üyeleri\n\nServet Meriç Kürşad\nEkin Uzunhasanoğlu Sarıgül\nFrederico Rodrigues de Paula Santos\nSebastian Szymański\n\n\n\n\n\n Back to top",
+    "text": "Takım Üyelerimizin detaylı özgemişlerinin yer aldığı kişisel sayfalarına gitmek için sol menüyü veya aşağıdaki linkleri kullanabilirsiniz.\n\nTakım Üyeleri\n\nServet Meriç Kürşad\nEkin Uzunhasanoğlu Sarıgül\nSefa Çelik\nFeyza Dönmez Bozok\nÖzge Avşar\nMehmet Gençağa\n\n\n\n\n\n Back to top",
     "crumbs": [
       "Takım Üyeleri"
     ]
@@ -324,7 +324,7 @@
     "href": "portfolyo/calisma1.html",
     "title": "Çalışma 1",
     "section": "",
-    "text": "(AE\u001faD\u001fD1dakiler C6rnek olarak verilmiE\u001ftir.)\nBu C’alD1E\u001fmada 3 gC6revimiz var. Bu gC6revler….. Bunlara sD1rayla aE\u001faD\u001fD1da cevap arD1yoruz.",
+    "text": "my_summary_stats &lt;- function(x) {\n  if (!is.numeric(x)) {\n    stop(\"Hata: Girdi sayisal bir vektor olmalidir.\")\n  }\n  \n  list(\n    mean = mean(x, na.rm = TRUE),\n    median = median(x, na.rm = TRUE),\n    sd = sd(x, na.rm = TRUE),\n    min = min(x, na.rm = TRUE),\n    max = max(x, na.rm = TRUE)\n  )\n}\n\n# mtcars veri seti için döngü ile uygulama\nfor (col_name in colnames(mtcars)) {\n  column_data &lt;- mtcars[[col_name]]  # Sütunun verisini al\n  cat(\"\\n===\", col_name, \"===\\n\")  # Sütun adını yazdır\n  stats &lt;- my_summary_stats(column_data)\n  print(data.frame(Value = unlist(stats)))\n}\n\n\n=== mpg ===\n           Value\nmean   20.090625\nmedian 19.200000\nsd      6.026948\nmin    10.400000\nmax    33.900000\n\n=== cyl ===\n          Value\nmean   6.187500\nmedian 6.000000\nsd     1.785922\nmin    4.000000\nmax    8.000000\n\n=== disp ===\n          Value\nmean   230.7219\nmedian 196.3000\nsd     123.9387\nmin     71.1000\nmax    472.0000\n\n=== hp ===\n           Value\nmean   146.68750\nmedian 123.00000\nsd      68.56287\nmin     52.00000\nmax    335.00000\n\n=== drat ===\n           Value\nmean   3.5965625\nmedian 3.6950000\nsd     0.5346787\nmin    2.7600000\nmax    4.9300000\n\n=== wt ===\n           Value\nmean   3.2172500\nmedian 3.3250000\nsd     0.9784574\nmin    1.5130000\nmax    5.4240000\n\n=== qsec ===\n           Value\nmean   17.848750\nmedian 17.710000\nsd      1.786943\nmin    14.500000\nmax    22.900000\n\n=== vs ===\n           Value\nmean   0.4375000\nmedian 0.0000000\nsd     0.5040161\nmin    0.0000000\nmax    1.0000000\n\n=== am ===\n           Value\nmean   0.4062500\nmedian 0.0000000\nsd     0.4989909\nmin    0.0000000\nmax    1.0000000\n\n=== gear ===\n           Value\nmean   3.6875000\nmedian 4.0000000\nsd     0.7378041\nmin    3.0000000\nmax    5.0000000\n\n=== carb ===\n        Value\nmean   2.8125\nmedian 2.0000\nsd     1.6152\nmin    1.0000\nmax    8.0000\n\napply(mtcars, 2, my_summary_stats)\n\n$mpg\n$mpg$mean\n[1] 20.09062\n\n$mpg$median\n[1] 19.2\n\n$mpg$sd\n[1] 6.026948\n\n$mpg$min\n[1] 10.4\n\n$mpg$max\n[1] 33.9\n\n\n$cyl\n$cyl$mean\n[1] 6.1875\n\n$cyl$median\n[1] 6\n\n$cyl$sd\n[1] 1.785922\n\n$cyl$min\n[1] 4\n\n$cyl$max\n[1] 8\n\n\n$disp\n$disp$mean\n[1] 230.7219\n\n$disp$median\n[1] 196.3\n\n$disp$sd\n[1] 123.9387\n\n$disp$min\n[1] 71.1\n\n$disp$max\n[1] 472\n\n\n$hp\n$hp$mean\n[1] 146.6875\n\n$hp$median\n[1] 123\n\n$hp$sd\n[1] 68.56287\n\n$hp$min\n[1] 52\n\n$hp$max\n[1] 335\n\n\n$drat\n$drat$mean\n[1] 3.596563\n\n$drat$median\n[1] 3.695\n\n$drat$sd\n[1] 0.5346787\n\n$drat$min\n[1] 2.76\n\n$drat$max\n[1] 4.93\n\n\n$wt\n$wt$mean\n[1] 3.21725\n\n$wt$median\n[1] 3.325\n\n$wt$sd\n[1] 0.9784574\n\n$wt$min\n[1] 1.513\n\n$wt$max\n[1] 5.424\n\n\n$qsec\n$qsec$mean\n[1] 17.84875\n\n$qsec$median\n[1] 17.71\n\n$qsec$sd\n[1] 1.786943\n\n$qsec$min\n[1] 14.5\n\n$qsec$max\n[1] 22.9\n\n\n$vs\n$vs$mean\n[1] 0.4375\n\n$vs$median\n[1] 0\n\n$vs$sd\n[1] 0.5040161\n\n$vs$min\n[1] 0\n\n$vs$max\n[1] 1\n\n\n$am\n$am$mean\n[1] 0.40625\n\n$am$median\n[1] 0\n\n$am$sd\n[1] 0.4989909\n\n$am$min\n[1] 0\n\n$am$max\n[1] 1\n\n\n$gear\n$gear$mean\n[1] 3.6875\n\n$gear$median\n[1] 4\n\n$gear$sd\n[1] 0.7378041\n\n$gear$min\n[1] 3\n\n$gear$max\n[1] 5\n\n\n$carb\n$carb$mean\n[1] 2.8125\n\n$carb$median\n[1] 2\n\n$carb$sd\n[1] 1.6152\n\n$carb$min\n[1] 1\n\n$carb$max\n[1] 8\n\n\n\nmy_summary_stats&lt;-function(y){\n    ortalamalar&lt;-c()\n    medianlar&lt;-c()\n    sapmalar&lt;-c()\n    minimumlar&lt;-c()\n    maximumlar&lt;-c()\n    ozellikler&lt;-c()\n    for (x in 1:length(y)) {\n      if (is.numeric(y[[x]])) {\n       ortalamalar&lt;-c(ortalamalar,mean(y[[x]]))\n       medianlar&lt;-c(medianlar,median(y[[x]]))\n       sapmalar&lt;-c(sapmalar,sd(y[[x]]))\n       minimumlar&lt;-c(minimumlar,min(y[[x]]))\n       maximumlar&lt;-c(maximumlar,max(y[[x]]))\n       ozellikler&lt;-c(ozellikler,names(y[x]))\n      }}\n    formul_sonuc&lt;&lt;-data.frame(ozellikler,ortalamalar,medianlar,sapmalar,minimumlar,maximumlar)\n    return(formul_sonuc)}\n\nmy_summary_stats(mtcars)\n\n   ozellikler ortalamalar medianlar    sapmalar minimumlar maximumlar\n1         mpg   20.090625    19.200   6.0269481     10.400     33.900\n2         cyl    6.187500     6.000   1.7859216      4.000      8.000\n3        disp  230.721875   196.300 123.9386938     71.100    472.000\n4          hp  146.687500   123.000  68.5628685     52.000    335.000\n5        drat    3.596563     3.695   0.5346787      2.760      4.930\n6          wt    3.217250     3.325   0.9784574      1.513      5.424\n7        qsec   17.848750    17.710   1.7869432     14.500     22.900\n8          vs    0.437500     0.000   0.5040161      0.000      1.000\n9          am    0.406250     0.000   0.4989909      0.000      1.000\n10       gear    3.687500     4.000   0.7378041      3.000      5.000\n11       carb    2.812500     2.000   1.6152000      1.000      8.000\n\napply_my_summary_stats&lt;-function(y){\nnumerik_kolon&lt;-y[sapply(y,is.numeric)]\n      ortalamalar&lt;-apply(numerik_kolon,2,mean)\n      medianlar&lt;-apply(numerik_kolon,2,median)\n      sapmalar&lt;-apply(numerik_kolon,2,sd)\n      minimumlar&lt;-apply(numerik_kolon,2,min)\n      maximumlar&lt;-apply(numerik_kolon,2,max)\n      ozellikler=names(numerik_kolon)\n  formul_sonuc&lt;&lt;-data.frame(ozellikler,ortalamalar,medianlar,sapmalar,minimumlar,maximumlar)\n  return(formul_sonuc)}\n\napply_my_summary_stats(mtcars)\n\n     ozellikler ortalamalar medianlar    sapmalar minimumlar maximumlar\nmpg         mpg   20.090625    19.200   6.0269481     10.400     33.900\ncyl         cyl    6.187500     6.000   1.7859216      4.000      8.000\ndisp       disp  230.721875   196.300 123.9386938     71.100    472.000\nhp           hp  146.687500   123.000  68.5628685     52.000    335.000\ndrat       drat    3.596563     3.695   0.5346787      2.760      4.930\nwt           wt    3.217250     3.325   0.9784574      1.513      5.424\nqsec       qsec   17.848750    17.710   1.7869432     14.500     22.900\nvs           vs    0.437500     0.000   0.5040161      0.000      1.000\nam           am    0.406250     0.000   0.4989909      0.000      1.000\ngear       gear    3.687500     4.000   0.7378041      3.000      5.000\ncarb       carb    2.812500     2.000   1.6152000      1.000      8.000\n\nmy_summary_stats(mtcars)\n\n   ozellikler ortalamalar medianlar    sapmalar minimumlar maximumlar\n1         mpg   20.090625    19.200   6.0269481     10.400     33.900\n2         cyl    6.187500     6.000   1.7859216      4.000      8.000\n3        disp  230.721875   196.300 123.9386938     71.100    472.000\n4          hp  146.687500   123.000  68.5628685     52.000    335.000\n5        drat    3.596563     3.695   0.5346787      2.760      4.930\n6          wt    3.217250     3.325   0.9784574      1.513      5.424\n7        qsec   17.848750    17.710   1.7869432     14.500     22.900\n8          vs    0.437500     0.000   0.5040161      0.000      1.000\n9          am    0.406250     0.000   0.4989909      0.000      1.000\n10       gear    3.687500     4.000   0.7378041      3.000      5.000\n11       carb    2.812500     2.000   1.6152000      1.000      8.000\n\nlibrary(dslabs)     \ndata(na_example)\nsum(is.na(na_example))\n\n[1] 145\n\ndegistir&lt;-ifelse(is.na(na_example),2025,na_example)\nsum(is.na(degistir))\n\n[1] 0\n\nsum(degistir==2025)\n\n[1] 145\n\n\n\n\n\n Back to top",
     "crumbs": [
       "Porfolyo",
       "Çalışma 1"
@@ -567,28 +567,44 @@
     "href": "takim/servetmerickursad.html#işler",
     "title": "Servet Meriç Kürşad",
     "section": "İşler",
-    "text": "İşler\n\nFirma Roketsan Roket A.Ş., pozisyon Senior Lead Engineer-Kıdemli Lider Mühendis, yıl 2023-ongoing\nFirma Kolin İnşaat, pozisyon QA/QC Manager-KK/KG Müdürü, yıl 2018-2023\nFirma REC Uluslararası, pozisyon QA/QC Manager-KK/KG Müdürü, yıl 2017-2018\nFirma YP İnşaat, pozisyon QA/QC Manager-KK/KG Müdürü, yıl 2016-2017\nFirma Bechtel-Enka General Partnership, pozisyon Earthworks Manager-Toprak İşleri Müdürü, yıl 2014-2016\nFirma Becthtel-Enka Joint Venture, pozisyon Civil Engineer-Saha İnşaat Mühendisi, yıl 2011-2014"
+    "text": "İşler\n\nFirma Roketsan Roket A.Ş., pozisyon Senior Lead Engineer-Kıdemli Lider Mühendis, yıl 2023-ongoing\nFirma Kolin İnşaat, pozisyon QA/QC Manager-KK/KG Müdürü, yıl 2018-2023\nFirma REC Uluslararası, pozisyon QA/QC Manager-KK/KG Müdürü, yıl 2017-2018\nFirma YP İnşaat, pozisyon QA/QC Manager-KK/KG Müdürü, yıl 2016-2017\nFirma Bechtel-Enka General Partnership, pozisyon Earthworks Manager-Toprak İşleri Müdürü, yıl 2014-2016\nFirma Becthtel-Enka Joint Venture, pozisyon Civil Engineer-Saha İnşaat Mühendisi, yıl 2011-2014",
+    "crumbs": [
+      "Takım Üyeleri",
+      "Servet Meriç Kürşad"
+    ]
   },
   {
     "objectID": "takim/servetmerickursad.html#stajlar",
     "href": "takim/servetmerickursad.html#stajlar",
     "title": "Servet Meriç Kürşad",
     "section": "Stajlar",
-    "text": "Stajlar\n\nFirma Kolin İnşaat, pozisyon Saha Mühendisi, yıl 2010"
+    "text": "Stajlar\n\nFirma Kolin İnşaat, pozisyon Saha Mühendisi, yıl 2010",
+    "crumbs": [
+      "Takım Üyeleri",
+      "Servet Meriç Kürşad"
+    ]
   },
   {
     "objectID": "takim/ekin.html#işler",
     "href": "takim/ekin.html#işler",
     "title": "Ekin Uzunhasanoğlu Sarıgül",
     "section": "İşler",
-    "text": "İşler\n\nMarmara Üniversitesi Çevre Mühendisliği Bölümü, Araştırma Asistanı, 2013 - 2018\nOfisus Danışmanlık ve Yazılım A.Ş., Proje Teşvik Uzmanı, 2019 - 2021\nOfisus Danışmanlık ve Yazılım A.Ş., Ar-Ge Teşvikleri Takım Lideri, 2021 - 2023\nAndar Elektromekanik Sistemler A.Ş., Proje Teşvik Uzmanı, 2023 - 2024\nAndar Elektromekanik Sistemler A.Ş., Proje Yönetim Uzmanı, 2024 - devam ediyor"
+    "text": "İşler\n\nAndar Elektromekanik Sistemler A.Ş., Proje Yönetim Uzmanı, 2024 - devam ediyor\nAndar Elektromekanik Sistemler A.Ş., Proje Teşvik Uzmanı, 2023 - 2024\nOfisus Danışmanlık ve Yazılım A.Ş., Ar-Ge Teşvikleri Takım Lideri, 2021 - 2023\nOfisus Danışmanlık ve Yazılım A.Ş., Proje Teşvik Uzmanı, 2019 - 2021\nMarmara Üniversitesi Çevre Mühendisliği Bölümü, Araştırma Asistanı, 2013 - 2018",
+    "crumbs": [
+      "Takım Üyeleri",
+      "Ekin Uzunhasanoğlu Sarıgül"
+    ]
   },
   {
     "objectID": "takim/ekin.html#stajlar",
     "href": "takim/ekin.html#stajlar",
     "title": "Ekin Uzunhasanoğlu Sarıgül",
     "section": "Stajlar",
-    "text": "Stajlar\n\nMarmara Üniversitesi, Çevre Mühendisliği Bölümü - Çevre Biyoteknolojisi Laboratuvarı, Stajyer Araştırmacı, 2013\nBeşiktaş Belediyesi, Çevre Koruma Müdürlüğü, Ştajyer Mühendis, 2014"
+    "text": "Stajlar\n\nMarmara Üniversitesi, Çevre Mühendisliği Bölümü - Çevre Biyoteknolojisi Laboratuvarı, Stajyer Araştırmacı, 2013\nBeşiktaş Belediyesi, Çevre Koruma Müdürlüğü, Ştajyer Mühendis, 2014",
+    "crumbs": [
+      "Takım Üyeleri",
+      "Ekin Uzunhasanoğlu Sarıgül"
+    ]
   },
   {
     "objectID": "docs/project.html",
@@ -659,5 +675,93 @@
     "title": "Ekin Uzunhasanoğlu Sarıgül",
     "section": "",
     "text": "dd"
+  },
+  {
+    "objectID": "takim/sefa.html#işler",
+    "href": "takim/sefa.html#işler",
+    "title": "Frederico Rodrigues",
+    "section": "İşler",
+    "text": "İşler\n\nFirma xxx, pozisyon xx, yıl xxx\nFirma yyy, pozisyon yyy, yıl yyy",
+    "crumbs": [
+      "Takım Üyeleri",
+      "Frederico Rodrigues"
+    ]
+  },
+  {
+    "objectID": "takim/sefa.html#stajlar",
+    "href": "takim/sefa.html#stajlar",
+    "title": "Frederico Rodrigues",
+    "section": "Stajlar",
+    "text": "Stajlar\n\nFirma aaa, pozisyon xx, yıl xxx\nFirma bbb, pozisyon yyy, yıl yyy",
+    "crumbs": [
+      "Takım Üyeleri",
+      "Frederico Rodrigues"
+    ]
+  },
+  {
+    "objectID": "takim/mehmet.html#işler",
+    "href": "takim/mehmet.html#işler",
+    "title": "Edin_Džeko",
+    "section": "İşler",
+    "text": "İşler\n\nFirma xxx, pozisyon xx, yıl xxx\nFirma yyy, pozisyon yyy, yıl yyy",
+    "crumbs": [
+      "Takım Üyeleri",
+      "Edin_Džeko"
+    ]
+  },
+  {
+    "objectID": "takim/mehmet.html#stajlar",
+    "href": "takim/mehmet.html#stajlar",
+    "title": "Edin_Džeko",
+    "section": "Stajlar",
+    "text": "Stajlar\n\nFirma aaa, pozisyon xx, yıl xxx\nFirma bbb, pozisyon yyy, yıl yyy",
+    "crumbs": [
+      "Takım Üyeleri",
+      "Edin_Džeko"
+    ]
+  },
+  {
+    "objectID": "takim/feyza.html#işler",
+    "href": "takim/feyza.html#işler",
+    "title": "Sebastian Szymański",
+    "section": "İşler",
+    "text": "İşler\n\nFirma xxx, pozisyon xx, yıl xxx\nFirma yyy, pozisyon yyy, yıl yyy",
+    "crumbs": [
+      "Takım Üyeleri",
+      "Sebastian Szymański"
+    ]
+  },
+  {
+    "objectID": "takim/feyza.html#stajlar",
+    "href": "takim/feyza.html#stajlar",
+    "title": "Sebastian Szymański",
+    "section": "Stajlar",
+    "text": "Stajlar\n\nFirma aaa, pozisyon xx, yıl xxx\nFirma bbb, pozisyon yyy, yıl yyy",
+    "crumbs": [
+      "Takım Üyeleri",
+      "Sebastian Szymański"
+    ]
+  },
+  {
+    "objectID": "takim/ozge.html#işler",
+    "href": "takim/ozge.html#işler",
+    "title": "Dusan Tadic",
+    "section": "İşler",
+    "text": "İşler\n\nFirma xxx, pozisyon xx, yıl xxx\nFirma yyy, pozisyon yyy, yıl yyy",
+    "crumbs": [
+      "Takım Üyeleri",
+      "Dusan Tadic"
+    ]
+  },
+  {
+    "objectID": "takim/ozge.html#stajlar",
+    "href": "takim/ozge.html#stajlar",
+    "title": "Dusan Tadic",
+    "section": "Stajlar",
+    "text": "Stajlar\n\nFirma aaa, pozisyon xx, yıl xxx\nFirma bbb, pozisyon yyy, yıl yyy",
+    "crumbs": [
+      "Takım Üyeleri",
+      "Dusan Tadic"
+    ]
   }
 ]

@@ -36,12 +36,13 @@ website:
       search: true
       contents:
         - takim.qmd
-        - takim/dusantadic.qmd
-        - takim/edindzeko.qmd
-        - takim/fred.qmd  
-        - takim/szymanski.qmd  
-        
-        
+        - takim/servetmerickursad.qmd
+        - takim/ekin.qmd
+        - takim/sefa.qmd  
+        - takim/feyza.qmd  
+        - takim/ozge.qmd  
+        - takim/mehmet.qmd
+
   page-navigation: true
   back-to-top-navigation: true
   page-footer:
