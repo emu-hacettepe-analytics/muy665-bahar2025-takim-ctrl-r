@@ -8,7 +8,7 @@ title: "Çalışma 1"
 Bu çalışmada 3 görevimiz var. Bu görevler..... Bunlara sırayla aşağıda cevap arıyoruz.
 
 ## (a)
-
+## deneme12
 ```{r}
 1 + 1
 ```
