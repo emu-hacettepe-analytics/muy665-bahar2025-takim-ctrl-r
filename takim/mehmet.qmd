@@ -1,38 +1,46 @@
 ---
-title: "Edin_Džeko"
+title: "Mehmet Gençağa"
 ---
 
 ![](/assets/images/vesikalik.jpeg){fig-align="center"}
 
 # Eğitim
 
--   Lisans, Orta Doğu Teknik Üniversitesi, Türkiye, 20xx - 20xx.
+-   Lisans, Orta Doğu Teknik Üniversitesi, Türkiye, 2010 - 2016.
 -   Yüksek Lisans, Endüstri Mühendisliği, Hacettepe Üniversitesi, Türkiye, 2024 - devam ediyor.
 
 # İş Deneyimi
 
 ## İşler
 
-1.  Firma xxx, pozisyon xx, yıl xxx
+1.  Roketsan, Üretim Planlama Mühendisi, yıl 2025
 
-2.  Firma yyy, pozisyon yyy, yıl yyy
+2.  Roketsan, Kesin Hesap Mühendisi, yıl 2023-2024
+
+3. Anki Yapı, Teknik Ofis Müdürü, 2022-2022
+
+4. Yüksel Proje, Proje Mühendisi, 2016-2020
 
 ## Stajlar
 
-1.  Firma aaa, pozisyon xx, yıl xxx
+1.  YP İnşaat, Stajyer Mühendis, yıl 2014
 
-2.  Firma bbb, pozisyon yyy, yıl yyy
+2.  İzka İnşaat, Stajyer Mühendis, yıl 2015
 
 # Projeler
 
-1.  TÜBİTAK 1001..........................
+1.  Odtü, Taxi Way Bridge
 
 # Yayınlar
 
-1.  Dasdemir, E., Batta, R., Koksalan, M., Tezcaner Öztürk, D. (2022) “İHA Yönlendirmesi için Keşif Misyonu: Zaman Bağımlı Ödülleri ve Çoklu Bağlantıları Olan Çok Amaçlı Oryantiring Problemi”, Computers & Operations Research, 145: 105882
+-
 
 # Yetkinlikler
 
-R, Quarto, Git, Python
+Matlab, Office, Autocad, SAP2000, Midas Civil, Allplan, Oracle ERP
 
 # Hobiler
+
+Sürekli Öğrenme ve Kişisel Gelişim
+
+Yönetim ve Strateji
