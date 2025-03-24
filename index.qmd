@@ -23,7 +23,6 @@ Lütfen faaliyetlerimizi görmek için için bizi takipte kalın.
 
 6.  [Mehmet Gençağa](/takim/mehmet.qmd)
 
-
 ## Proje Adı
 
 MUY660-İş Analitiği iyileştirme çalışmaları (örnek)
@@ -35,4 +34,5 @@ MUY660-İş Analitiği iyileştirme çalışmaları (örnek)
 ## Veri Seti Hakkında Özet Bilgi
 
 ## Sonuçlar
+
 Burada key takeways verilmelidir. En az 3 en fazla 5 madde ile çarpıcı sonuçlar sunulmalıdır.

@@ -10,7 +10,6 @@ title: "Ekin Uzunhasanoğlu Sarıgül"
 -   Yüksek Lisans, Çevre Mühendisliği, Marmara Üniversitesi, Türkiye, 2015 - 2018.
 -   Lisans, Çevre Mühendisliği, Marmara Üniversitesi, Türkiye, 2010 - 2015 .
 
-
 # İş Deneyimi
 
 ## İşler
@@ -36,7 +35,7 @@ title: "Ekin Uzunhasanoğlu Sarıgül"
 
 1.  Aktan, C. K., Uzunhasanoglu, A. E., & Yapsakli, K. (2018). Speciation of nickel and zinc, its short-term inhibitory effect on anammox, and the associated microbial community composition. Bioresource Technology, 268, 558-567.
 2.  Aktan, C. K., Uzunhasanoglu, A. E., Yapsakli, K., & Mertoglu, B. (2018, July). Short-term and long-term inhibitory effects of copper on anammox process. In Proceedings (Vol. 2, No. 11, p. 657). MDPI.
-3.  Uzunhasanoğlu, A. E., Kalkan Aktan, Ç., Bakırcı, K., & Mertoğlu, B., (2017). Long Term Effects of Cadmium on Anammox Process . 2nd International Conference of Civil and Environmental Engineering (ICOCEE 2017), Nevşehir, Turkey 
+3.  Uzunhasanoğlu, A. E., Kalkan Aktan, Ç., Bakırcı, K., & Mertoğlu, B., (2017). Long Term Effects of Cadmium on Anammox Process . 2nd International Conference of Civil and Environmental Engineering (ICOCEE 2017), Nevşehir, Turkey
 
 # Yetkinlikler
 
@@ -45,4 +44,3 @@ MS Office, MS Project, MS Visio, EDrawMAX, AutoCAD, R, Visual Basic, Fortran
 # Hobiler
 
 Tenis
-
