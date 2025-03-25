@@ -2,7 +2,7 @@
 title: "Ekin Uzunhasanoğlu Sarıgül"
 ---
 
-![](/assets/images/vesikalik.jpeg){fig-align="center"}
+![](/assets/images/ekin.jpg){.right-padded}
 
 # Eğitim
 

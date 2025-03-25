@@ -2,7 +2,7 @@
 title: "Özge Avşar"
 ---
 
-![](/assets/images/ozgeavsar.jpeg){fig-align="center"}
+![](/assets/images/ozgeavsar.jpeg){.right-padded}
 
 # Eğitim
 

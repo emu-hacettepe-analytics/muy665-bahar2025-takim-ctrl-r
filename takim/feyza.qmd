@@ -2,8 +2,7 @@
 title: "Feyza Dönmez Bozok"
 ---
 
-
-![](/assets/images/Vesikalık FDB.jpeg){fig-align="center"}
+![](/assets/images/feyza.jpeg){.right-padded}
 
 # Eğitim
 
@@ -26,10 +25,9 @@ title: "Feyza Dönmez Bozok"
 
 2.  Nurol Teknoloji, Stajyer Mühendis, 2021
 
-
 # Yetkinlikler
 
-SAP, MS Office, CMMI, Agile, Scrum, Jira, Confluence, SVN 
+SAP, MS Office, CMMI, Agile, Scrum, Jira, Confluence, SVN
 
 # Hobiler
 

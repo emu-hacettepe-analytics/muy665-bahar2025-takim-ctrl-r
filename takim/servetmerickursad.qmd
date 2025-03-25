@@ -2,7 +2,7 @@
 title: "Servet Meriç Kürşad"
 ---
 
-!\[\](/assets/images/smk.jpg){fig-align="center" width="300"}
+![](/assets/images/smk.jpg){.right-padded}
 
 # Eğitim
 

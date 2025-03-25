@@ -2,7 +2,7 @@
 title: "Sefa Çelik"
 ---
 
-![](images/Sefa_Celik-01.jpeg){fig-align="center"}
+![](images/Sefa_Celik-01.jpeg){.right-padded}
 
 # Eğitim
 

@@ -2,7 +2,7 @@
 title: "Mehmet Gençağa"
 ---
 
-![](/assets/images/mgencaga.jpg){fig-align="center"}
+![](/assets/images/mgencaga.jpg){.right-padded}
 
 # Eğitim
 
@@ -17,9 +17,9 @@ title: "Mehmet Gençağa"
 
 2.  Roketsan, Kesin Hesap Mühendisi, yıl 2023-2024
 
-3. Anki Yapı, Teknik Ofis Müdürü, 2022-2022
+3.  Anki Yapı, Teknik Ofis Müdürü, 2022-2022
 
-4. Yüksel Proje, Proje Mühendisi, 2016-2020
+4.  Yüksel Proje, Proje Mühendisi, 2016-2020
 
 ## Stajlar
 
@@ -33,7 +33,7 @@ title: "Mehmet Gençağa"
 
 # Yayınlar
 
--
+-   
 
 # Yetkinlikler
 

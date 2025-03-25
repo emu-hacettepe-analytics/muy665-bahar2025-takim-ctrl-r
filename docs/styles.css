@@ -1,1 +1,7 @@
 /* css styles */
+
+img.right-padded {
+  height: 300px !important;
+  padding: 14px;
+  float: right;
+}
