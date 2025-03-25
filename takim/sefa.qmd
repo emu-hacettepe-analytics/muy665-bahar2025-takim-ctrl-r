@@ -2,7 +2,7 @@
 title: "Sefa Çelik"
 ---
 
-![](/assets/images/Sefa_Celik.jpeg){fig-align="center"}
+![](images/Sefa_Celik-01.jpeg){fig-align="center"}
 
 # Eğitim
 
@@ -33,7 +33,7 @@ title: "Sefa Çelik"
 
 # Yayınlar
 
--
+-   
 
 # Yetkinlikler
 
