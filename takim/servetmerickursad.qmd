@@ -2,7 +2,7 @@
 title: "Servet Meriç Kürşad"
 ---
 
-!\[\](/assets/images/smk.jpg){fig-align="center"}
+!\[\](/assets/images/smk.jpg){fig-align="center" width="300"}
 
 # Eğitim
 
@@ -13,25 +13,21 @@ title: "Servet Meriç Kürşad"
 
 ## İşler
 
-1.  Firma Roketsan Roket A.Ş., pozisyon Senior Lead Engineer-Kıdemli Lider Mühendis, yıl 2023-ongoing
+1.  Becthtel-Enka Joint Venture, pozisyon Civil Engineer-Saha İnşaat Mühendisi, yıl 2011-2014
 
-2.  Firma Kolin İnşaat, pozisyon QA/QC Manager-KK/KG Müdürü, yıl 2018-2023
+2.  Bechtel-Enka General Partnership, pozisyon Earthworks Manager-Toprak İşleri Müdürü, yıl 2014-2016
 
-3.  Firma REC Uluslararası, pozisyon QA/QC Manager-KK/KG Müdürü, yıl 2017-2018
+3.  YP İnşaat, pozisyon QA/QC Manager-KK/KG Müdürü, yıl 2016-2017
 
-4.  Firma YP İnşaat, pozisyon QA/QC Manager-KK/KG Müdürü, yıl 2016-2017
+4.  REC Uluslararası, pozisyon QA/QC Manager-KK/KG Müdürü, yıl 2017-2018
 
-5.  Firma Bechtel-Enka General Partnership, pozisyon Earthworks Manager-Toprak İşleri Müdürü, yıl 2014-2016
+5.  Kolin İnşaat, pozisyon QA/QC Manager-KK/KG Müdürü, yıl 2018-2023
 
-6.  Firma Becthtel-Enka Joint Venture, pozisyon Civil Engineer-Saha İnşaat Mühendisi, yıl 2011-2014
+6.  Roketsan Roket A.Ş., pozisyon Senior Lead Engineer-Kıdemli Lider Mühendis, yıl 2023-ongoing
 
 ## Stajlar
 
 1.  Firma Kolin İnşaat, pozisyon Saha Mühendisi, yıl 2010
-
-# Projeler
-
-# Yayınlar
 
 # Yetkinlikler
 
