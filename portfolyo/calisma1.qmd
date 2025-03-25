@@ -4,79 +4,108 @@ title: "Çalışma 1"
 
 ## 
 
-Bu Çalışmada MÜY665 İş Analitiği 2024-2025 Bahar Dönemi 1 numaralı
-Ödev'de verilen 3 numaralı görevleri yerine getireceğiz;
+Bu Çalışmada MÜY665 İş Analitiği 2024-2025 Bahar Dönemi için verilen birinci grup ödevinin ilk aşaması verilmektedir. Bu çalışma 3 bölümden oluşmaktadır. İlk kısımda Veri Bilimi ve Endüstri Mühendisliği Üzerine Sohbetler serisinden video özeti bulunmaktadır.
 
-a)  Veri Bilimi ve Endüstri Mühendisliği Üzerine Sohbetler - Mustafa
-    Baydoğan & Erdi Daşdemir isimli videonun kısa özetini aşağıda
-    görebilirsiniz;
+İkinci olarak mtcar veri seti incelenerek çeşitli istatistiksel bilgileri bir liste olarak döndüren fonksiyon tanımı yapılmıştır.
 
-Konu: Veriye Dayalı Karar Verme Farklı Sektörlerden Uygulamalar
+Son olarak na_exaple veri seti içerisindeki toplam NA sayısı bulunmuştur. NA verisi 2025 değeri ile değiştirilerek kaç adet 2025 değeri olduğu kontrol edilmiştir.
 
-Karar Verme Süreci
+**a) Veri Bilimi ve Endüstri Mühendisliği Üzerine Sohbetler - Mustafa Baydoğan & Erdi Daşdemir Söyleşi Videosunun Özeti**
 
-Veri + Analitik Kararlar
+**KONU:Veriye Dayalı Karar Verme Farklı Sektörlerden Uygulamalar**
 
-1- Operasyon-Veri-Sorun/Gözlem/Uyarı: Sorun/durum tanımlama Amaç
-belirleme 2- Sorun/durum ile ilgili olası nedenlerin belirlenmesi 3-
-Sorun/durum ile ilgili verilerin ve gerekli bilgilerin toplanması 4-
-Alternatiflerin belirlenmesi, olası sonuçların tahmini ve en
-etkili/yararlı/uygulanabilir olanın seçilmesi
+Endüstri mühendisleri profesyonel hayatlarında genellikle optimizasyon problemleriyle yüzleşmekte ve bu sorunlara çözüm üretmek amacıyla çeşitli araçlardan yararlanmaktadır. Bu araçlar arasında en önemlileri matematiksel modelleme ve simülasyondur. Matematiksel modellemeyle ifade edilemeyen sorunlar, olasılık temelli yaklaşımlar aracılığıyla ele alınabilir.
 
-Tahmin problemlerine bakış örneği:
+Son yıllarda veri analizi ve veri madenciliği yöntemlerinin giderek daha fazla kullanılmaya başladığı gözlemlenmektedir. Bu gelişmenin temelinde, endüstri mühendislerinin sahip olduğu matematik tabanlı eğitimin etkili olması yatmaktadır. Bu alanlar detaylı incelendiğinde, makine öğrenmesinin bir parçası oldukları görülmektedir.
 
-Kereste eğrilik tahmini Problem: Yaş kereste resminden eğrilik tahmini
-yapılabilir mi? Problemin önemi, veri, çözüm yöntemi üzerine karar verme
-süreci netleşiyor ve etki analizi gerçekleşiyor. Çözüm yöntemi: Görüntü
-işleme + makine öğrenimi Problemin temel nedeni araştırılır: Ağaç açısı,
-budak noktaları ve genç/yaşlı odun dağılımı Daha sonra nasıl sayıya
-dökülebilir. İşlenmiş veri-Öznitelikler-Makine öğrenimi algoritmaları
-Ham veriyi aldık, ön işlemeye tabi tuttuk sonra değişkenler çıkardık ve
-sonra öğreniciye verdik. Sonuçlar görselleştirilir.
+Mühendislik disiplininin özünde problem çözmek yer almaktadır. Bu süreç belirli aşamalar çerçevesinde gerçekleştirilmektedir:
 
-Geleneksel Öğrenme -- Derin Öğrenme ve Karar Verme Süreçleri
+-   İlk olarak, mevcut problemin ne olduğu belirlenip tanımlanmalıdır.
+-   Sorunun olası nedenleri belirlenmelidir.
+-   Problemin sayısal olarak ifade edilmesi sağlanmalıdır. Bu aşamada, yalnızca tek bir çözüm üretmek yerine farklı alternatifler geliştirilmeli ve kıyaslama yöntemleri kullanılmalıdır.
+-   Alternatif çözümler arasından en uygun olanın belirlenmesiyle problem çözülebilir.
 
-1- Yorumlanabilirlik (İhtiyaç/Regülasyon?) 2- Yönlendirme (İndirim oranı
-arttıkça satışlar artar.) 3- Dirençli/Gürbüz olabilme (hava durumu
-tahmin hatalarından nasıl daha az etkilenebilirim) 4- Karar çevirebilme
-(Yarın saat 12-13 arası için kaç MW elektrik satın almalıyım?)
+**Problem Örneği: Kereste Bükülme Tahmini**
 
-Karar vermede tahmin doğruluğunun önemi
+***Problem Tanımı:***
 
-Elektrik piyasası işlemleri: üretim ve tüketimin dengede olması gerekir.
-Lisanssız Üreticiler -- Perakende Şirketleri -- Tüketiciler Problemin
-önemi: Yıllık dengesizlik miktarı: 19.1 TWh Net zarar: 421 milyon TL
-Çözüm yönetimi: Özelleşmiş öznitelik çıkarımı + makine öğrenimi Karar:
-Piyasa dengesizliği ve üretim/tüketim öngörüsüne göre 24 saatlik satın
-alınacak elektrik miktarı Etki: 2018 yılında dengesizlik maliyetlerinde
-var olan sisteme kıyasla 6 milyon TL ek fayda Veri: Bölge tüketim
-verisi, Türkiye saatlik tüketimi, hava durumu ....
+Yaş kerestenin kurutma işlemi sonrasındaki bükülme miktarının tahmin edilmesi.
 
-Karar vermede tahmin doğruluğunun önemi
+Ev yapımında kullanılan yaş keresteler kurutma sürecinde yamulabilmektedir. Hangi kerestelerin bücüleceği önceden tahmin edilebilirse, stabilizasyon gibi önleyici önlemler alınarak bu sorun engellenebilir.
 
-Trendyol Örneği
+***Problemin Önemi:***
 
-• Dijital ayak izi - Tıklama, favoriye ekleme, sepete ekle, sepetten
-çıkar, satın al, iptal et • Diğer veriler - İzlenim, yorumlar, Google
-trends, ürün özellikleri..... • Önerilen - Satış/Stok dengesi,
-popülerlik • Makine öğrenimi - Benzetme, tercih öğrenme, tahmini satış •
-Makine öğrenimi + Karar verme - Akıllı deneme yanılma - Minimum
-pişmanlık, maksimum ödül - Basit sıralama politikası
+Düz kerestenin fiyatı yaklaşık 10\$ iken, yamulmuş kerestenin fiyatı 2\$'a kadar düşebilmektedir.
 
-ÇIKARIMLAR
+***Problemin Kaynakları:***
 
-• Az ve/veya kirli veri ile uğraş ciddi insan kaynağı gerektiriyor. •
-Yapısal ve yapısal olmayan veri için alternatif yaklaşımlar geliştirme
-gereksinimi artmakta. • Açık veri kaynakları zengin bilgi içeriği
-sağlamakta. • İnsan yönlendirmesi fark yaratıyor. • Yorumlanabilirlik
-hala çok önemli durumda. • Karar verme için kullanılan tahminler yüzde
-yüz doğru olmak zorunda değil. Nokta tahminler yanıltıcı olabilir. •
-Karar verme için pekiştirmeli öğrenme yaklaşımları önemli hale gelmekte.
+-   Kesim noktasına bağlı olarak ağaç halkalarının oryantasyonu.
 
-b)  Fonksiyonlar ve döngüler ile veri özetleme için ödev yönergesinde
-    verilen direktiflere göre fonksiyonlar oluşturma;
+-   Ağaç gövdelerindeki budak noktaları.
 
-``` {r}
+-   Kerestenin yaşlı ve genç odun oranı.
+
+***Veri Kaynakları:***
+
+-   Yaş kereste görselleri.
+
+-   Kurutma süreci sonrasında elde edilen ölçüm verileri.
+
+***Çözüm Yöntemleri:***
+
+-   Farklı açılardan çekilen görüntüler birleştirilerek tek bir veri seti oluşturulmalıdır.
+
+-   Görüntü işleme yöntemleriyle detaylı analiz yapılmalıdır.
+
+-   Sayısal veriye dönüştürülen bu görseller tahmin algoritmalarına dahil edilmelidir.
+
+***Beklenen Etki:***
+
+Ciroda %5 oranında artış.
+
+**Problem Örneği: Elektrik Üretim Tahmini**
+
+***Problem Tanımı:***
+
+Elektrik üretiminin tüketim ihtiyacına uygun olarak düzenlenmesi ve fazla ya da eksik üretimin önlenmesi.
+
+Elektrik tüketimi doğrultusunda dengeli bir üretim planı gerekmektedir. Arz ve talep dengesi doğru tahmin edilerek kayıplar minimize edilmelidir.
+
+***Problemin Önemi:***
+
+Yıllık elektrik dengesizlik miktarı: 19,1 TWh
+
+Net zarar: 421 Milyon TL
+
+***Veri Kaynakları:***
+
+-   Bölge bazlı tüketim verileri.
+
+-   Lisanssız santrallerin üretim verileri.
+
+-   Saatlik bazda Türkiye genelindeki elektrik tüketimi.
+
+-   Hava durumu verileri.
+
+-   Resmi ve özel günler.
+
+***Çözüm Yöntemleri:***
+
+-   Sezonsal bazda elektrik ihtiyacını tahmin etmek.
+
+-   Sayısal verileri kullanarak tahmin algoritmaları geliştirmek.
+
+-   Tahminlerin aralıklı yapılması.
+
+***Beklenen Etki:***
+
+Var olan sisteme kıyasla 6 Milyon TL kar.
+
+Makine öğrenme teknikleri, optimizasyon süreçlerini iyileştirmek amacıyla giderek daha fazla benimsenmektedir. Geçmişte çözülmüş optimizasyon problemlerinin verileri, yeni problemlerin çözümünde yeniden kullanılarak daha verimli yaklaşımlar geliştirilmektedir.
+
+**b) Fonksiyonlar ve döngüler ile veri özetleme için ödev yönergesinde verilen direktiflere göre fonksiyonlar oluşturma**
+
+```{r}
 data(mtcars) #mtcars veri setini çağırıyoruz
   my_summary_stats<-function(y){ 
     ortalamalar<-c() #verilerin depolanması için boş vektörler belirliyoruz
@@ -114,8 +143,7 @@ apply_my_summary_stats(mtcars)
 my_summary_stats(mtcars)
 ```
 
-c)  dslabs paketi içinde bulunan "na_example" veri seti üzerinde ödev
-    yönergesinde istenilen düzenlemeleri yapıyoruz;
+**c) dslabs paketi içinde bulunan "na_example" veri setinde kaç adet NA verisi olduğunun hesaplanması**
 
 ```{r}
 library(dslabs) #dslabs paketini çağırıyoruz    

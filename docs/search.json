@@ -324,7 +324,7 @@
     "href": "portfolyo/calisma1.html",
     "title": "Çalışma 1",
     "section": "",
-    "text": "(AE\u001faD\u001fD1dakiler C6rnek olarak verilmiE\u001ftir.)\nBu C’alD1E\u001fmada 3 gC6revimiz var. Bu gC6revler….. Bunlara sD1rayla aE\u001faD\u001fD1da cevap arD1yoruz.",
+    "text": "Bu Çalışmada MÜY665 İş Analitiği 2024-2025 Bahar Dönemi 1 numaralı Ödev’de verilen 3 numaralı görevleri yerine getireceğiz;\n\nVeri Bilimi ve Endüstri Mühendisliği Üzerine Sohbetler - Mustafa Baydoğan & Erdi Daşdemir isimli videonun kısa özetini aşağıda görebilirsiniz;\n\nKonu: Veriye Dayalı Karar Verme Farklı Sektörlerden Uygulamalar\nKarar Verme Süreci\nVeri + Analitik Kararlar\n1- Operasyon-Veri-Sorun/Gözlem/Uyarı: Sorun/durum tanımlama Amaç belirleme 2- Sorun/durum ile ilgili olası nedenlerin belirlenmesi 3- Sorun/durum ile ilgili verilerin ve gerekli bilgilerin toplanması 4- Alternatiflerin belirlenmesi, olası sonuçların tahmini ve en etkili/yararlı/uygulanabilir olanın seçilmesi\nTahmin problemlerine bakış örneği:\nKereste eğrilik tahmini Problem: Yaş kereste resminden eğrilik tahmini yapılabilir mi? Problemin önemi, veri, çözüm yöntemi üzerine karar verme süreci netleşiyor ve etki analizi gerçekleşiyor. Çözüm yöntemi: Görüntü işleme + makine öğrenimi Problemin temel nedeni araştırılır: Ağaç açısı, budak noktaları ve genç/yaşlı odun dağılımı Daha sonra nasıl sayıya dökülebilir. İşlenmiş veri-Öznitelikler-Makine öğrenimi algoritmaları Ham veriyi aldık, ön işlemeye tabi tuttuk sonra değişkenler çıkardık ve sonra öğreniciye verdik. Sonuçlar görselleştirilir.\nGeleneksel Öğrenme – Derin Öğrenme ve Karar Verme Süreçleri\n1- Yorumlanabilirlik (İhtiyaç/Regülasyon?) 2- Yönlendirme (İndirim oranı arttıkça satışlar artar.) 3- Dirençli/Gürbüz olabilme (hava durumu tahmin hatalarından nasıl daha az etkilenebilirim) 4- Karar çevirebilme (Yarın saat 12-13 arası için kaç MW elektrik satın almalıyım?)\nKarar vermede tahmin doğruluğunun önemi\nElektrik piyasası işlemleri: üretim ve tüketimin dengede olması gerekir. Lisanssız Üreticiler – Perakende Şirketleri – Tüketiciler Problemin önemi: Yıllık dengesizlik miktarı: 19.1 TWh Net zarar: 421 milyon TL Çözüm yönetimi: Özelleşmiş öznitelik çıkarımı + makine öğrenimi Karar: Piyasa dengesizliği ve üretim/tüketim öngörüsüne göre 24 saatlik satın alınacak elektrik miktarı Etki: 2018 yılında dengesizlik maliyetlerinde var olan sisteme kıyasla 6 milyon TL ek fayda Veri: Bölge tüketim verisi, Türkiye saatlik tüketimi, hava durumu ….\nKarar vermede tahmin doğruluğunun önemi\nTrendyol Örneği\n• Dijital ayak izi - Tıklama, favoriye ekleme, sepete ekle, sepetten çıkar, satın al, iptal et • Diğer veriler - İzlenim, yorumlar, Google trends, ürün özellikleri….. • Önerilen - Satış/Stok dengesi, popülerlik • Makine öğrenimi - Benzetme, tercih öğrenme, tahmini satış • Makine öğrenimi + Karar verme - Akıllı deneme yanılma - Minimum pişmanlık, maksimum ödül - Basit sıralama politikası\nÇIKARIMLAR\n• Az ve/veya kirli veri ile uğraş ciddi insan kaynağı gerektiriyor. • Yapısal ve yapısal olmayan veri için alternatif yaklaşımlar geliştirme gereksinimi artmakta. • Açık veri kaynakları zengin bilgi içeriği sağlamakta. • İnsan yönlendirmesi fark yaratıyor. • Yorumlanabilirlik hala çok önemli durumda. • Karar verme için kullanılan tahminler yüzde yüz doğru olmak zorunda değil. Nokta tahminler yanıltıcı olabilir. • Karar verme için pekiştirmeli öğrenme yaklaşımları önemli hale gelmekte.\n\nFonksiyonlar ve döngüler ile veri özetleme için ödev yönergesinde verilen direktiflere göre fonksiyonlar oluşturma;\n\n\ndata(mtcars) #mtcars veri setini çağırıyoruz\n  my_summary_stats&lt;-function(y){ \n    ortalamalar&lt;-c() #verilerin depolanması için boş vektörler belirliyoruz\n    medianlar&lt;-c()\n    sapmalar&lt;-c()\n    minimumlar&lt;-c()\n    maximumlar&lt;-c()\n    ozellikler&lt;-c()\n    for (x in 1:length(y)) { #farklı tip veri setlerinde de fonksiyonun çalışabilmesi için for döngüsünü veri setinin sütun sayısına bağlıyoruz\n      if (is.numeric(y[[x]])) { #sütunun numeric olup olmadığını kontrol ettiriyoruz\n       ortalamalar&lt;-c(ortalamalar,mean(y[[x]])) #vektörlerimizin içini ilgili fonksiyonlarla dolduruyoruz\n       medianlar&lt;-c(medianlar,median(y[[x]]))\n       sapmalar&lt;-c(sapmalar,sd(y[[x]]))\n       minimumlar&lt;-c(minimumlar,min(y[[x]]))\n       maximumlar&lt;-c(maximumlar,max(y[[x]]))\n       ozellikler&lt;-c(ozellikler,names(y[x]))\n      }}\n    formul_sonuc&lt;&lt;-data.frame(ozellikler,ortalamalar,medianlar,sapmalar,minimumlar,maximumlar) #sonuçlarımızı toplu bir şekilde raporlayabilmek için vektörlerimizden dataframe oluşturuyoruz\n    return(formul_sonuc)}\n\nmy_summary_stats(mtcars)\n\n   ozellikler ortalamalar medianlar    sapmalar minimumlar maximumlar\n1         mpg   20.090625    19.200   6.0269481     10.400     33.900\n2         cyl    6.187500     6.000   1.7859216      4.000      8.000\n3        disp  230.721875   196.300 123.9386938     71.100    472.000\n4          hp  146.687500   123.000  68.5628685     52.000    335.000\n5        drat    3.596563     3.695   0.5346787      2.760      4.930\n6          wt    3.217250     3.325   0.9784574      1.513      5.424\n7        qsec   17.848750    17.710   1.7869432     14.500     22.900\n8          vs    0.437500     0.000   0.5040161      0.000      1.000\n9          am    0.406250     0.000   0.4989909      0.000      1.000\n10       gear    3.687500     4.000   0.7378041      3.000      5.000\n11       carb    2.812500     2.000   1.6152000      1.000      8.000\n\napply_my_summary_stats&lt;-function(y){ #bir önceki aşamada for döngüsü ile yazdığımız fomülü bu sefer apply fonksiyonu yardımı ile oluşturacağız\nnumerik_kolon&lt;-y[sapply(y,is.numeric)] #veri setimizi sadece numerik kolonlardan oluşur hale getiriyoruz\n      ortalamalar&lt;-apply(numerik_kolon,2,mean) #apply fonksiyonu yardımı ile vektörlerimizi oluşturup içlerini dolduruyoruz\n      medianlar&lt;-apply(numerik_kolon,2,median)\n      sapmalar&lt;-apply(numerik_kolon,2,sd)\n      minimumlar&lt;-apply(numerik_kolon,2,min)\n      maximumlar&lt;-apply(numerik_kolon,2,max)\n      ozellikler=names(numerik_kolon)\n  formul_sonuc&lt;&lt;-data.frame(ozellikler,ortalamalar,medianlar,sapmalar,minimumlar,maximumlar)#sonuçlarımızı toplu bir şekilde raporlayabilmek için vektörlerimizden dataframe oluşturuyoruz\n  return(formul_sonuc)}\n\napply_my_summary_stats(mtcars)\n\n     ozellikler ortalamalar medianlar    sapmalar minimumlar maximumlar\nmpg         mpg   20.090625    19.200   6.0269481     10.400     33.900\ncyl         cyl    6.187500     6.000   1.7859216      4.000      8.000\ndisp       disp  230.721875   196.300 123.9386938     71.100    472.000\nhp           hp  146.687500   123.000  68.5628685     52.000    335.000\ndrat       drat    3.596563     3.695   0.5346787      2.760      4.930\nwt           wt    3.217250     3.325   0.9784574      1.513      5.424\nqsec       qsec   17.848750    17.710   1.7869432     14.500     22.900\nvs           vs    0.437500     0.000   0.5040161      0.000      1.000\nam           am    0.406250     0.000   0.4989909      0.000      1.000\ngear       gear    3.687500     4.000   0.7378041      3.000      5.000\ncarb       carb    2.812500     2.000   1.6152000      1.000      8.000\n\nmy_summary_stats(mtcars)\n\n   ozellikler ortalamalar medianlar    sapmalar minimumlar maximumlar\n1         mpg   20.090625    19.200   6.0269481     10.400     33.900\n2         cyl    6.187500     6.000   1.7859216      4.000      8.000\n3        disp  230.721875   196.300 123.9386938     71.100    472.000\n4          hp  146.687500   123.000  68.5628685     52.000    335.000\n5        drat    3.596563     3.695   0.5346787      2.760      4.930\n6          wt    3.217250     3.325   0.9784574      1.513      5.424\n7        qsec   17.848750    17.710   1.7869432     14.500     22.900\n8          vs    0.437500     0.000   0.5040161      0.000      1.000\n9          am    0.406250     0.000   0.4989909      0.000      1.000\n10       gear    3.687500     4.000   0.7378041      3.000      5.000\n11       carb    2.812500     2.000   1.6152000      1.000      8.000\n\n\n\ndslabs paketi içinde bulunan “na_example” veri seti üzerinde ödev yönergesinde istenilen düzenlemeleri yapıyoruz;\n\n\nlibrary(dslabs) #dslabs paketini çağırıyoruz    \ndata(na_example) #na_example veri setini çağırıyoruz\nsum(is.na(na_example)) #na_example veri seti içinde kaç adet NA değer olduğunu buluyoruz\n\n[1] 145\n\ndegistir&lt;-ifelse(is.na(na_example),2025,na_example) #na_example veri seti içindeki NA değerleri 2025 ile değiştiriyoruz\nsum(is.na(degistir)) #bütün NA değerlerin değiştirildiğinden emin oluyoruz\n\n[1] 0\n\nsum(degistir==2025) # kontrol amaçlı olarak revize veri setimizde kaç adet 2025 var diye kontrol ediyoruz.\n\n[1] 145",
     "crumbs": [
       "Porfolyo",
       "Çalışma 1"
@@ -679,67 +679,67 @@
   {
     "objectID": "takim/sefa.html#işler",
     "href": "takim/sefa.html#işler",
-    "title": "Frederico Rodrigues",
+    "title": "Sefa Çelik",
     "section": "İşler",
-    "text": "İşler\n\nFirma xxx, pozisyon xx, yıl xxx\nFirma yyy, pozisyon yyy, yıl yyy",
+    "text": "İşler\n\nSTM Savunma Teknolojileri Mühendislik ve Ticaret A.Ş, Uzman Sözleşme Yöneticisi, 2024 - devam ediyor\nTractebel Hidro Dizayn Mühendislik A.Ş, Proje Kontrol ve Teklif Mühendisi, 2021 - 2024\nEnergo Pro İnşaat Sanayi ve Ticaret A.Ş., Teknik Ofis Mühendisi, 2019 - 2021\nProyapı Mühendislik ve Müşavirlik A.Ş, Proje Mühendisi, 2019 - 2019",
     "crumbs": [
       "Takım Üyeleri",
-      "Frederico Rodrigues"
+      "Sefa Çelik"
     ]
   },
   {
     "objectID": "takim/sefa.html#stajlar",
     "href": "takim/sefa.html#stajlar",
-    "title": "Frederico Rodrigues",
+    "title": "Sefa Çelik",
     "section": "Stajlar",
-    "text": "Stajlar\n\nFirma aaa, pozisyon xx, yıl xxx\nFirma bbb, pozisyon yyy, yıl yyy",
+    "text": "Stajlar\n\nCCN Holding, Stajyer Mühendis, 2015\nBerko İnşaat Taahhüt Sanayi Ticaret A.Ş., Stajyer Mühendis, 2014",
     "crumbs": [
       "Takım Üyeleri",
-      "Frederico Rodrigues"
+      "Sefa Çelik"
     ]
   },
   {
     "objectID": "takim/mehmet.html#işler",
     "href": "takim/mehmet.html#işler",
-    "title": "Edin_Džeko",
+    "title": "Mehmet Gençağa",
     "section": "İşler",
-    "text": "İşler\n\nFirma xxx, pozisyon xx, yıl xxx\nFirma yyy, pozisyon yyy, yıl yyy",
+    "text": "İşler\n\nRoketsan, Üretim Planlama Mühendisi, yıl 2025\nRoketsan, Kesin Hesap Mühendisi, yıl 2023-2024\nAnki Yapı, Teknik Ofis Müdürü, 2022-2022\nYüksel Proje, Proje Mühendisi, 2016-2020",
     "crumbs": [
       "Takım Üyeleri",
-      "Edin_Džeko"
+      "Mehmet Gençağa"
     ]
   },
   {
     "objectID": "takim/mehmet.html#stajlar",
     "href": "takim/mehmet.html#stajlar",
-    "title": "Edin_Džeko",
+    "title": "Mehmet Gençağa",
     "section": "Stajlar",
-    "text": "Stajlar\n\nFirma aaa, pozisyon xx, yıl xxx\nFirma bbb, pozisyon yyy, yıl yyy",
+    "text": "Stajlar\n\nYP İnşaat, Stajyer Mühendis, yıl 2014\nİzka İnşaat, Stajyer Mühendis, yıl 2015",
     "crumbs": [
       "Takım Üyeleri",
-      "Edin_Džeko"
+      "Mehmet Gençağa"
     ]
   },
   {
     "objectID": "takim/feyza.html#işler",
     "href": "takim/feyza.html#işler",
-    "title": "Sebastian Szymański",
+    "title": "Feyza Dönmez Bozok",
     "section": "İşler",
-    "text": "İşler\n\nFirma xxx, pozisyon xx, yıl xxx\nFirma yyy, pozisyon yyy, yıl yyy",
+    "text": "İşler\n\nSTM Savunma Teknolojileri Mühendislik ve Ticaret A.Ş, Konfigürasyon Yönetim Uzmanı, 2024 - devam ediyor\nNurol Teknoloji, Konfigürasyon Yönetim Mühendisi, 2022-2024\nNurol Teknoloji, Proje Mühendisi, 2021-2022",
     "crumbs": [
       "Takım Üyeleri",
-      "Sebastian Szymański"
+      "Feyza Dönmez Bozok"
     ]
   },
   {
     "objectID": "takim/feyza.html#stajlar",
     "href": "takim/feyza.html#stajlar",
-    "title": "Sebastian Szymański",
+    "title": "Feyza Dönmez Bozok",
     "section": "Stajlar",
-    "text": "Stajlar\n\nFirma aaa, pozisyon xx, yıl xxx\nFirma bbb, pozisyon yyy, yıl yyy",
+    "text": "Stajlar\n\nMKE, Stajyer Mühendis, 2020\nNurol Teknoloji, Stajyer Mühendis, 2021",
     "crumbs": [
       "Takım Üyeleri",
-      "Sebastian Szymański"
+      "Feyza Dönmez Bozok"
     ]
   },
   {
@@ -773,6 +773,17 @@
     "crumbs": [
       "Takım Üyeleri",
       "title: \"Özge Avşar\""
+    ]
+  },
+  {
+    "objectID": "portfolyo/calisma1.html#section",
+    "href": "portfolyo/calisma1.html#section",
+    "title": "Çalışma 1",
+    "section": "",
+    "text": "Bu Çalışmada MÜY665 İş Analitiği 2024-2025 Bahar Dönemi 1 numaralı Ödev’de verilen 3 numaralı görevleri yerine getireceğiz;\n\nVeri Bilimi ve Endüstri Mühendisliği Üzerine Sohbetler - Mustafa Baydoğan & Erdi Daşdemir isimli videonun kısa özetini aşağıda görebilirsiniz;\n\nKonu: Veriye Dayalı Karar Verme Farklı Sektörlerden Uygulamalar\nKarar Verme Süreci\nVeri + Analitik Kararlar\n1- Operasyon-Veri-Sorun/Gözlem/Uyarı: Sorun/durum tanımlama Amaç belirleme 2- Sorun/durum ile ilgili olası nedenlerin belirlenmesi 3- Sorun/durum ile ilgili verilerin ve gerekli bilgilerin toplanması 4- Alternatiflerin belirlenmesi, olası sonuçların tahmini ve en etkili/yararlı/uygulanabilir olanın seçilmesi\nTahmin problemlerine bakış örneği:\nKereste eğrilik tahmini Problem: Yaş kereste resminden eğrilik tahmini yapılabilir mi? Problemin önemi, veri, çözüm yöntemi üzerine karar verme süreci netleşiyor ve etki analizi gerçekleşiyor. Çözüm yöntemi: Görüntü işleme + makine öğrenimi Problemin temel nedeni araştırılır: Ağaç açısı, budak noktaları ve genç/yaşlı odun dağılımı Daha sonra nasıl sayıya dökülebilir. İşlenmiş veri-Öznitelikler-Makine öğrenimi algoritmaları Ham veriyi aldık, ön işlemeye tabi tuttuk sonra değişkenler çıkardık ve sonra öğreniciye verdik. Sonuçlar görselleştirilir.\nGeleneksel Öğrenme – Derin Öğrenme ve Karar Verme Süreçleri\n1- Yorumlanabilirlik (İhtiyaç/Regülasyon?) 2- Yönlendirme (İndirim oranı arttıkça satışlar artar.) 3- Dirençli/Gürbüz olabilme (hava durumu tahmin hatalarından nasıl daha az etkilenebilirim) 4- Karar çevirebilme (Yarın saat 12-13 arası için kaç MW elektrik satın almalıyım?)\nKarar vermede tahmin doğruluğunun önemi\nElektrik piyasası işlemleri: üretim ve tüketimin dengede olması gerekir. Lisanssız Üreticiler – Perakende Şirketleri – Tüketiciler Problemin önemi: Yıllık dengesizlik miktarı: 19.1 TWh Net zarar: 421 milyon TL Çözüm yönetimi: Özelleşmiş öznitelik çıkarımı + makine öğrenimi Karar: Piyasa dengesizliği ve üretim/tüketim öngörüsüne göre 24 saatlik satın alınacak elektrik miktarı Etki: 2018 yılında dengesizlik maliyetlerinde var olan sisteme kıyasla 6 milyon TL ek fayda Veri: Bölge tüketim verisi, Türkiye saatlik tüketimi, hava durumu ….\nKarar vermede tahmin doğruluğunun önemi\nTrendyol Örneği\n• Dijital ayak izi - Tıklama, favoriye ekleme, sepete ekle, sepetten çıkar, satın al, iptal et • Diğer veriler - İzlenim, yorumlar, Google trends, ürün özellikleri….. • Önerilen - Satış/Stok dengesi, popülerlik • Makine öğrenimi - Benzetme, tercih öğrenme, tahmini satış • Makine öğrenimi + Karar verme - Akıllı deneme yanılma - Minimum pişmanlık, maksimum ödül - Basit sıralama politikası\nÇIKARIMLAR\n• Az ve/veya kirli veri ile uğraş ciddi insan kaynağı gerektiriyor. • Yapısal ve yapısal olmayan veri için alternatif yaklaşımlar geliştirme gereksinimi artmakta. • Açık veri kaynakları zengin bilgi içeriği sağlamakta. • İnsan yönlendirmesi fark yaratıyor. • Yorumlanabilirlik hala çok önemli durumda. • Karar verme için kullanılan tahminler yüzde yüz doğru olmak zorunda değil. Nokta tahminler yanıltıcı olabilir. • Karar verme için pekiştirmeli öğrenme yaklaşımları önemli hale gelmekte.\n\nFonksiyonlar ve döngüler ile veri özetleme için ödev yönergesinde verilen direktiflere göre fonksiyonlar oluşturma;\n\n\ndata(mtcars) #mtcars veri setini çağırıyoruz\n  my_summary_stats&lt;-function(y){ \n    ortalamalar&lt;-c() #verilerin depolanması için boş vektörler belirliyoruz\n    medianlar&lt;-c()\n    sapmalar&lt;-c()\n    minimumlar&lt;-c()\n    maximumlar&lt;-c()\n    ozellikler&lt;-c()\n    for (x in 1:length(y)) { #farklı tip veri setlerinde de fonksiyonun çalışabilmesi için for döngüsünü veri setinin sütun sayısına bağlıyoruz\n      if (is.numeric(y[[x]])) { #sütunun numeric olup olmadığını kontrol ettiriyoruz\n       ortalamalar&lt;-c(ortalamalar,mean(y[[x]])) #vektörlerimizin içini ilgili fonksiyonlarla dolduruyoruz\n       medianlar&lt;-c(medianlar,median(y[[x]]))\n       sapmalar&lt;-c(sapmalar,sd(y[[x]]))\n       minimumlar&lt;-c(minimumlar,min(y[[x]]))\n       maximumlar&lt;-c(maximumlar,max(y[[x]]))\n       ozellikler&lt;-c(ozellikler,names(y[x]))\n      }}\n    formul_sonuc&lt;&lt;-data.frame(ozellikler,ortalamalar,medianlar,sapmalar,minimumlar,maximumlar) #sonuçlarımızı toplu bir şekilde raporlayabilmek için vektörlerimizden dataframe oluşturuyoruz\n    return(formul_sonuc)}\n\nmy_summary_stats(mtcars)\n\n   ozellikler ortalamalar medianlar    sapmalar minimumlar maximumlar\n1         mpg   20.090625    19.200   6.0269481     10.400     33.900\n2         cyl    6.187500     6.000   1.7859216      4.000      8.000\n3        disp  230.721875   196.300 123.9386938     71.100    472.000\n4          hp  146.687500   123.000  68.5628685     52.000    335.000\n5        drat    3.596563     3.695   0.5346787      2.760      4.930\n6          wt    3.217250     3.325   0.9784574      1.513      5.424\n7        qsec   17.848750    17.710   1.7869432     14.500     22.900\n8          vs    0.437500     0.000   0.5040161      0.000      1.000\n9          am    0.406250     0.000   0.4989909      0.000      1.000\n10       gear    3.687500     4.000   0.7378041      3.000      5.000\n11       carb    2.812500     2.000   1.6152000      1.000      8.000\n\napply_my_summary_stats&lt;-function(y){ #bir önceki aşamada for döngüsü ile yazdığımız fomülü bu sefer apply fonksiyonu yardımı ile oluşturacağız\nnumerik_kolon&lt;-y[sapply(y,is.numeric)] #veri setimizi sadece numerik kolonlardan oluşur hale getiriyoruz\n      ortalamalar&lt;-apply(numerik_kolon,2,mean) #apply fonksiyonu yardımı ile vektörlerimizi oluşturup içlerini dolduruyoruz\n      medianlar&lt;-apply(numerik_kolon,2,median)\n      sapmalar&lt;-apply(numerik_kolon,2,sd)\n      minimumlar&lt;-apply(numerik_kolon,2,min)\n      maximumlar&lt;-apply(numerik_kolon,2,max)\n      ozellikler=names(numerik_kolon)\n  formul_sonuc&lt;&lt;-data.frame(ozellikler,ortalamalar,medianlar,sapmalar,minimumlar,maximumlar)#sonuçlarımızı toplu bir şekilde raporlayabilmek için vektörlerimizden dataframe oluşturuyoruz\n  return(formul_sonuc)}\n\napply_my_summary_stats(mtcars)\n\n     ozellikler ortalamalar medianlar    sapmalar minimumlar maximumlar\nmpg         mpg   20.090625    19.200   6.0269481     10.400     33.900\ncyl         cyl    6.187500     6.000   1.7859216      4.000      8.000\ndisp       disp  230.721875   196.300 123.9386938     71.100    472.000\nhp           hp  146.687500   123.000  68.5628685     52.000    335.000\ndrat       drat    3.596563     3.695   0.5346787      2.760      4.930\nwt           wt    3.217250     3.325   0.9784574      1.513      5.424\nqsec       qsec   17.848750    17.710   1.7869432     14.500     22.900\nvs           vs    0.437500     0.000   0.5040161      0.000      1.000\nam           am    0.406250     0.000   0.4989909      0.000      1.000\ngear       gear    3.687500     4.000   0.7378041      3.000      5.000\ncarb       carb    2.812500     2.000   1.6152000      1.000      8.000\n\nmy_summary_stats(mtcars)\n\n   ozellikler ortalamalar medianlar    sapmalar minimumlar maximumlar\n1         mpg   20.090625    19.200   6.0269481     10.400     33.900\n2         cyl    6.187500     6.000   1.7859216      4.000      8.000\n3        disp  230.721875   196.300 123.9386938     71.100    472.000\n4          hp  146.687500   123.000  68.5628685     52.000    335.000\n5        drat    3.596563     3.695   0.5346787      2.760      4.930\n6          wt    3.217250     3.325   0.9784574      1.513      5.424\n7        qsec   17.848750    17.710   1.7869432     14.500     22.900\n8          vs    0.437500     0.000   0.5040161      0.000      1.000\n9          am    0.406250     0.000   0.4989909      0.000      1.000\n10       gear    3.687500     4.000   0.7378041      3.000      5.000\n11       carb    2.812500     2.000   1.6152000      1.000      8.000\n\n\n\ndslabs paketi içinde bulunan “na_example” veri seti üzerinde ödev yönergesinde istenilen düzenlemeleri yapıyoruz;\n\n\nlibrary(dslabs) #dslabs paketini çağırıyoruz    \ndata(na_example) #na_example veri setini çağırıyoruz\nsum(is.na(na_example)) #na_example veri seti içinde kaç adet NA değer olduğunu buluyoruz\n\n[1] 145\n\ndegistir&lt;-ifelse(is.na(na_example),2025,na_example) #na_example veri seti içindeki NA değerleri 2025 ile değiştiriyoruz\nsum(is.na(degistir)) #bütün NA değerlerin değiştirildiğinden emin oluyoruz\n\n[1] 0\n\nsum(degistir==2025) # kontrol amaçlı olarak revize veri setimizde kaç adet 2025 var diye kontrol ediyoruz.\n\n[1] 145",
+    "crumbs": [
+      "Porfolyo",
+      "Çalışma 1"
     ]
   }
 ]
