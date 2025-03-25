@@ -2,19 +2,126 @@
 title: "Çalışma 1"
 ---
 
-\
-(AEaDD1dakiler C6rnek olarak verilmiEtir.)
+## 
 
-Bu C'alD1Emada 3 gC6revimiz var. Bu gC6revler..... Bunlara sD1rayla aEaDD1da cevap arD1yoruz.
+Bu Çalışmada MÜY665 İş Analitiği 2024-2025 Bahar Dönemi 1 numaralı
+Ödev'de verilen 3 numaralı görevleri yerine getireceğiz;
 
-## (a)
+a)  Veri Bilimi ve Endüstri Mühendisliği Üzerine Sohbetler - Mustafa
+    Baydoğan & Erdi Daşdemir isimli videonun kısa özetini aşağıda
+    görebilirsiniz;
 
-## deneme12
+Konu: Veriye Dayalı Karar Verme Farklı Sektörlerden Uygulamalar
 
-##deneme34
+Karar Verme Süreci
 
-```{r}
-1 + 1
+Veri + Analitik Kararlar
+
+1- Operasyon-Veri-Sorun/Gözlem/Uyarı: Sorun/durum tanımlama Amaç
+belirleme 2- Sorun/durum ile ilgili olası nedenlerin belirlenmesi 3-
+Sorun/durum ile ilgili verilerin ve gerekli bilgilerin toplanması 4-
+Alternatiflerin belirlenmesi, olası sonuçların tahmini ve en
+etkili/yararlı/uygulanabilir olanın seçilmesi
+
+Tahmin problemlerine bakış örneği:
+
+Kereste eğrilik tahmini Problem: Yaş kereste resminden eğrilik tahmini
+yapılabilir mi? Problemin önemi, veri, çözüm yöntemi üzerine karar verme
+süreci netleşiyor ve etki analizi gerçekleşiyor. Çözüm yöntemi: Görüntü
+işleme + makine öğrenimi Problemin temel nedeni araştırılır: Ağaç açısı,
+budak noktaları ve genç/yaşlı odun dağılımı Daha sonra nasıl sayıya
+dökülebilir. İşlenmiş veri-Öznitelikler-Makine öğrenimi algoritmaları
+Ham veriyi aldık, ön işlemeye tabi tuttuk sonra değişkenler çıkardık ve
+sonra öğreniciye verdik. Sonuçlar görselleştirilir.
+
+Geleneksel Öğrenme -- Derin Öğrenme ve Karar Verme Süreçleri
+
+1- Yorumlanabilirlik (İhtiyaç/Regülasyon?) 2- Yönlendirme (İndirim oranı
+arttıkça satışlar artar.) 3- Dirençli/Gürbüz olabilme (hava durumu
+tahmin hatalarından nasıl daha az etkilenebilirim) 4- Karar çevirebilme
+(Yarın saat 12-13 arası için kaç MW elektrik satın almalıyım?)
+
+Karar vermede tahmin doğruluğunun önemi
+
+Elektrik piyasası işlemleri: üretim ve tüketimin dengede olması gerekir.
+Lisanssız Üreticiler -- Perakende Şirketleri -- Tüketiciler Problemin
+önemi: Yıllık dengesizlik miktarı: 19.1 TWh Net zarar: 421 milyon TL
+Çözüm yönetimi: Özelleşmiş öznitelik çıkarımı + makine öğrenimi Karar:
+Piyasa dengesizliği ve üretim/tüketim öngörüsüne göre 24 saatlik satın
+alınacak elektrik miktarı Etki: 2018 yılında dengesizlik maliyetlerinde
+var olan sisteme kıyasla 6 milyon TL ek fayda Veri: Bölge tüketim
+verisi, Türkiye saatlik tüketimi, hava durumu ....
+
+Karar vermede tahmin doğruluğunun önemi
+
+Trendyol Örneği
+
+• Dijital ayak izi - Tıklama, favoriye ekleme, sepete ekle, sepetten
+çıkar, satın al, iptal et • Diğer veriler - İzlenim, yorumlar, Google
+trends, ürün özellikleri..... • Önerilen - Satış/Stok dengesi,
+popülerlik • Makine öğrenimi - Benzetme, tercih öğrenme, tahmini satış •
+Makine öğrenimi + Karar verme - Akıllı deneme yanılma - Minimum
+pişmanlık, maksimum ödül - Basit sıralama politikası
+
+ÇIKARIMLAR
+
+• Az ve/veya kirli veri ile uğraş ciddi insan kaynağı gerektiriyor. •
+Yapısal ve yapısal olmayan veri için alternatif yaklaşımlar geliştirme
+gereksinimi artmakta. • Açık veri kaynakları zengin bilgi içeriği
+sağlamakta. • İnsan yönlendirmesi fark yaratıyor. • Yorumlanabilirlik
+hala çok önemli durumda. • Karar verme için kullanılan tahminler yüzde
+yüz doğru olmak zorunda değil. Nokta tahminler yanıltıcı olabilir. •
+Karar verme için pekiştirmeli öğrenme yaklaşımları önemli hale gelmekte.
+
+b)  Fonksiyonlar ve döngüler ile veri özetleme için ödev yönergesinde
+    verilen direktiflere göre fonksiyonlar oluşturma;
+
+``` {r}
+data(mtcars) #mtcars veri setini çağırıyoruz
+  my_summary_stats<-function(y){ 
+    ortalamalar<-c() #verilerin depolanması için boş vektörler belirliyoruz
+    medianlar<-c()
+    sapmalar<-c()
+    minimumlar<-c()
+    maximumlar<-c()
+    ozellikler<-c()
+    for (x in 1:length(y)) { #farklı tip veri setlerinde de fonksiyonun çalışabilmesi için for döngüsünü veri setinin sütun sayısına bağlıyoruz
+      if (is.numeric(y[[x]])) { #sütunun numeric olup olmadığını kontrol ettiriyoruz
+       ortalamalar<-c(ortalamalar,mean(y[[x]])) #vektörlerimizin içini ilgili fonksiyonlarla dolduruyoruz
+       medianlar<-c(medianlar,median(y[[x]]))
+       sapmalar<-c(sapmalar,sd(y[[x]]))
+       minimumlar<-c(minimumlar,min(y[[x]]))
+       maximumlar<-c(maximumlar,max(y[[x]]))
+       ozellikler<-c(ozellikler,names(y[x]))
+      }}
+    formul_sonuc<<-data.frame(ozellikler,ortalamalar,medianlar,sapmalar,minimumlar,maximumlar) #sonuçlarımızı toplu bir şekilde raporlayabilmek için vektörlerimizden dataframe oluşturuyoruz
+    return(formul_sonuc)}
+
+my_summary_stats(mtcars)
+
+apply_my_summary_stats<-function(y){ #bir önceki aşamada for döngüsü ile yazdığımız fomülü bu sefer apply fonksiyonu yardımı ile oluşturacağız
+numerik_kolon<-y[sapply(y,is.numeric)] #veri setimizi sadece numerik kolonlardan oluşur hale getiriyoruz
+      ortalamalar<-apply(numerik_kolon,2,mean) #apply fonksiyonu yardımı ile vektörlerimizi oluşturup içlerini dolduruyoruz
+      medianlar<-apply(numerik_kolon,2,median)
+      sapmalar<-apply(numerik_kolon,2,sd)
+      minimumlar<-apply(numerik_kolon,2,min)
+      maximumlar<-apply(numerik_kolon,2,max)
+      ozellikler=names(numerik_kolon)
+  formul_sonuc<<-data.frame(ozellikler,ortalamalar,medianlar,sapmalar,minimumlar,maximumlar)#sonuçlarımızı toplu bir şekilde raporlayabilmek için vektörlerimizden dataframe oluşturuyoruz
+  return(formul_sonuc)}
+
+apply_my_summary_stats(mtcars)
+my_summary_stats(mtcars)
 ```
 
-## (b)
+c)  dslabs paketi içinde bulunan "na_example" veri seti üzerinde ödev
+    yönergesinde istenilen düzenlemeleri yapıyoruz;
+
+```{r}
+library(dslabs) #dslabs paketini çağırıyoruz    
+data(na_example) #na_example veri setini çağırıyoruz
+sum(is.na(na_example)) #na_example veri seti içinde kaç adet NA değer olduğunu buluyoruz
+degistir<-ifelse(is.na(na_example),2025,na_example) #na_example veri seti içindeki NA değerleri 2025 ile değiştiriyoruz
+sum(is.na(degistir)) #bütün NA değerlerin değiştirildiğinden emin oluyoruz
+sum(degistir==2025) # kontrol amaçlı olarak revize veri setimizde kaç adet 2025 var diye kontrol ediyoruz.
+```
