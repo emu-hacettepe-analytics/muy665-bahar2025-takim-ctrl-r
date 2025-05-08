@@ -13,21 +13,29 @@ title: "Servet Meriç Kürşad"
 
 ## İşler
 
-1.  Becthtel-Enka Joint Venture, pozisyon Civil Engineer-Saha İnşaat Mühendisi, yıl 2011-2014
+1.  Becthtel-Enka Joint Venture, Kosova, Route 7 Motorway Project, Civil Engineer-Saha Mühendisi, 2011-2013
 
-2.  Bechtel-Enka General Partnership, pozisyon Earthworks Manager-Toprak İşleri Müdürü, yıl 2014-2016
+2.  Becthtel-Enka Joint Venture, Umman, Development and completion of the design and building of the Muscat International Airport, Main Contract 3, Civil Engineer-Saha Mühendisi, 2013-2014
 
-3.  YP İnşaat, pozisyon QA/QC Manager-KK/KG Müdürü, yıl 2016-2017
+3.  Bechtel-Enka General Partnership, Kosova, Prishtine-Hani I Elezit Route 6 Motorway Project, Earthworks Manager-Toprak İşleri Müdürü, 2014-2016
 
-4.  REC Uluslararası, pozisyon QA/QC Manager-KK/KG Müdürü, yıl 2017-2018
+4.  YP İnşaat, Ankara, TANAP Project, "MCC" (Main Control Center) Construction Work, QA/QC Manager-KK/KG Müdürü, 2016-2017
 
-5.  Kolin İnşaat, pozisyon QA/QC Manager-KK/KG Müdürü, yıl 2018-2023
+5.  REC Uluslararası, Ankara, KALE Yerleşkesi II. Faz Yapım İşi, Yargıtay Başkanlığı Binası Yapım İşi, QA/QC Manager-KK/KG Müdürü, 2017-2018
 
-6.  Roketsan Roket A.Ş., pozisyon Senior Lead Engineer-Kıdemli Lider Mühendis, yıl 2023-ongoing
+6.  Kolin İnşaat, Senior Business Development and Tendering Engineer-İş Geliştirme ve Teklif Hazırlama Şef Yardımcısı, 2018-2023
+
+7.  Roketsan Roket A.Ş., Senior Lead Engineer-Kıdemli Lider Mühendis, 2023-Devam Ediyor
 
 ## Stajlar
 
-1.  Firma Kolin İnşaat, pozisyon Saha Mühendisi, yıl 2010
+1.  Kolin İnşaat, Erzurum Artvin Devlet Yolu Yapım İşi , 2010
+
+## Sertifikalar
+
+1.  Banka ve Ticaret Hukuku Araştırma Enstitüsü, Borçlar Hukuku Sertifika Programı, Haziran 2023
+
+2.  Banka ve Ticaret Hukuku Araştırma Enstitüsü, İnşaat Sözleşmeleri Hukuku Sertifika Programı, Eylül 2024
 
 # Yetkinlikler
 
@@ -35,4 +43,4 @@ R, Quarto, Git, VBA, Microsoft Access, Microsoft Office, Oracle Primavera
 
 # Hobiler
 
-Snowboard Yapmak, Trekking
+Snowboard, Trekking
