@@ -250,7 +250,7 @@
     "href": "proje.html",
     "title": "2018-2023 Yılları Arasında Türkiye’deki Boşanmaların Eğitim Düzeyleriyle İlişkisinin İnclenmesi",
     "section": "",
-    "text": "Proje sayfamıza hoş geldiniz.\nProjemizle ilgili güncellemelerden haberdar olmak için bu alanı takip edin.\n(Aşağıdaki başlıklar örnek olarak verilmiştir; lütfen gerektiği şekilde düzenlemekten çekinmeyin.)"
+    "text": "Proje sayfamıza hoş geldiniz.\nProjemizle ilgili güncellemelerden haberdar olmak için bu alanı takip edin."
   },
   {
     "objectID": "proje.html#data-source",
@@ -334,57 +334,57 @@
     "objectID": "proje.html#veri-kaynağı",
     "href": "proje.html#veri-kaynağı",
     "title": "2018-2023 Yılları Arasında Türkiye’deki Boşanmaların Eğitim Düzeyleriyle İlişkisinin İnclenmesi",
-    "section": "2.1 Veri Kaynağı",
-    "text": "2.1 Veri Kaynağı\nxxxxxx"
+    "section": "1.2 Veri Kaynağı",
+    "text": "1.2 Veri Kaynağı\nVeriler Türkiye İstatistik Kurumu’ndan alınmıştır.\n\nUlusal Eğitim İstatistikleri, 2023, TÜİK, 30 Mayıs 2024, 53444, https://data.tuik.gov.tr/Bulten/Index?p=Ulusal-Egitim-Istatistikleri-2023-53444\nEvlenme ve Boşanma İstatistikleri, 2024, TÜİK, 24 Şubat 2025, 54194, https://data.tuik.gov.tr/Bulten/Index?p=Evlenme-ve-Bosanma-Istatistikleri-2024-54194\nMedeni Durum İstatistikleri - Nüfus İstatistikleri Portalı, https://nip.tuik.gov.tr/?value=MedeniDurum"
   },
   {
     "objectID": "proje.html#veri-hakkında-genel-bilgiler",
     "href": "proje.html#veri-hakkında-genel-bilgiler",
     "title": "2018-2023 Yılları Arasında Türkiye’deki Boşanmaların Eğitim Düzeyleriyle İlişkisinin İnclenmesi",
-    "section": "2.2 Veri Hakkında Genel Bilgiler",
-    "text": "2.2 Veri Hakkında Genel Bilgiler\nxxxxxx"
+    "section": "1.3 Veri Hakkında Genel Bilgiler",
+    "text": "1.3 Veri Hakkında Genel Bilgiler\nBu çalışmada, 2018-2023 yılları arasındaki boşanma verilerinin, Türkiye’deki illerdeki eğitim düzeylerine göre incelenmesi amaçlanmıştır. Bu kapsamda, Türkiye İstatistik Kurumu’ndan (TÜİK) elde edilen ham veriler kullanılmıştır.\n\n1.3.1 Veri Setleri:\nAnalizde kullanılan veri setleri aşağıdaki gibidir:\nİllere Göre +15 Yaş Bitirilen Eğitim Durumu:\nBu veri seti, Türkiye’de 15 yaş ve üzeri bireylerin eğitim düzeylerine göre dağılımını iller bazında içermektedir. Eğitim düzeyleri 10 düzeye ayrılmıştır. Bunlar: - Okuryazar olmayanlar - Okuryazar ancak okul bitirmemiş olanlar - İlkokul mezunları - İlköğretim mezunları - Ortaokul ve dengi meslek okulu mezunları - Lise ve dengi meslek okulu mezunları - Yüksekokul veya fakülte mezunları - Yüksek lisans mezunları - Doktora mezunları - Bilinmeyen\nİllere Göre Boşanma Sayıları:\nBu veri seti, Türkiye’deki illerde yıllara göre gerçekleşen boşanma sayılarını içermektedir. Veriler 2018’den 2023’e kadar olan dönemi kapsamaktadır.\nİllere Göre Medeni Durum:\nBu veri seti, Türkiye’deki illerdeki medeni durum dağılımını göstermektedir. Veriler, 4 kategoride düzenlenmiştir.Bunlar: - Hiç evlenmedi - Evli - Boşanmış - Eşi Öldü\nAnaliz Yöntemi:\nİlk olarak, yıllara göre Türkiye genelindeki eğitim düzeylerinin dağılımı görselleştirilecektir. Sonrasında, eğitim düzeylerinin illere göre dağılımı incelenecektir.\nYıllara göre Türkiye genelindeki boşanma oranları analiz edilip görselleştirilecektir. Boşanma oranlarının illere göre dağılımı da ayrıca ele alınacaktır.\nSon olarak, illere göre eğitim düzeyine göre sıralanan boşanma oranları karşılaştırılarak sonuç çıkarılacaktır.\nVeri Kaynağı ve Güvenilirlik: Tüm veriler Türkiye İstatistik Kurumu (TÜİK) tarafından yayımlanmış güncel ve resmi verilerdir. Bu nedenle analiz sonuçlarının güvenilirliği TÜİK tarafından belirtildiği hali ile güvenilir kabul edilmelidir."
   },
   {
     "objectID": "proje.html#tercih-sebebi",
     "href": "proje.html#tercih-sebebi",
     "title": "2018-2023 Yılları Arasında Türkiye’deki Boşanmaların Eğitim Düzeyleriyle İlişkisinin İnclenmesi",
-    "section": "2.3 Tercih Sebebi",
-    "text": "2.3 Tercih Sebebi\nxxxxxx"
+    "section": "1.1 Tercih Sebebi",
+    "text": "1.1 Tercih Sebebi\nBu araştırmanın yapılmasının temel sebeplerinden biri, Türkiye’deki boşanma oranlarının eğitim düzeyleriyle olan ilişkisine dair literatürde ve resmi kaynaklarda eksik ya da yetersiz bilgi bulunmasıdır.\nAraştırmanın Tercih Sebebi\n1. Bilgi Eksikliği ve İlk Olma Niteliği: TÜİK verileri incelendiğinde, boşanma istatistiklerinde eğitim düzeyine dair doğrudan bir veri bulunmamaktadır. Bu, boşanma ve eğitim ilişkisini ele alan bilimsel çalışmaların sayısını oldukça kısıtlamaktadır. Bu araştırma, eğitim düzeylerinin boşanma oranları üzerindeki etkisini inceleyen ilk kapsamlı çalışma olma özelliği taşıdığı için önemli bir boşluğu dolduracaktır.\n2. Toplumsal Yapı ve Sosyoekonomik İlişkiler: Eğitim düzeyi, bireylerin toplumsal yapıdaki konumunu ve sosyoekonomik durumunu doğrudan etkileyen önemli bir faktördür. Boşanmanın sosyal ve ekonomik sonuçlarını anlamak için, eğitim seviyesinin bu süreçteki rolünü belirlemek gereklidir. Bu araştırma, eğitim düzeyi ile boşanma arasındaki ilişkiyi ortaya koyarak, toplumsal yapı ve aile yapısı üzerine önemli bilgiler sunacaktır.\n3. Politika Geliştirme ve Toplumsal Farkındalık: Eğitim düzeylerinin aile içi dinamikler ve evlilik başarısı üzerindeki etkisini anlamak, politika yapıcılar için yol gösterici olacaktır. Eğitim politikalarını geliştirmek, aile yapısını güçlendirmek ve boşanma oranlarını düşürmek için bu çalışmanın bulguları önemli katkılar sağlayacaktır.\n4. Veri Temelli Yaklaşım: Araştırmanın temel amacı, TÜİK’ten elde edilen eğitim ve boşanma verilerini bir araya getirerek istatistiksel analiz yapmaktır. Bu bağlamda, elde edilen verilerin analiz edilmesi ve görselleştirilmesi, literatürde daha önce yapılmamış bir çalışma olarak değer taşıyacaktır.\n5. Akademik ve Bilimsel Katkı: Bu araştırma, sosyoloji, demografi ve eğitim bilimleri gibi birçok disiplinde referans alınabilecek nitelikte olacaktır. Bu nedenle, akademik camiada önemli bir kaynak oluşturma potansiyeline sahiptir."
   },
   {
     "objectID": "proje.html#ön-işleme",
     "href": "proje.html#ön-işleme",
     "title": "2018-2023 Yılları Arasında Türkiye’deki Boşanmaların Eğitim Düzeyleriyle İlişkisinin İnclenmesi",
-    "section": "2.4 Ön İşleme",
-    "text": "2.4 Ön İşleme\nxxxxxx"
+    "section": "1.2 Ön İşleme",
+    "text": "1.2 Ön İşleme\nxxxxxx"
   },
   {
     "objectID": "proje.html#keşifsel-veri-analizi",
     "href": "proje.html#keşifsel-veri-analizi",
     "title": "2018-2023 Yılları Arasında Türkiye’deki Boşanmaların Eğitim Düzeyleriyle İlişkisinin İnclenmesi",
-    "section": "3.1 Keşifsel Veri Analizi",
-    "text": "3.1 Keşifsel Veri Analizi\nxxxxxx"
+    "section": "2.1 Keşifsel Veri Analizi",
+    "text": "2.1 Keşifsel Veri Analizi\nxxxxxx"
   },
   {
     "objectID": "proje.html#trend-analizi",
     "href": "proje.html#trend-analizi",
     "title": "2018-2023 Yılları Arasında Türkiye’deki Boşanmaların Eğitim Düzeyleriyle İlişkisinin İnclenmesi",
-    "section": "3.2 Trend Analizi",
-    "text": "3.2 Trend Analizi\nxxxxxx"
+    "section": "2.2 Trend Analizi",
+    "text": "2.2 Trend Analizi\nxxxxxx"
   },
   {
     "objectID": "proje.html#model-uydurma",
     "href": "proje.html#model-uydurma",
     "title": "2018-2023 Yılları Arasında Türkiye’deki Boşanmaların Eğitim Düzeyleriyle İlişkisinin İnclenmesi",
-    "section": "3.3 Model Uydurma",
-    "text": "3.3 Model Uydurma\nxxxxxx"
+    "section": "2.3 Model Uydurma",
+    "text": "2.3 Model Uydurma\nxxxxxx"
   },
   {
     "objectID": "proje.html#sonuçlar",
     "href": "proje.html#sonuçlar",
     "title": "2018-2023 Yılları Arasında Türkiye’deki Boşanmaların Eğitim Düzeyleriyle İlişkisinin İnclenmesi",
-    "section": "3.4 Sonuçlar",
-    "text": "3.4 Sonuçlar\nxxxxxx"
+    "section": "2.4 Sonuçlar",
+    "text": "2.4 Sonuçlar\nxxxxxx"
   },
   {
     "objectID": "portfolyo/calisma1.html#a",

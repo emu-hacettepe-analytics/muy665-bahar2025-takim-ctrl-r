@@ -9,27 +9,85 @@ number-sections: true
 
 # Proje Genel Bakış ve Kapsamı
 
-xxxxxx
+Bu proje kapsamında, Türkiye’de 2018-2023 yılları arasında illere göre boşanma oranlarının eğitim düzeyiyle olan ilişkisi analiz edilmiştir. Amaç, eğitim düzeylerinin boşanma oranları üzerinde nasıl bir etkisi olduğunu tespit etmek ve yıllara göre bu ilişkinin nasıl değiştiğini ortaya koymaktır.
 
-# Veri
+Veri kaynakları olarak Türkiye İstatistik Kurumu (TÜİK) tarafından sağlanan veriler kullanılmıştır. Bu veriler arasında illere göre bitirilen eğitim durumları, illere göre boşanma sayıları ve illere göre medeni durumlar bulunmaktadır. Veriler R programlama dili kullanılarak işlenmiş, görselleştirilmiş ve analiz edilmiştir.
 
-xxxxxx
+Bu çalışmada, boşanma oranlarının farklı eğitim seviyeleri ile nasıl bir ilişki içinde olduğu analiz edilerek, elde edilen bulgular üzerinden yorumlar yapılacaktır. Elde edilen veriler grafiksel olarak sunulacak ve yıllara göre boşanma oranlarındaki değişimler incelenecektir.
 
-## Veri Kaynağı
-
-xxxxxx
-
-## Veri Hakkında Genel Bilgiler
-
-xxxxxx
+Bu rapor, boşanma oranlarının eğitim düzeyiyle olan ilişkisini ortaya koyarken, aynı zamanda toplumsal yapı ve eğitim politikaları üzerine de önemli çıkarımlarda bulunmayı hedeflemektedir.
 
 ## Tercih Sebebi
 
-xxxxxx
+Bu araştırmanın yapılmasının temel sebeplerinden biri, Türkiye'deki boşanma oranlarının eğitim düzeyleriyle olan ilişkisine dair literatürde ve resmi kaynaklarda eksik ya da yetersiz bilgi bulunmasıdır.
 
-## Ön İşleme
+**<u>Araştırmanın Tercih Sebebi</u>**
 
-xxxxxx
+**1. Bilgi Eksikliği ve İlk Olma Niteliği:**
+TÜİK verileri incelendiğinde, boşanma istatistiklerinde eğitim düzeyine dair doğrudan bir veri bulunmamaktadır. Bu, boşanma ve eğitim ilişkisini ele alan bilimsel çalışmaların sayısını oldukça kısıtlamaktadır. Bu araştırma, eğitim düzeylerinin boşanma oranları üzerindeki etkisini inceleyen ilk kapsamlı çalışma olma özelliği taşıdığı için önemli bir boşluğu dolduracaktır.
+
+**2. Toplumsal Yapı ve Sosyoekonomik İlişkiler:**
+Eğitim düzeyi, bireylerin toplumsal yapıdaki konumunu ve sosyoekonomik durumunu doğrudan etkileyen önemli bir faktördür. Boşanmanın sosyal ve ekonomik sonuçlarını anlamak için, eğitim seviyesinin bu süreçteki rolünü belirlemek gereklidir. Bu araştırma, eğitim düzeyi ile boşanma arasındaki ilişkiyi ortaya koyarak, toplumsal yapı ve aile yapısı üzerine önemli bilgiler sunacaktır.
+
+**3. Politika Geliştirme ve Toplumsal Farkındalık:**
+Eğitim düzeylerinin aile içi dinamikler ve evlilik başarısı üzerindeki etkisini anlamak, politika yapıcılar için yol gösterici olacaktır. Eğitim politikalarını geliştirmek, aile yapısını güçlendirmek ve boşanma oranlarını düşürmek için bu çalışmanın bulguları önemli katkılar sağlayacaktır.
+
+**4. Veri Temelli Yaklaşım:**
+Araştırmanın temel amacı, TÜİK'ten elde edilen eğitim ve boşanma verilerini bir araya getirerek istatistiksel analiz yapmaktır. Bu bağlamda, elde edilen verilerin analiz edilmesi ve görselleştirilmesi, literatürde daha önce yapılmamış bir çalışma olarak değer taşıyacaktır.
+
+**5. Akademik ve Bilimsel Katkı:**
+Bu araştırma, sosyoloji, demografi ve eğitim bilimleri gibi birçok disiplinde referans alınabilecek nitelikte olacaktır. Bu nedenle, akademik camiada önemli bir kaynak oluşturma potansiyeline sahiptir.
+
+## Veri Kaynağı
+Veriler Türkiye İstatistik Kurumu'ndan alınmıştır.
+
+1. Ulusal Eğitim İstatistikleri, 2023, TÜİK, 30 Mayıs 2024, 53444, https://data.tuik.gov.tr/Bulten/Index?p=Ulusal-Egitim-Istatistikleri-2023-53444
+2. Evlenme ve Boşanma İstatistikleri, 2024, TÜİK, 24 Şubat 2025, 54194, https://data.tuik.gov.tr/Bulten/Index?p=Evlenme-ve-Bosanma-Istatistikleri-2024-54194
+3. Medeni Durum İstatistikleri - Nüfus İstatistikleri Portalı, https://nip.tuik.gov.tr/?value=MedeniDurum
+
+## Veri Hakkında Genel Bilgiler
+
+Bu çalışmada, 2018-2023 yılları arasındaki boşanma verilerinin, Türkiye'deki illerdeki eğitim düzeylerine göre incelenmesi amaçlanmıştır. Bu kapsamda, Türkiye İstatistik Kurumu’ndan (TÜİK) elde edilen ham veriler kullanılmıştır.
+
+### Veri Setleri:
+Analizde kullanılan veri setleri aşağıdaki gibidir:
+
+**İllere Göre +15 Yaş Bitirilen Eğitim Durumu:**
+
+Bu veri seti, Türkiye’de 15 yaş ve üzeri bireylerin eğitim düzeylerine göre dağılımını iller bazında içermektedir. Eğitim düzeyleri 10 düzeye ayrılmıştır. Bunlar:
+- Okuryazar olmayanlar
+- Okuryazar ancak okul bitirmemiş olanlar
+- İlkokul mezunları
+- İlköğretim mezunları
+- Ortaokul ve dengi meslek okulu mezunları
+- Lise ve dengi meslek okulu mezunları
+- Yüksekokul veya fakülte mezunları
+- Yüksek lisans mezunları
+- Doktora mezunları
+- Bilinmeyen
+
+**İllere Göre Boşanma Sayıları:**
+
+Bu veri seti, Türkiye’deki illerde yıllara göre gerçekleşen boşanma sayılarını içermektedir. Veriler 2018'den 2023'e kadar olan dönemi kapsamaktadır.
+
+**İllere Göre Medeni Durum:**
+
+Bu veri seti, Türkiye’deki illerdeki medeni durum dağılımını göstermektedir. Veriler, 4 kategoride düzenlenmiştir.Bunlar:
+- Hiç evlenmedi
+- Evli
+- Boşanmış
+- Eşi Öldü
+
+**Analiz Yöntemi:**
+
+İlk olarak, yıllara göre Türkiye genelindeki eğitim düzeylerinin dağılımı görselleştirilecektir. Sonrasında, eğitim düzeylerinin illere göre dağılımı incelenecektir.
+
+Yıllara göre Türkiye genelindeki boşanma oranları analiz edilip görselleştirilecektir. Boşanma oranlarının illere göre dağılımı da ayrıca ele alınacaktır.
+
+Son olarak, illere göre eğitim düzeyine göre sıralanan boşanma oranları karşılaştırılarak sonuç çıkarılacaktır.
+
+**Veri Kaynağı ve Güvenilirlik:**
+Tüm veriler Türkiye İstatistik Kurumu (TÜİK) tarafından yayımlanmış güncel ve resmi verilerdir. Bu nedenle analiz sonuçlarının güvenilirliği TÜİK tarafından belirtildiği hali ile güvenilir kabul edilmelidir.
 
 # Analiz
 
