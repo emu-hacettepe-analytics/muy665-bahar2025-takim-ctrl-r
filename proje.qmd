@@ -1,13 +1,11 @@
 ---
-title: "Proje X (proje adını yazınız)"
+title: "2018-2023 Yılları Arasında Türkiye'deki Boşanmaların Eğitim Düzeyleriyle İlişkisinin İnclenmesi"
 number-sections: true
 ---
 
 **Proje sayfamıza hoş geldiniz.**
 
 *Projemizle ilgili güncellemelerden haberdar olmak için bu alanı takip edin.*
-
-(Aşağıdaki başlıklar örnek olarak verilmiştir; lütfen gerektiği şekilde düzenlemekten çekinmeyin.)
 
 # Proje Genel Bakış ve Kapsamı
 
