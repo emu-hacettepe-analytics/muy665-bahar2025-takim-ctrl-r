@@ -2,52 +2,53 @@
 title: "Çalışma 2"
 ---
 
+[Veri Seti](/assets/veri_edited_en.csv)
+
 Projemizde yaptığımız veri analizinin kodlarını aşağıda görebilirsiniz;
 
 
-library(tidyverse)
-library(dslabs)
-library(dplyr)
-bosanma_long <- tbl_bosanma %>%
-  pivot_longer(-Province_name, names_to = "years", values_to = "bosanma_sayisi")
-bosanma_sirali<-arrange(bosanma_long,years)
-bosanma_sirali<-bosanma_sirali|>relocate(years,.before=Province_name)
-bosanma_son<-filter(bosanma_sirali,years>=2008,years<2024)
-bosanma_son$years<-as.numeric(bosanma_son$years)
-toplu_tablo1 <- left_join(tbl_egitim, bosanma_son, by = c("years" = "years", "Province_name" = "Province_name"))
-medeni_yeni<-select(tbl_medeni,"Year","Province","Married-Total","Divorced-Total")
-medeni_yeni<-arrange(medeni_yeni,Year)                              
-medeni_son<-filter(medeni_yeni,Year<2024)
-medeni_son$Year<-as.numeric(medeni_son$Year)
-toplu_tablo<-left_join(toplu_tablo1, medeni_son, by = c("years" = "Year", "Province_name" = "Province"))
-toplu_tablo<-filter(toplu_tablo,years>=2018)
-egitim_orani<-toplu_tablo %>%
-  group_by(years) %>%
-  summarise(across(c("General_Total-Total", "Primary_school-Total","Lower_secondary_school-Total","Upper_secondary_school-Total","Universities_and_other_higher_educational_institutions-Total","Master_(Including_5_or_6_Years_Faculties)-Total","Doctorate-Total"), ~ sum(.x, na.rm = TRUE)))
-egitim_orani <- egitim_orani %>%
-  mutate(
-    egitim = 
-      `Primary_school-Total` +
-      `Lower_secondary_school-Total` +
-      `Upper_secondary_school-Total` +
-      `Universities_and_other_higher_educational_institutions-Total` +
-      `Master_(Including_5_or_6_Years_Faculties)-Total` +
-      `Doctorate-Total`
-  )
-egitim_orani <- egitim_orani %>%
-  mutate(egitim_orani = egitim/`General_Total-Total`  )
-toplu_tablo<-toplu_tablo %>%
-  mutate(Illiterate_rate=`Illiterate-Total`/`General_Total-Total`
-           )
-toplu_tablo<-toplu_tablo %>%
-  mutate(higher_edu=`Universities_and_other_higher_educational_institutions-Total`+`Master_(Including_5_or_6_Years_Faculties)-Total`+`Doctorate-Total`
-  )
-toplu_tablo<-toplu_tablo %>%
-  mutate(higher_edu_rate=higher_edu/`General_Total-Total`
-  )
-toplu_tablo<-toplu_tablo %>%
-  mutate(divorce_rate=`Divorced-Total`/`General_Total-Total`
-  )
+```{r}
+# Kütüphaneler
+suppressPackageStartupMessages(library(readr))
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(tidyr))  # pivot_longer fonksiyonu için
+
+# Veriyi yükleme
+egitim_veri <- read.csv("./calisma2-veriler/veri_edited_en.csv", header = TRUE, sep = ";", encoding = "UTF-8")
+# bosanma_veri <- read.csv("./calisma2-veriler/bosanma_verisi.csv", header = TRUE, sep = ";", encoding = "UTF-8")
+
+# İl listesini tanımlama
+iller <- c("TR","Ankara", "İstanbul", "İzmir", "Bursa", "Antalya")
+
+# For döngüsü
+for (il in iller) {
+  
+  # Veriyi 2018-2023 yılları ile sınırlama
+  egitim_veri_filtreli <- egitim_veri %>% filter(province_name == il)
+  
+  # Veriyi uzun formata dönüştürme (karşılaştırılabilir barlar için)
+  egitim_veri_long <- egitim_veri_filtreli %>%
+    select(year, illiterate_total, literate_without_diploma_total, primary_school_total, primary_education_total) %>%
+    pivot_longer(cols = -year, names_to = "Egitim_Duzeyi", values_to = "Kisi_Sayisi")
+  
+  # Bar chart oluşturma
+  print(ggplot(egitim_veri_long, aes(x = factor(year), y = Kisi_Sayisi, fill = Egitim_Duzeyi)) +
+    geom_bar(stat = "identity", position = "dodge") +
+    scale_y_continuous(labels = function(x) paste(x / 1e6, "M"), limits = c(0, ifelse(il == "TR", 15e6, 1e6))) +
+    labs(title = ifelse(il == "TR", "2018-2023 Yılları Arası Turkiye Geneli Eğitim Duzeyleri", paste("2018-2023 Yılları Arası", il, "Egitim Duzeyleri")),
+         x = "Yıllar", y = "Kisi Sayisi") +
+    scale_fill_manual(values = c("illiterate_total" = "red", 
+                                 "literate_without_diploma_total" = "orange", 
+                                 "primary_school_total" = "green", 
+                                 "primary_education_total" = "blue"),
+                      labels = c("Okuma Yazma Bilmeyen", 
+                                 "Okur Yazar Olup Okul Bitirmeyen", 
+                                 "İlkokul Mezunları", 
+                                 "İlköğretim Mezunları")) +
+  theme_minimal())
+}
+
 
 ```
 
