@@ -313,7 +313,7 @@
     "href": "portfolyo/calisma2.html",
     "title": "Çalışma 2",
     "section": "",
-    "text": "(Aşağıdakiler örnek olarak verilmiştir.)\nBu çalışmada 3 görevimiz var. Bu görevler….. Bunlara sırayla aşağıda cevap arıyoruz.",
+    "text": "Projemizde yaptığımız veri analizinin kodlarını aşağıda görebilirsiniz;\nlibrary(tidyverse) library(dslabs) library(dplyr) bosanma_long &lt;- tbl_bosanma %&gt;% pivot_longer(-Province_name, names_to = “years”, values_to = “bosanma_sayisi”) bosanma_sirali&lt;-arrange(bosanma_long,years) bosanma_sirali&lt;-bosanma_sirali|&gt;relocate(years,.before=Province_name) bosanma_son&lt;-filter(bosanma_sirali,years&gt;=2008,years&lt;2024) bosanma_son\\(years&lt;-as.numeric(bosanma_son\\)years) toplu_tablo1 &lt;- left_join(tbl_egitim, bosanma_son, by = c(“years” = “years”, “Province_name” = “Province_name”)) medeni_yeni&lt;-select(tbl_medeni,“Year”,“Province”,“Married-Total”,“Divorced-Total”) medeni_yeni&lt;-arrange(medeni_yeni,Year)\nmedeni_son&lt;-filter(medeni_yeni,Year&lt;2024) medeni_son\\(Year&lt;-as.numeric(medeni_son\\)Year) toplu_tablo&lt;-left_join(toplu_tablo1, medeni_son, by = c(“years” = “Year”, “Province_name” = “Province”)) toplu_tablo&lt;-filter(toplu_tablo,years&gt;=2018) egitim_orani&lt;-toplu_tablo %&gt;% group_by(years) %&gt;% summarise(across(c(“General_Total-Total”, “Primary_school-Total”,“Lower_secondary_school-Total”,“Upper_secondary_school-Total”,“Universities_and_other_higher_educational_institutions-Total”,“Master_(Including_5_or_6_Years_Faculties)-Total”,“Doctorate-Total”), ~ sum(.x, na.rm = TRUE))) egitim_orani &lt;- egitim_orani %&gt;% mutate( egitim = Primary_school-Total + Lower_secondary_school-Total + Upper_secondary_school-Total + Universities_and_other_higher_educational_institutions-Total + Master_(Including_5_or_6_Years_Faculties)-Total + Doctorate-Total ) egitim_orani &lt;- egitim_orani %&gt;% mutate(egitim_orani = egitim/General_Total-Total ) toplu_tablo&lt;-toplu_tablo %&gt;% mutate(Illiterate_rate=Illiterate-Total/General_Total-Total ) toplu_tablo&lt;-toplu_tablo %&gt;% mutate(higher_edu=Universities_and_other_higher_educational_institutions-Total+Master_(Including_5_or_6_Years_Faculties)-Total+Doctorate-Total ) toplu_tablo&lt;-toplu_tablo %&gt;% mutate(higher_edu_rate=higher_edu/General_Total-Total ) toplu_tablo&lt;-toplu_tablo %&gt;% mutate(divorce_rate=Divorced-Total/General_Total-Total )\n```\n\n\n\n Back to top",
     "crumbs": [
       "Portfolyo",
       "Çalışma 2"
@@ -384,7 +384,7 @@
     "href": "proje.html#sonuçlar",
     "title": "2018-2023 Yılları Arasında Türkiye’deki Boşanmaların Eğitim Düzeyleriyle İlişkisinin İnclenmesi",
     "section": "2.4 Sonuçlar",
-    "text": "2.4 Sonuçlar\nxxxxxx"
+    "text": "2.4 Sonuçlar\nİki veri de ( Egitim ve boşanma) yıllar içinde artış göstermektedir. Eğitim oranı 2018’de %13.16 iken 2023’te %16.87’ye çıkarak yaklaşık %3.7’lik bir artış göstermiştir. Boşanma oranı ise aynı dönemde %9.63’ten %11.84’e çıkarak yaklaşık %2.2’lik bir artış göstermiştir. 2022 ve 2023 yıllarında boşanma oranı sabit kalırken, eğitim oranı küçük de olsa artmaya devam etmiştir. 2018–2023 dönemi, hem eğitimin hem de boşanmanın arttığı bir dönemdir."
   },
   {
     "objectID": "portfolyo/calisma1.html#a",
