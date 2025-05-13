@@ -54,48 +54,106 @@ Analizde kullanılan veri setleri aşağıdaki gibidir:
 
 **İllere Göre +15 Yaş Bitirilen Eğitim Durumu:**
 
-Bu veri seti, Türkiye’de 15 yaş ve üzeri bireylerin eğitim düzeylerine göre dağılımını iller bazında içermektedir. Eğitim düzeyleri 10 düzeye ayrılmıştır. Bunlar:
+Bu veri seti, Türkiye’de 15 yaş ve üzeri bireylerin eğitim düzeylerine göre dağılımını iller bazında içermektedir. Eğitim düzeyleri 9 düzeye ayrılmıştır. Bunlar:
 - Okuryazar olmayanlar
 - Okuryazar ancak okul bitirmemiş olanlar
 - İlkokul mezunları
 - İlköğretim mezunları
 - Ortaokul ve dengi meslek okulu mezunları
-- Lise ve dengi meslek okulu mezunları
-- Yüksekokul veya fakülte mezunları
+- Lise mezunları
+- Lisans mezunları
 - Yüksek lisans mezunları
 - Doktora mezunları
-- Bilinmeyen
 
 **İllere Göre Boşanma Sayıları:**
 
 Bu veri seti, Türkiye’deki illerde yıllara göre gerçekleşen boşanma sayılarını içermektedir. Veriler 2018'den 2023'e kadar olan dönemi kapsamaktadır.
 
-**İllere Göre Medeni Durum:**
-
-Bu veri seti, Türkiye’deki illerdeki medeni durum dağılımını göstermektedir. Veriler, 4 kategoride düzenlenmiştir.Bunlar:
-- Hiç evlenmedi
-- Evli
-- Boşanmış
-- Eşi Öldü
 
 **Analiz Yöntemi:**
 
-İlk olarak, yıllara göre Türkiye genelindeki eğitim düzeylerinin dağılımı görselleştirilecektir. Sonrasında, eğitim düzeylerinin illere göre dağılımı incelenecektir.
+İlk olarak, yıllara göre Türkiye genelindeki eğitim düzeylerinin dağılımı görselleştirilecektir. Aynı yıllardaki boşanma sayıları da ikincil bir veri olarak gösterilecektir.
 
-Yıllara göre Türkiye genelindeki boşanma oranları analiz edilip görselleştirilecektir. Boşanma oranlarının illere göre dağılımı da ayrıca ele alınacaktır.
-
-Son olarak, illere göre eğitim düzeyine göre sıralanan boşanma oranları karşılaştırılarak sonuç çıkarılacaktır.
+Sonrasında belirli illerdeki eğitim durumlarına göre boşanma sayıları karşılaştırılması yapılacaktır. Türkiye'de zorunlu eğitim süresi Lise düzeyine kadar olduğu için, iller seçilirken Lise Mezunları sayısının en düşük ve en yüksek olduğu 3 il belirlenmiş ve bunların gösterimleri yapılmıştır.
 
 **Veri Kaynağı ve Güvenilirlik:**
 Tüm veriler Türkiye İstatistik Kurumu (TÜİK) tarafından yayımlanmış güncel ve resmi verilerdir. Bu nedenle analiz sonuçlarının güvenilirliği TÜİK tarafından belirtildiği hali ile güvenilir kabul edilmelidir.
 
 # Analiz
 
-Veri analizimizin kodlarını portfolyo sayfamızda görebilirsiniz. Aşağıda analiz sonuçları yorumlanmıştır.
+Çalışmanın bu bölümünde, 2018–2023 yılları arasında Türkiye’deki eğitim düzeyine ilişkin veriler analiz edilmiştir. 2018 yılında toplam eğitim görmüş kişi sayısı 60 Milyon'un biraz üzerindeyken, bu sayı yıllar içerisinde doğrusal bir artış göstererek 2023 yılında 65 Milyon'u geçmiştir. 
 
-Çalışmanın bu bölümünde, 2018–2023 yılları arasında Türkiye’deki eğitim düzeyine ilişkin veriler analiz edilmiştir. 2018 yılında toplam eğitim görmüş kişi sayısı 61.844.096 iken, bu sayı yıllar içerisinde doğrusal bir artış göstererek 2023 yılında 65.739.229’a ulaşmıştır. İncelenen dönemde, Türkiye nüfusu genelinde eğitimli bireylerin toplam nüfus içindeki oranı %75’ten %77’ye yükselmiştir. 
-Eğitim düzeylerine göre elde edilen veriler incelendiğinde, özellikle yüksekokul ve üzeri eğitim seviyelerine sahip bireylerin oranında artış olduğu gözlemlenmiştir. Buna karşılık, yalnızca ilkokul düzeyinde eğitim almış ya da hiç okuma yazma bilmeyen bireylerin oranında azalma meydana gelmiştir. Öte yandan, doktora ve üzeri düzeyde eğitim gören bireylerin oranında kayda değer bir değişim görülmemektedir. 
-Bu bulgular doğrultusunda, genel eğilim; bireylerin ağırlıklı olarak lise/meslek okulu, lisans ve lisansüstü düzeyde eğitim almaya yöneldiği şeklinde değerlendirilebilir.
+
+```{r}
+  
+# Kütüphaneler
+suppressPackageStartupMessages(library(readr))
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(tidyr))  # pivot_longer fonksiyonu için
+
+# Read bar data
+bar_data <- read.csv("./portfolyo/calisma2-veriler/veri_edited_en.csv", header = TRUE, encoding = "UTF-8", sep = ";")
+
+# Read line data
+line_data <- read.csv("./portfolyo/calisma2-veriler/bosanma_verisi_edited.csv", header = TRUE, encoding = "UTF-8", sep = ";")
+
+# Reshape bar data to long format
+bar_data_long <- bar_data %>%
+  pivot_longer(cols = c("illiterate_total", "literate_without_diploma_total", "primary_school_total", "primary_education_total",
+                        "lower_secondary_school_total", "upper_secondary_school_total",
+                        "universities_and_other_higher_educational_institutions_total",
+                        "master_total", "doctorate_total"), names_to = "EducationLevel", values_to = "Total")
+
+# Merge data to ensure categories are aligned
+merged_data <- merge(bar_data_long, line_data, by = "year", all.x = TRUE)
+
+# İl listesini tanımlama
+iller <- c("TR")
+
+for (il in iller) {
+  max_value <- max(merged_data[il])
+  coef <- 10e6/max_value
+  
+  # Create the dual-axis plot
+  print(ggplot(merged_data, aes(x = year, fill = EducationLevel)) +
+    geom_bar(aes(y = Total), stat = "identity", position = "dodge", alpha = 1) +
+    geom_line(aes(x = year, y = !!sym(il) * coef, group = "bosanma"), color = "brown", linewidth = 1) +
+  scale_fill_manual(values = c("doctorate_total" ="#003f5c",
+                               "illiterate_total" = "#2f4b7c", 
+                               "literate_without_diploma_total" = "#665191",
+                               "lower_secondary_school_total" = "#c558a1",
+                               "master_total" = "#a05195",
+                               "primary_education_total" = "#d45087",
+                               "primary_school_total" = "#f95d6a", "universities_and_other_higher_educational_institutions_total" ="#ff7c43",
+                               "upper_secondary_school_total" ="#ffa600"
+                               ),
+                    labels = c("Doktora Mezunları",
+                               "Okuma Yazma Bilmeyen",
+                               "Okur Yazar Olup Okul Bitirmeyen",
+                               "Ortaokul Mezunları",
+                               "Yüksek Lisans Mezunları",
+                               "İlkokul Mezunları",
+                               "İlköğretim Mezunları",
+                               "Lisans Mezunları",
+                               "Lise Mezunları"
+                               )) +
+    
+    scale_y_continuous(
+      name = "Kişi Sayısı",
+      sec.axis = sec_axis(~ . / coef, name="Boşanma Sayısı"),
+      labels = function(x) paste(x / 1e6, "M")
+    ) +
+    scale_x_continuous(
+      name = "Years",
+      breaks = 2018:2023  # Step 1 on x-axis
+    ) +
+    labs(title = ifelse(il == "TR", "2018-2023 Yılları Arası Turkiye Geneli Eğitim Duzeyleri", paste("2018-2023 Yılları Arası", il, "Egitim Duzeyleri")), fill = "Eğitim Durumu") +
+    theme_minimal())
+}
+
+```
+
 
 Çalışmanın bu bölümünde 2018 ve 2023 yılları arasındaki illerin eğitim düzeyine iliskin veriler analiz edilmiştir.
 2018 yılında birçok ilde özellikle okuma yazma bilmeyenlerin oranı yüksek seviyelerdeyken, 2023 yılında bu oranların anlamlı bir şekilde azaldığı dikkat çekmektedir. 
@@ -109,6 +167,53 @@ Genel olarak, bu beş yıllık dönemde Türkiye’nin birçok ilinde eğitim d�
 Türkiye’de boşanma oranları 2018 ile 2023 yılları arasında düzenli bir artış göstermiştir. 2018 yılında boşanma oranı %9,462, 2023 yılında ise %12,093 olarak gözukmektedir. Bu verilere göre, 5 yıl içinde boşanma oranı yaklaşık olarak %2,63 artmıştır.  Bu da yaklaşık olarak %27,8’lik oransal bir artışa karşılık gelmektedir. 
 Bu artış, toplumdaki bireylerin boşanma konusunda daha fazla farkındalık kazandığını göstermektedir.
 
+
+```{r}
+
+iller <- c("Ankara")
+
+for (il in iller) {
+  max_value <- max(merged_data[il])
+  coef <- 10e6/max_value
+  
+  # Create the dual-axis plot
+  print(ggplot(merged_data, aes(x = year, fill = EducationLevel)) +
+    geom_bar(aes(y = Total), stat = "identity", position = "dodge", alpha = 1) +
+    geom_line(aes(x = year, y = !!sym(il) * coef, group = "bosanma"), color = "brown", linewidth = 1) +
+  scale_fill_manual(values = c("doctorate_total" ="#003f5c",
+                               "illiterate_total" = "#2f4b7c", 
+                               "literate_without_diploma_total" = "#665191",
+                               "lower_secondary_school_total" = "#c558a1",
+                               "master_total" = "#a05195",
+                               "primary_education_total" = "#d45087",
+                               "primary_school_total" = "#f95d6a", "universities_and_other_higher_educational_institutions_total" ="#ff7c43",
+                               "upper_secondary_school_total" ="#ffa600"
+                               ),
+                    labels = c("Doktora Mezunları",
+                               "Okuma Yazma Bilmeyen",
+                               "Okur Yazar Olup Okul Bitirmeyen",
+                               "Ortaokul Mezunları",
+                               "Yüksek Lisans Mezunları",
+                               "İlkokul Mezunları",
+                               "İlköğretim Mezunları",
+                               "Lisans Mezunları",
+                               "Lise Mezunları"
+                               )) +
+    
+    scale_y_continuous(
+      name = "Kişi Sayısı",
+      sec.axis = sec_axis(~ . / coef, name="Boşanma Sayısı"),
+      labels = function(x) paste(x / 1e6, "M")
+    ) +
+    scale_x_continuous(
+      name = "Years",
+      breaks = 2018:2023  # Step 1 on x-axis
+    ) +
+    labs(title = ifelse(il == "TR", "2018-2023 Yılları Arası Turkiye Geneli Eğitim Duzeyleri", paste("2018-2023 Yılları Arası", il, "Egitim Duzeyleri")), fill = "Eğitim Durumu") +
+    theme_minimal())
+}
+
+```
 
 2018 ve 2023 yılları arasında Türkiye’de boşanma oranları illere göre farklılıklar göstermiştir. Genel olarak, birçok ilde boşanma oranlarında artış yaşanırken bazı büyükşehirlerde bu oranlarda belirgin bir düşüş gözlemlenmiştir. 
 Örneğin 2018 yılında İstanbul’da boşanma oranı %2,27 iken, 2023’te bu oran %1,65’e gerilemiştir. Benzer şekilde Ankara’da oran %2,12’den %1,50’ye, İzmir’de ise %1,60’tan %1,15’e düşmüştür. Bu düşüşler, büyük şehirlerde boşanmayı etkileyen sosyal ve ekonomik faktörlerin daha zorlu bir hale gelmesi ile açıklanabilir.
