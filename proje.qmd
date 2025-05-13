@@ -52,7 +52,7 @@ Bu çalışmada, 2018-2023 yılları arasındaki boşanma verilerinin, Türkiye'
 ### Veri Setleri:
 Analizde kullanılan veri setleri aşağıdaki gibidir:
 
-**İllere Göre +15 Yaş Bitirilen Eğitim Durumu:**
+**İllere Göre +15 Yaş Bitirilen Eğitim Durumu:** [İndir](/assets/veri_edited_en.csv)
 
 Bu veri seti, Türkiye’de 15 yaş ve üzeri bireylerin eğitim düzeylerine göre dağılımını iller bazında içermektedir. Eğitim düzeyleri 9 düzeye ayrılmıştır. Bunlar:
 - Okuryazar olmayanlar
@@ -65,7 +65,7 @@ Bu veri seti, Türkiye’de 15 yaş ve üzeri bireylerin eğitim düzeylerine g�
 - Yüksek lisans mezunları
 - Doktora mezunları
 
-**İllere Göre Boşanma Sayıları:**
+**İllere Göre Boşanma Sayıları:** [İndir](/assets/bosanma_verisi_edited.csv)
 
 Bu veri seti, Türkiye’deki illerde yıllara göre gerçekleşen boşanma sayılarını içermektedir. Veriler 2018'den 2023'e kadar olan dönemi kapsamaktadır.
 
@@ -169,6 +169,8 @@ Ancak gözlem olarak; lise ve ilkokul mezunlarının sayısının fazla olduğu 
 
 Karşılaştırma için seçilen illere göre durumu gösterir grafikler aşağıda sunulmuştur:
 
+::: {.chart-wrapper}
+
 ```{r, echo=FALSE}
 iller <- c("İstanbul", "Ankara", "İzmir", "Ardahan", "Bayburt", "Tunceli")
 
@@ -213,6 +215,8 @@ for (il in iller) {
     theme_minimal())
 }
 ```
+
+:::
 
 # Sonuçlar
 

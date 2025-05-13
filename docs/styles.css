@@ -5,3 +5,13 @@ img.right-padded {
   padding: 14px;
   float: right;
 }
+
+.chart-wrapper .cell-output-display {
+  display: inline-block;
+  width: calc(50% - 5px);
+  min-width: 400px;
+}
+
+img.team {
+  width: 500px;
+}

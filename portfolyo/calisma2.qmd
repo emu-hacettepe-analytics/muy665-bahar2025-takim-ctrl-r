@@ -2,7 +2,8 @@
 title: "Çalışma 2"
 ---
 
-[Veri Seti](/assets/veri_edited_en.csv)
+- [Veri Seti](/assets/veri_edited_en.csv)
+- [Veri Seti](/assets/bosanma_verisi_edited.csv)
 
 Projemizde yaptığımız veri analizinin kodlarını aşağıda görebilirsiniz;
 

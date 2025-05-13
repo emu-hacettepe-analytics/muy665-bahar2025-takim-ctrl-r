@@ -3,6 +3,8 @@ title: "Takım: Ctrl + R"
 sidebar: false 
 ---
 
+![](/assets/images/takim.jpg){.team}
+
 MUY660-İş Analitiği dersi takım sayfamıza hoş geldiniz.
 
 Bu analitik çalışmalarımızı paylaşıyoruz.
@@ -25,14 +27,17 @@ Lütfen faaliyetlerimizi görmek için için bizi takipte kalın.
 
 ## Proje Adı
 
-MUY660-İş Analitiği iyileştirme çalışmaları (örnek)
+2018-2023 Yılları Arasında Türkiye'deki Boşanmaların Eğitim Düzeyleriyle İlişkisinin İnclenmesi
 
 ## Proje Konusu
 
-Örnek: Bu projede MUY660-İş Analitiği ders içeriğinin analitik yaklaşımlarla iyileştirilmesini hedefledik. Bu doğrultuda tüm üniversitelerdeki benzer derslerin verisini toplayarak bir veri seti oluşturduk Analiz için ........ yöntemleri kullanarak, ....... çalışmaları yaptık Sonuç olarak, MUY660-İş Analitiği dersinin dünyadaki tüm derslerden daha iyi olduğunu ve bu dersi aldığımız için çok mutlu olduğumuzu tespit ettik.
+Bu proje kapsamında, Türkiye’de 2018-2023 yılları arasında illere göre boşanma oranlarının eğitim düzeyiyle olan ilişkisi analiz edilmiştir. Amaç, eğitim düzeylerinin boşanma oranları üzerinde nasıl bir etkisi olduğunu tespit etmek ve yıllara göre bu ilişkinin nasıl değiştiğini ortaya koymaktır.
 
 ## Veri Seti Hakkında Özet Bilgi
 
+Araştırmanın temel amacı, TÜİK'ten elde edilen eğitim ve boşanma verilerini bir araya getirerek istatistiksel analiz yapmaktır. Bu bağlamda, elde edilen verilerin analiz edilmesi ve görselleştirilmesi, literatürde daha önce yapılmamış bir çalışma olarak değer taşıyacaktır.
+
 ## Sonuçlar
 
-Burada key takeways verilmelidir. En az 3 en fazla 5 madde ile çarpıcı sonuçlar sunulmalıdır.
+Eğitim seviyesi arttıkça boşanma oranlarında da artış gözlemleniyor, ancak bu iki değer birebir paralel değildir.Eğitimdeki artış daha belirgin ve hızlı gözükmektedir.
+Bu durum, eğitimle birlikte bireylerin kendi hayatları üzerinde daha fazla söz sahibi olmasının ve bireysel kararlar almasının (örneğin boşanma gibi) artmış olabileceğini düşündürebilir.
