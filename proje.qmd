@@ -154,23 +154,23 @@ for (il in iller) {
 
 ```
 
+- En fazla kişi sayısına sahip eğitim düzeyi "Lise Mezunları" ve "İlkokul Mezunları" olarak görülmektedir. "Okuma Yazma Bilmeyen" ve "Doktora Mezunları" en az kişi sayısına sahip gruplardır.
+- Her yıl eğitim düzeyleri arasında çok büyük bir değişim görülmemektedir; grafik genellikle dengeli bir dağılım göstermektedir.
+- Boşanma sayıları da yıllar arasında dalgalanma göstermektedir.
+- 2020 yılında boşanma sayısında gözle görülür bir azalma yaşanmıştır. Bu düşüşün temel nedenleri arasında pandemi etkisi düşünülebilir (karantina süreçleri ve adliyelerin kapalı olması gibi).
+- 2021 yılından itibaren boşanma sayıları tekrar yükselme eğilimindedir.
 
-Çalışmanın bu bölümünde 2018 ve 2023 yılları arasındaki illerin eğitim düzeyine iliskin veriler analiz edilmiştir.
-2018 yılında birçok ilde özellikle okuma yazma bilmeyenlerin oranı yüksek seviyelerdeyken, 2023 yılında bu oranların anlamlı bir şekilde azaldığı dikkat çekmektedir. 
-Örneğin İstanbul’da 2018’de okuma yazma bilmeyenlerin oranı %2,27 iken, 2023’te %1,65’e gerilemiştir. 
-Aynı zamanda ilkokul ve lise mezunlarının oranı kısmen düşerken, bu durumun üniversite ve diğer yükseköğretim düzeylerindeki artışla dengelendiği görülmektedir.
- Üniversite ve üstü eğitim oranı 2018’de ortalama %13,8 iken, 2023’te %16,8’e yükselmiştir.
-Bazı Doğu ve Güneydoğu Anadolu illerinde ise ilerleme daha sınırlı kalmıştır. Örneğin Hakkâri’de 2018’de okuryazarlık oranı oldukça %7,18 iken bu oran 2023’te %4,14’e düşmüştür.
-Genel olarak, bu beş yıllık dönemde Türkiye’nin birçok ilinde eğitim düzeyinde ilerleme sağlanmış, özellikle okuryazarlık oranı artarken, yükseköğretim oranı da yükselmiştir.
- Ancak bölgesel eşitsizlikler ve cinsiyet temelli farklardan dolayi eğitim oranında hala dengesiz dağılım bulunmaktadır.
+Grafik, doğrudan eğitim düzeyleri ile boşanma oranları arasında bir ilişki kurmamaktadır.
 
-Türkiye’de boşanma oranları 2018 ile 2023 yılları arasında düzenli bir artış göstermiştir. 2018 yılında boşanma oranı %9,462, 2023 yılında ise %12,093 olarak gözukmektedir. Bu verilere göre, 5 yıl içinde boşanma oranı yaklaşık olarak %2,63 artmıştır.  Bu da yaklaşık olarak %27,8’lik oransal bir artışa karşılık gelmektedir. 
-Bu artış, toplumdaki bireylerin boşanma konusunda daha fazla farkındalık kazandığını göstermektedir.
+Ancak gözlem olarak; lise ve ilkokul mezunlarının sayısının fazla olduğu yıllarda boşanma sayısında da artış olduğu görülmektedir. Eğitim düzeyi yükseldikçe (örneğin üniversite ve üstü), kişi sayısının azalması dikkat çekicidir, ancak boşanma oranına doğrudan etkisi gözlemlenmemektedir.
 
 
-```{r}
+2018 ve 2023 yılları arasında Türkiye’de boşanma oranları illere göre farklılıklar göstermiştir. 
 
-iller <- c("Ankara")
+Karşılaştırma için seçilen illere göre durumu gösterir grafikler aşağıda sunulmuştur:
+
+```{r, echo=FALSE}
+iller <- c("İstanbul", "Ankara", "İzmir", "Ardahan", "Bayburt", "Tunceli")
 
 for (il in iller) {
   max_value <- max(merged_data[il])
@@ -212,40 +212,9 @@ for (il in iller) {
     labs(title = ifelse(il == "TR", "2018-2023 Yılları Arası Turkiye Geneli Eğitim Duzeyleri", paste("2018-2023 Yılları Arası", il, "Egitim Duzeyleri")), fill = "Eğitim Durumu") +
     theme_minimal())
 }
-
 ```
 
-2018 ve 2023 yılları arasında Türkiye’de boşanma oranları illere göre farklılıklar göstermiştir. Genel olarak, birçok ilde boşanma oranlarında artış yaşanırken bazı büyükşehirlerde bu oranlarda belirgin bir düşüş gözlemlenmiştir. 
-Örneğin 2018 yılında İstanbul’da boşanma oranı %2,27 iken, 2023’te bu oran %1,65’e gerilemiştir. Benzer şekilde Ankara’da oran %2,12’den %1,50’ye, İzmir’de ise %1,60’tan %1,15’e düşmüştür. Bu düşüşler, büyük şehirlerde boşanmayı etkileyen sosyal ve ekonomik faktörlerin daha zorlu bir hale gelmesi ile açıklanabilir.
-
-Doğu ve Güneydoğu Anadolu Bölgeleri’ndeki birçok ilde boşanma oranları Türkiye ortalamasının üzerinde seyretmiştir. Örneğin Ağrı’da 2018 yılında %9,37 olan boşanma oranı 2023’te %7,34’e, Mardin’de %10,55’ten %7,78’e gerilemiş olsa da halen yüksek seviyelerdedir. 
-
-Bu durum, bölgedeki eğitim düzeyi ve ekonomik koşulların boşanma kararlarını doğrudan etkilediğini göstermektedir.
-Genel olarak, 2018-2023 döneminde Türkiye’nin bazı bölgelerinde boşanma oranları azalırken, ülke genelinde boşanma eğiliminin devam ettiğini söylenebilir.
-
-
-## Keşifsel Veri Analizi
-
-xxxxxx
-
-## Trend Analizi
-
-xxxxxx
-
-## Model Uydurma
-
-xxxxxx
-
-## Sonuçlar
-
-İki veri de ( Egitim ve boşanma) yıllar içinde artış göstermektedir. 
-Eğitim oranı 2018’de %13.16 iken 2023’te %16.87’ye çıkarak yaklaşık %3.7’lik bir artış göstermiştir.
-Boşanma oranı ise aynı dönemde %9.63’ten %11.84’e çıkarak yaklaşık %2.2’lik bir artış göstermiştir.
-2022 ve 2023 yıllarında boşanma oranı sabit kalırken, eğitim oranı küçük de olsa artmaya devam etmiştir.
-2018–2023 dönemi, hem eğitimin hem de boşanmanın arttığı bir dönemdir.
-
-# Sonuçlar ve Ana Çıkarımlar
+# Sonuçlar
 
 Eğitim seviyesi arttıkça boşanma oranlarında da artış gözlemleniyor, ancak bu iki değer birebir paralel değildir.Eğitimdeki artış daha belirgin ve hızlı gözükmektedir.
 Bu durum, eğitimle birlikte bireylerin kendi hayatları üzerinde daha fazla söz sahibi olmasının ve bireysel kararlar almasının (örneğin boşanma gibi) artmış olabileceğini düşündürebilir.
-
