@@ -171,7 +171,7 @@ Karşılaştırma için seçilen illere göre durumu gösterir grafikler aşağ�
 
 ::: {.chart-wrapper}
 
-```{r, echo=FALSE}
+```{r}
 iller <- c("İstanbul", "Ankara", "İzmir", "Ardahan", "Bayburt", "Tunceli")
 
 for (il in iller) {
