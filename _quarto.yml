@@ -50,8 +50,7 @@ website:
     border: true
 format:
   html:
-    code-fold: true
-    code-summary: "Code"
+    code-fold: false
     toc: true
     toc-location: left
     theme: 

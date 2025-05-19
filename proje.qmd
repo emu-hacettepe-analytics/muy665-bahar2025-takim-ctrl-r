@@ -1,6 +1,10 @@
 ---
 title: "2018-2023 Yılları Arasında Türkiye'deki Boşanmaların Eğitim Düzeyleriyle İlişkisinin İnclenmesi"
 number-sections: true
+format:
+  html:
+    code-fold: true
+    code-summary: "Code"
 ---
 
 **Proje sayfamıza hoş geldiniz.**
