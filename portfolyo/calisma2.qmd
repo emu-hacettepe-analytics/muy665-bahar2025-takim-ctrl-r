@@ -8,17 +8,20 @@ title: "Çalışma 2"
 Projemizde yaptığımız veri analizinin kodlarını aşağıda görebilirsiniz;
 
 ```{r}
+
+  
 # Kütüphaneler
 suppressPackageStartupMessages(library(readr))
 suppressPackageStartupMessages(library(ggplot2))
 suppressPackageStartupMessages(library(dplyr))
 suppressPackageStartupMessages(library(tidyr))  # pivot_longer fonksiyonu için
 
-# Read bar data
-bar_data <- read.csv("./calisma2-veriler/veri_edited_en.csv", header = TRUE, encoding = "UTF-8", sep = ";")
 
-# Read line data
-line_data <- read.csv("./calisma2-veriler/bosanma_verisi_edited.csv", header = TRUE, encoding = "UTF-8", sep = ";")
+# Read bar data
+bar_data <- read.csv("./portfolyo/calisma2-veriler/veri_edited_en.csv", header = TRUE, encoding = "UTF-8", sep = ";")
+
+# bar_data ilk 10 satır
+knitr::kable(head(bar_data, 10), caption = "Veri Setinin İlk 10 Satırı")
 
 # Reshape bar data to long format
 bar_data_long <- bar_data %>%
@@ -27,13 +30,115 @@ bar_data_long <- bar_data %>%
                         "universities_and_other_higher_educational_institutions_total",
                         "master_total", "doctorate_total"), names_to = "EducationLevel", values_to = "Total")
 
+# Eğitim düzeyi dağılımı için pie chart
+education_summary <- bar_data_long %>%
+    group_by(EducationLevel) %>%
+    summarize(Total = sum(Total, na.rm = TRUE))
+
+  print(ggplot(education_summary, aes(x = "", y = Total, fill = EducationLevel)) +
+    geom_bar(stat = "identity", width = 1) +
+    coord_polar("y", start = 0) +
+    labs(title = "Eğitim Düzeyi Dağılımı", fill = "Eğitim Düzeyi") +
+    theme_void() +
+    geom_text(aes(label = paste0(round((Total / sum(Total)) * 100, 1), "%")), 
+              position = position_stack(vjust = 0.5)) +
+    scale_fill_manual(values = c("doctorate_total" ="#003f5c",
+                               "illiterate_total" = "#2f4b7c", 
+                               "literate_without_diploma_total" = "#665191",
+                               "lower_secondary_school_total" = "#c558a1",
+                               "master_total" = "#a05195",
+                               "primary_education_total" = "#d45087",
+                               "primary_school_total" = "#f95d6a", "universities_and_other_higher_educational_institutions_total" ="#ff7c43",
+                               "upper_secondary_school_total" ="#ffa600"
+                               ),
+                    labels = c("Doktora Mezunları",
+                               "Okuma Yazma Bilmeyen",
+                               "Okur Yazar Olup Okul Bitirmeyen",
+                               "Ortaokul Mezunları",
+                               "Yüksek Lisans Mezunları",
+                               "İlkokul Mezunları",
+                               "İlköğretim Mezunları",
+                               "Lisans Mezunları",
+                               "Lise Mezunları"
+                               )))
+  
+  print(ggplot(bar_data_long, aes(x = year, fill = EducationLevel)) +
+        geom_bar(aes(y = Total), stat = "identity", position = "dodge", alpha = 1) +
+        scale_fill_manual(values = c("doctorate_total" ="#003f5c",
+                               "illiterate_total" = "#2f4b7c", 
+                               "literate_without_diploma_total" = "#665191",
+                               "lower_secondary_school_total" = "#c558a1",
+                               "master_total" = "#a05195",
+                               "primary_education_total" = "#d45087",
+                               "primary_school_total" = "#f95d6a", "universities_and_other_higher_educational_institutions_total" ="#ff7c43",
+                               "upper_secondary_school_total" ="#ffa600"
+                               ),
+                    labels = c("Doktora Mezunları",
+                               "Okuma Yazma Bilmeyen",
+                               "Okur Yazar Olup Okul Bitirmeyen",
+                               "Ortaokul Mezunları",
+                               "Yüksek Lisans Mezunları",
+                               "İlkokul Mezunları",
+                               "İlköğretim Mezunları",
+                               "Lisans Mezunları",
+                               "Lise Mezunları"
+                               )))
+  
+  # Read line data
+line_data <- read.csv("./portfolyo/calisma2-veriler/bosanma_verisi_edited.csv", header = TRUE, encoding = "UTF-8", sep = ";")
+
+# line_data ilk 10 satır
+knitr::kable(head(line_data, 10), caption = "Veri Setinin İlk 10 Satırı")
+
 # Merge data to ensure categories are aligned
 merged_data <- merge(bar_data_long, line_data, by = "year", all.x = TRUE)
 
 # İl listesini tanımlama
-iller <- c("TR","Ankara", "İstanbul", "İzmir", "Ardahan", "Bayburt", "Tunceli")
+iller <- c("TR")
 
-# For döngüsü
+for (il in iller) {
+  max_value <- max(merged_data[il])
+  coef <- 10e6/max_value
+  
+  # Create the dual-axis plot
+  print(ggplot(merged_data, aes(x = year, fill = EducationLevel)) +
+    geom_bar(aes(y = Total), stat = "identity", position = "dodge", alpha = 1) +
+    geom_line(aes(x = year, y = !!sym(il) * coef, group = "bosanma"), color = "brown", linewidth = 1) +
+  scale_fill_manual(values = c("doctorate_total" ="#003f5c",
+                               "illiterate_total" = "#2f4b7c", 
+                               "literate_without_diploma_total" = "#665191",
+                               "lower_secondary_school_total" = "#c558a1",
+                               "master_total" = "#a05195",
+                               "primary_education_total" = "#d45087",
+                               "primary_school_total" = "#f95d6a", "universities_and_other_higher_educational_institutions_total" ="#ff7c43",
+                               "upper_secondary_school_total" ="#ffa600"
+                               ),
+                    labels = c("Doktora Mezunları",
+                               "Okuma Yazma Bilmeyen",
+                               "Okur Yazar Olup Okul Bitirmeyen",
+                               "Ortaokul Mezunları",
+                               "Yüksek Lisans Mezunları",
+                               "İlkokul Mezunları",
+                               "İlköğretim Mezunları",
+                               "Lisans Mezunları",
+                               "Lise Mezunları"
+                               )) +
+    
+    scale_y_continuous(
+      name = "Kişi Sayısı",
+      sec.axis = sec_axis(~ . / coef, name="Boşanma Sayısı"),
+      labels = function(x) paste(x / 1e6, "M")
+    ) +
+    scale_x_continuous(
+      name = "Years",
+      breaks = 2018:2023  # Step 1 on x-axis
+    ) +
+    labs(title = ifelse(il == "TR", "2018-2023 Yılları Arası Turkiye Geneli Eğitim Duzeyleri", paste("2018-2023 Yılları Arası", il, "Egitim Duzeyleri")), fill = "Eğitim Durumu") +
+    theme_minimal())
+}
+
+iller <- c("İstanbul", "Ankara", "İzmir", "Ardahan", "Bayburt", "Tunceli")
+
 for (il in iller) {
   max_value <- max(merged_data[il])
   coef <- 10e6/max_value

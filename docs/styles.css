@@ -15,3 +15,7 @@ img.right-padded {
 img.team {
   width: 500px;
 }
+
+.figure img {
+  width: 800px !important;
+}
