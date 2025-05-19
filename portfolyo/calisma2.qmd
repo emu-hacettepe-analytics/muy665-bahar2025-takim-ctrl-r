@@ -18,7 +18,7 @@ suppressPackageStartupMessages(library(tidyr))  # pivot_longer fonksiyonu için
 
 
 # Read bar data
-bar_data <- read.csv("./portfolyo/calisma2-veriler/veri_edited_en.csv", header = TRUE, encoding = "UTF-8", sep = ";")
+bar_data <- read.csv("./calisma2-veriler/veri_edited_en.csv", header = TRUE, encoding = "UTF-8", sep = ";")
 
 # bar_data ilk 10 satır
 knitr::kable(head(bar_data, 10), caption = "Veri Setinin İlk 10 Satırı")
@@ -61,8 +61,8 @@ education_summary <- bar_data_long %>%
                                "Lisans Mezunları",
                                "Lise Mezunları"
                                )))
-  
-  print(ggplot(bar_data_long, aes(x = year, fill = EducationLevel)) +
+
+print(ggplot(bar_data_long, aes(x = year, fill = EducationLevel)) +
         geom_bar(aes(y = Total), stat = "identity", position = "dodge", alpha = 1) +
         scale_fill_manual(values = c("doctorate_total" ="#003f5c",
                                "illiterate_total" = "#2f4b7c", 
@@ -83,12 +83,65 @@ education_summary <- bar_data_long %>%
                                "Lisans Mezunları",
                                "Lise Mezunları"
                                )))
-  
-  # Read line data
-line_data <- read.csv("./portfolyo/calisma2-veriler/bosanma_verisi_edited.csv", header = TRUE, encoding = "UTF-8", sep = ";")
+
+# Read line data
+line_data <- read.csv("./calisma2-veriler/bosanma_verisi_edited.csv", header = TRUE, encoding = "UTF-8", sep = ";")
 
 # line_data ilk 10 satır
 knitr::kable(head(line_data, 10), caption = "Veri Setinin İlk 10 Satırı")
+
+# Create line grapfh throught years
+  print(ggplot(line_data, aes(x = year)) +
+    geom_line(aes(x = year, y = TR, group = "bosanma"), color = "brown", linewidth = 1) +
+    scale_y_continuous(
+      name = "Boşanma Sayısı",
+      labels = function(x) paste(x / 1e3, "K")
+    ) +
+    scale_x_continuous(
+      name = "Yıllar",
+      breaks = 2018:2023  # Step 1 on x-axis
+    ) +
+    labs(title = "Yıllara Göre Boşanma Sayısı") +
+    theme_minimal())
+
+
+ # Create line grapfh throught years
+  print(ggplot(line_data, aes(x = year)) +
+    geom_line(aes(x = year, y = İstanbul, color = "Istanbul"), linewidth = 1) +
+    geom_line(aes(x = year, y = Ankara, color = "Ankara"), linewidth = 1) +
+      geom_line(aes(x = year, y = İzmir, color = "Izmir"), linewidth = 1) +
+      
+      scale_color_manual(name = "İller",
+                     values = c("Istanbul" = "#c558a1", "Ankara" = "#f95d6a", "Izmir" = "#665191")) +
+    scale_y_continuous(
+      name = "Boşanma Sayısı",
+      labels = function(x) paste(x / 1e3, "K"),
+      limits = c(0, NA)
+    ) +
+    scale_x_continuous(
+      name = "Years",
+      breaks = 2018:2023  # Step 1 on x-axis
+    ) +
+    labs(title = "3 Büyükşehirde Yıllara Göre Boşanma Sayısı") +
+    theme_minimal())
+
+ # Create line grapfh throught years
+  print(ggplot(line_data, aes(x = year)) +
+    geom_line(aes(x = year, y = Ağrı, color = "Agri"), linewidth = 1, show.legend = TRUE) +
+    geom_line(aes(x = year, y = Mardin , color = "Mardin"), linewidth = 1) +
+      scale_color_manual(name = "İller",
+                     values = c("Agri" = "#003f5c", "Mardin" = "#ffa600")) +
+    scale_y_continuous(
+      name = "Boşanma Sayısı",
+      labels = function(x) paste(x / 1e3, "K"),
+      limits = c(0,NA)
+    ) +
+    scale_x_continuous(
+      name = "Years",
+      breaks = 2018:2023  # Step 1 on x-axis
+    ) +
+    labs(title = "Yıllara Göre Boşanma Sayısı") +
+    theme_minimal())
 
 # Merge data to ensure categories are aligned
 merged_data <- merge(bar_data_long, line_data, by = "year", all.x = TRUE)
@@ -103,7 +156,7 @@ for (il in iller) {
   # Create the dual-axis plot
   print(ggplot(merged_data, aes(x = year, fill = EducationLevel)) +
     geom_bar(aes(y = Total), stat = "identity", position = "dodge", alpha = 1) +
-    geom_line(aes(x = year, y = !!sym(il) * coef, group = "bosanma"), color = "brown", linewidth = 1) +
+    geom_line(aes(x = year, y = !!sym(il) * coef, group = "bosanma", color="Türkiye"), linewidth = 1) +
   scale_fill_manual(values = c("doctorate_total" ="#003f5c",
                                "illiterate_total" = "#2f4b7c", 
                                "literate_without_diploma_total" = "#665191",
@@ -123,11 +176,13 @@ for (il in iller) {
                                "Lisans Mezunları",
                                "Lise Mezunları"
                                )) +
-    
+    scale_color_manual(values = c("Türkiye" = "#23bc24"), name = "Boşanma Sayısı") +
     scale_y_continuous(
       name = "Kişi Sayısı",
-      sec.axis = sec_axis(~ . / coef, name="Boşanma Sayısı"),
-      labels = function(x) paste(x / 1e6, "M")
+      sec.axis = sec_axis(~ . / coef, name="Boşanma Sayısı",
+                          labels = function(x) paste(x / 1e3, "K")),
+      labels = function(x) paste(x / 1e6, "M"),
+      limits = c(0, NA)
     ) +
     scale_x_continuous(
       name = "Years",
@@ -136,6 +191,7 @@ for (il in iller) {
     labs(title = ifelse(il == "TR", "2018-2023 Yılları Arası Turkiye Geneli Eğitim Duzeyleri", paste("2018-2023 Yılları Arası", il, "Egitim Duzeyleri")), fill = "Eğitim Durumu") +
     theme_minimal())
 }
+
 
 iller <- c("İstanbul", "Ankara", "İzmir", "Ardahan", "Bayburt", "Tunceli")
 
@@ -146,7 +202,7 @@ for (il in iller) {
   # Create the dual-axis plot
   print(ggplot(merged_data, aes(x = year, fill = EducationLevel)) +
     geom_bar(aes(y = Total), stat = "identity", position = "dodge", alpha = 1) +
-    geom_line(aes(x = year, y = !!sym(il) * coef, group = "bosanma"), color = "brown", linewidth = 1) +
+    geom_line(aes(x = year, y = !!sym(il) * coef, group = "bosanma", color = "bosanma"), linewidth = 1) +
   scale_fill_manual(values = c("doctorate_total" ="#003f5c",
                                "illiterate_total" = "#2f4b7c", 
                                "literate_without_diploma_total" = "#665191",
@@ -166,10 +222,11 @@ for (il in iller) {
                                "Lisans Mezunları",
                                "Lise Mezunları"
                                )) +
-    
+    scale_color_manual(values = c("bosanma" = "#23bc24"), name = "Boşanma Sayısı" , labels= c(il)) +
     scale_y_continuous(
       name = "Kişi Sayısı",
-      sec.axis = sec_axis(~ . / coef, name="Boşanma Sayısı"),
+      sec.axis = sec_axis(~ . / coef, name="Boşanma Sayısı",
+                          labels = function(x) paste(x / 1e3, "K")),
       labels = function(x) paste(x / 1e6, "M")
     ) +
     scale_x_continuous(
@@ -179,5 +236,4 @@ for (il in iller) {
     labs(title = ifelse(il == "TR", "2018-2023 Yılları Arası Turkiye Geneli Eğitim Duzeyleri", paste("2018-2023 Yılları Arası", il, "Egitim Duzeyleri")), fill = "Eğitim Durumu") +
     theme_minimal())
 }
-
 ```
