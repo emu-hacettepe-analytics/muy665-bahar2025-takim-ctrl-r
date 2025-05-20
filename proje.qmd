@@ -133,13 +133,13 @@ education_summary <- bar_data_long %>%
     theme_void() +
     geom_text(aes(label = paste0(round((Total / sum(Total)) * 100, 1), "%")), 
               position = position_stack(vjust = 0.5)) +
-    scale_fill_manual(values = c("doctorate_total" ="#003f5c",
+      scale_fill_manual(values = c("doctorate_total" ="#74a0e3",
                                "illiterate_total" = "#2f4b7c", 
                                "literate_without_diploma_total" = "#665191",
-                               "lower_secondary_school_total" = "#c558a1",
+                               "lower_secondary_school_total" = "#6fd7c4",
                                "master_total" = "#a05195",
                                "primary_education_total" = "#d45087",
-                               "primary_school_total" = "#f95d6a", "universities_and_other_higher_educational_institutions_total" ="#ff7c43",
+                               "primary_school_total" = "#f95d6a", "universities_and_other_higher_educational_institutions_total" ="#9cd365",
                                "upper_secondary_school_total" ="#ffa600"
                                ),
                     labels = c("Doktora Mezunları",
@@ -152,25 +152,33 @@ education_summary <- bar_data_long %>%
                                "Lisans Mezunları",
                                "Lise Mezunları"
                                )))
-
 ```
+Yukarıdaki grafikte eğitim düzeyleri ve bunların toplam içindeki yüzdelik payları yer almaktadır:
 
+**- Lise Mezunları:** Grafikte en büyük dilimi oluşturarak, 15 yaş ve üzeri nüfus içinde en yaygın eğitim düzeyini temsil etmektedir.
 
-Çalışmanın bu bölümünde 2018 ve 2023 yılları arasında Türkiye'deki eğitim düzeyine iliskin veriler analiz edilmiştir.
-2018 yılında Türkiye genelinde özellikle okuma yazma bilmeyenlerin sayısı yüksek seviyelerdeyken, 2023 yılında bu oranların anlamlı bir şekilde azaldığı dikkat çekmektedir
-İncelenen dönemde, Türkiye nüfusu genelinde eğitimli bireylerin toplam nüfus içindeki oranı %75’ten %77’ye yükselmiştir.
+**- İlkokul ve İlköğretim Mezunları:** Toplamda önemli bir paya sahip olup, bu da geçmiş yıllarda temel eğitimin yaygınlığını göstermektedir.
+
+**- Lisans ve Yüksek Lisans Mezunları:** Daha küçük dilimler halinde temsil edilmekte, bu da yükseköğretime erişimin sınırlı olduğunu veya yeni yeni arttığını göstermektedir.
+
+**- Okuma Yazma Bilmeyenler ve Okuryazar Olup Okul Bitirmeyenler:** En küçük dilimleri oluşturarak, bu grupların toplum içindeki oranının düşük olduğunu göstermektedir.
+
+Verilere göre, Türkiye'de ortaöğretim seviyesinin en yaygın eğitim düzeyi olduğunu söylemek mümkündür. Bununla birlikte lisans ve yüksek lisans mezunlarının oranlarının daha düşük olması, yükseköğretime erişimin sınırlı olduğunu veya yeni yeni arttığını göstermektedir. Ayrıca, okuma yazma bilmeyenlerin oranının düşük olması, okuryazarlık kampanyalarının ve yemel eğitimin başarılı olduğunu göstermektedir.
+
+Çalışmanın bu bölümünde 2018 ve 2023 yılları arasında Türkiye'deki eğitim düzeyine iliskin veriler çubuk grafik gösterimi ile biraz daha detaylandırılmıştır.
 
 ```{r}
+#Create bar graph through years w/ education data
 
 print(ggplot(bar_data_long, aes(x = year, fill = EducationLevel)) +
-        geom_bar(aes(y = Total), stat = "identity", position = "dodge", alpha = 1) +
-        scale_fill_manual(values = c("doctorate_total" ="#003f5c",
+      geom_bar(aes(y = Total), stat = "identity", position = "dodge", alpha = 1) +
+        scale_fill_manual(values = c("doctorate_total" ="#74a0e3",
                                "illiterate_total" = "#2f4b7c", 
                                "literate_without_diploma_total" = "#665191",
-                               "lower_secondary_school_total" = "#c558a1",
+                               "lower_secondary_school_total" = "#6fd7c4",
                                "master_total" = "#a05195",
                                "primary_education_total" = "#d45087",
-                               "primary_school_total" = "#f95d6a", "universities_and_other_higher_educational_institutions_total" ="#ff7c43",
+                               "primary_school_total" = "#f95d6a", "universities_and_other_higher_educational_institutions_total" ="#9cd365",
                                "upper_secondary_school_total" ="#ffa600"
                                ),
                     labels = c("Doktora Mezunları",
@@ -182,10 +190,28 @@ print(ggplot(bar_data_long, aes(x = year, fill = EducationLevel)) +
                                "İlköğretim Mezunları",
                                "Lisans Mezunları",
                                "Lise Mezunları"
-                               )))
+                               )) +
+        scale_y_continuous(
+      name = "Kişi Sayısı",
+      labels = function(x) paste(x / 1e6, "M"),
+      limits = c(0, NA)
+    ) +
+    scale_x_continuous(
+      name = "Years",
+      breaks = 2018:2023
+    ))
 ```
 
-Çalışmanın bir diğer ana odağı olarak boşanma verileri yine TÜİK tarafından yapılan çalışmadan alınmış olup ilk 10 satır gösterimi aşağıdaki gibidir:
+Grafiğe göre:
+
+- Tüm eğitim düzeylerinde yıllara göre düzenli bir artış gözlemlenmektedir.
+- Bu artış, nüfus artışı veya eğitim seviyesindeki iyileşmeyi yansıtıyor olabilir.
+- Doktora mezunları ve okuma yazma bilmeyenlerin sayıları görece az ve yıllar içinde de çok değişmemiş gibi görünmektedir.
+- İlkokul ve ilköğretim mezunlarının da yüksek oranda temsil edildiği gözlemlenmiştir.
+- Lisans ve Yüksek Lisans mezunlarında yıllara göre artış gözlemlenmektedir.
+- Yıllara bağlı olarak yükseköğretime erişimin arttığı şeklinde yorumlanabilir.
+
+Çalışmanın bir diğer ana odağı olarak boşanma verileri yine TÜİK tarafından yapılmış farklı bir çalışmadan alınmış olup 2018-2023 yıllarında illere göre boşanma sayılarını gösteren tablo aşağıdaki gibidir:
 
 ```{r}
 # Read line data
@@ -195,36 +221,24 @@ line_data <- read.csv("./portfolyo/calisma2-veriler/bosanma_verisi_edited.csv", 
 knitr::kable(head(line_data, 10), caption = "Veri Setinin İlk 10 Satırı")
 ```
 
-Türkiye’deki boşanma sayılarında 2018 ile 2023 yılları arasında bir artış gözlemlenmektedir. Yıllara göre boşanma sayılarındaki değişim aşağıdaki grafikte gösterilmektedir:
+Öncelikli olarak Türkiye'nin toplam boşanma sayıları ile bölgelerdeki toplam boşanma sayıları çizgi grafiği ile görselleştirilmiştir. Marmara bölgesi ile Türkiye geneli eğilim çizgilerinin örtüşmesi Marmara Bölgesinde bulunan şehirlerin - özellikle İstanbul - nüfus yoğunluğunun diğer illere göre fazla olmasından kaynaklanmaktadır.
 
 ```{r}
- # Create line grapfh throught years
-  print(ggplot(line_data, aes(x = year)) +
-    geom_line(aes(x = year, y = TR, group = "bosanma"), color = "brown", linewidth = 1) +
-    scale_y_continuous(
-      name = "Boşanma Sayısı",
-      labels = function(x) paste(x / 1e3, "K")
-    ) +
-    scale_x_continuous(
-      name = "Yıllar",
-      breaks = 2018:2023  # Step 1 on x-axis
-    ) +
-    labs(title = "Yıllara Göre Boşanma Sayısı") +
-    theme_minimal())
+ #read region data
+  region_data <- read.csv("./portfolyo/calisma2-veriler/bosanma_bolge.csv", header = TRUE, encoding = "UTF-8", sep = ";")
 
-```
-
-2018 ve 2023 yılları arasında Türkiye’deki boşanmalar illere göre farklılıklar göstermiştir. Genel olarak, birçok ilde boşanmada artış yaşanırken bazı büyükşehirlerde belirgin bir düşüş gözlemlenmiştir.
-
-```{r}
- # Create line grapfh throught years
-  print(ggplot(line_data, aes(x = year)) +
-    geom_line(aes(x = year, y = İstanbul, color = "Istanbul"), linewidth = 1) +
-    geom_line(aes(x = year, y = Ankara, color = "Ankara"), linewidth = 1) +
-      geom_line(aes(x = year, y = İzmir, color = "Izmir"), linewidth = 1) +
-      
-      scale_color_manual(name = "İller",
-                     values = c("Istanbul" = "#c558a1", "Ankara" = "#f95d6a", "Izmir" = "#665191")) +
+ # Create line graph throught years acc to regions
+  print(ggplot(region_data, aes(x = year)) +
+    geom_line(aes(x=year, y = TR, color ="TR"), linewidth = 1) +
+    geom_line(aes(x = year, y = Akdeniz, color = "Akdeniz"), linewidth = 1) +
+    geom_line(aes(x = year, y = Guneydogu.Anadolu, color = "Guneydogu.Anadolu"), linewidth = 1) +
+    geom_line(aes(x=year, y= Ege, color ="Ege"), linewidth = 1) +
+    geom_line(aes(x = year, y=Marmara, color ="Marmara"), linewidth = 1) +
+    geom_line(aes(x = year, y = Dogu.Anadolu, color="Dogu.Anadolu"), linewidth = 1) +
+    geom_line(aes(x = year, y = Ic.Anadolu, color ="Ic.Anadolu"), linewidth = 1) +
+    geom_line(aes(x = year, y = Karadeniz, color ="Karadeniz"), linewidth = 1) +
+      scale_color_manual(name = "Bölgeler",
+                     values = c("Akdeniz" = "#74a0e3", "Guneydogu.Anadolu" = "#e8d359", "Ege" = "#9cd365" , "Marmara" = "#db90e9" , "Dogu.Anadolu" ="#6fd7c4" , "TR" = "brown" , "Ic.Anadolu" = "#e78480","Karadeniz"="#ef9d63")) +
     scale_y_continuous(
       name = "Boşanma Sayısı",
       labels = function(x) paste(x / 1e3, "K"),
@@ -234,46 +248,64 @@ Türkiye’deki boşanma sayılarında 2018 ile 2023 yılları arasında bir art
       name = "Years",
       breaks = 2018:2023  # Step 1 on x-axis
     ) +
-    labs(title = "3 Büyükşehirde Yıllara Göre Boşanma Sayısı") +
+    labs(title = "Bölgelere Göre Boşanma Sayıları") +
     theme_minimal())
 
 ```
 
-**BURANIN YORUMLANMASI GEREKİYOR - ALTTAKİ ESKİ YORUM VE YANLIŞ - ORAN DEĞİL BOŞANMA SAYILARI ÜZERİNDEN YORUM YAPILMALI**
-
-*Yukarıdaki grafikte de görüldüğü gibi 2018 yılında İstanbul'un Türkiye toplamındaki boşanmalara göre oranı 2018 yılında %21 civarındayken, 2023’te bu oran %20'nin altına gerilemiştir. Benzer şekilde Ankara ve İzmir şehirlerinde oran %8’den, %7'ye gerilemiştir. Bu düşüşler, büyük şehirlerde boşanmayı etkileyen sosyal ve ekonomik faktörlerin daha zorlu bir hale gelmesi ile açıklanabilir.
-
-Doğu ve Güneydoğu Anadolu Bölgeleri’ndeki birçok ilde boşanma oranları Türkiye boşanma ortalamasının üzerinde seyretmiştir.*
+Marmara Bölgesi dışında kalan bölgelerden en yüksek boşanma sayısına sahip bölgenin İç Anadolu Bölgesi olduğu görülmektedir. En az boşanma sayısı olan bölge ise Doğu Anadolu Bölgesidir. Her iki bölgenin nüfus yoğunlu en fazla olan 2 ili seçilerek yapılan karşılaştırma aşağıdaki grafikte gösterildiği gibidir:
 
 ```{r}
  # Create line grapfh throught years
   print(ggplot(line_data, aes(x = year)) +
-    geom_line(aes(x = year, y = Ağrı, color = "Agri"), linewidth = 1, show.legend = TRUE) +
-    geom_line(aes(x = year, y = Mardin , color = "Mardin"), linewidth = 1) +
+    geom_line(aes(x = year, y = Ankara, color = "Ankara"), linewidth = 1) +
+    geom_line(aes(x = year, y = Konya, color = "Konya"), linewidth = 1) +
+    geom_line(aes(x = year, y = Malatya, color = "Malatya"), linewidth = 1) +
+    geom_line(aes(x=year, y= Elazığ, color = "Elazığ"), linewidth = 1) +
       scale_color_manual(name = "İller",
-                     values = c("Agri" = "#003f5c", "Mardin" = "#ffa600")) +
+                     values = c("Ankara" = "#e78480", "Konya" = "#ef9d63", "Malatya" = "#6fd7c4", "Elazığ" = "#9cd365")) +
     scale_y_continuous(
       name = "Boşanma Sayısı",
       labels = function(x) paste(x / 1e3, "K"),
-      limits = c(0,NA)
+      limits = c(0, NA)
     ) +
     scale_x_continuous(
       name = "Years",
       breaks = 2018:2023  # Step 1 on x-axis
     ) +
-    labs(title = "Yıllara Göre Boşanma Sayısı") +
+    labs(title = "Bazı İllerdeki Boşanma Karşılaştırması") +
     theme_minimal())
 
 ```
+**Ankara:**
 
-**BURASI YORUMLANMALI - AŞAĞIGAKİ ESKİ VE YANLIŞ - ORAN DEĞİL SAYILAR ÜZERİNDEN YAPILMALI**
+- Boşanma sayısı tüm yıllarda açık ara en yüksek olan il.
 
-*Örneğin Ağrı’da 2018 yılında %9,37 olan boşanma oranı 2023’te %7,34’e, Mardin’de %10,55’ten %7,78’e gerilemiş olsa da halen yüksek seviyelerdedir.
+- 2018-2019 arasında artış, 2020’de belirgin bir düşüş görülüyor. Bu muhtemelen COVID-19 pandemisinin doğrudan etkisi (adliyelerin kapalı olması vb.).
 
-Genel olarak, 2018-2023 döneminde Türkiye’nin bazı bölgelerinde boşanma oranları azalırken, ülke genelinde boşanma eğiliminin devam ettiğini söylenebilir.
-Bu verilere göre, 5 yıl içinde boşanma sayısı yaklaşık olarak %27,8 artış göstermiştir. Bu artış, toplumdaki bireylerin boşanma konusunda daha fazla farkındalık kazandığı şeklinde yorumlanabilir.*
+- 2020 sonrası tekrar artarak 2022’de zirve yapmış, 2023’te küçük bir düşüşle devam etmiş.
 
-Bu iki veri seti ile anlamlı bir çıkarım yapabilmek adına öncelikli olarak Türkiye geneli eğitim düzeyleri ile boşanma sayılarının birlikte görselleştirilmesi amaçlanmıştır.
+**Konya**
+
+- Boşanma sayısı Ankara’dan çok daha düşük ama diğer iki ile göre yüksek.
+
+- 2018-2020 arasında yatay seyir var, 2021’de belirgin bir sıçrama gözleniyor.
+
+- 2021 sonrası ise hafif düşüşle stabil kalmış.
+
+**Malatya & Elazığ**
+
+- Boşanma sayıları oldukça düşük ve birbirine yakın.
+
+- 2019’da küçük bir artış var, 2020’de düşüş, 2021’de tekrar artış olmuş.
+
+- 2023’te ise her iki ilde de düşüş var; bu durum, bölgesel sosyolojik ya da ekonomik değişimlerden kaynaklanabilir (örneğin göç, afet vb.).
+
+Şu ana kadar sunulan tüm boşanma grafikleri göz önünde bulundurulduğunda, tüm illerde 2020 yılında belirgin bir düşüş görülmektedir. Bu Türkiye genelinde pandeminin yargı süreçlerini ve sosyal hareketliliği sınırlamasının doğal sonucu olarak yorumlanmıştır. Ankara gibi büyükşehirlerde boşanma sayılarının yüksek olması, daha bireysel yaşam tarzlarının, kadınların ekonomik bağımsızlığının ve sosyal kabullerin etkisini yansıtıyor olabilir. Malatya ve Elazığ gibi nispeten daha muhafazakar yapıya sahip illerde boşanma sayılarının düşük olması, kültürel normlara veya evliliğe bakış açılarına işaret edebilir.
+
+
+# Sonuçlar
+Çalışmanın ilk bölümünde belirtilen eğitim verileri ile, ikinci bölümde özetlenmeye çalışılan boşanma verilerinden anlamlı bir çıkarım yapabilmek çalışmanın sonucunu ve amacını oluşturmaktadır.
 
 ```{r}
 # Merge data to ensure categories are aligned
@@ -290,13 +322,13 @@ for (il in iller) {
   print(ggplot(merged_data, aes(x = year, fill = EducationLevel)) +
     geom_bar(aes(y = Total), stat = "identity", position = "dodge", alpha = 1) +
     geom_line(aes(x = year, y = !!sym(il) * coef, group = "bosanma", color="Türkiye"), linewidth = 1) +
-  scale_fill_manual(values = c("doctorate_total" ="#003f5c",
+   scale_fill_manual(values = c("doctorate_total" ="#74a0e3",
                                "illiterate_total" = "#2f4b7c", 
                                "literate_without_diploma_total" = "#665191",
-                               "lower_secondary_school_total" = "#c558a1",
+                               "lower_secondary_school_total" = "#6fd7c4",
                                "master_total" = "#a05195",
                                "primary_education_total" = "#d45087",
-                               "primary_school_total" = "#f95d6a", "universities_and_other_higher_educational_institutions_total" ="#ff7c43",
+                               "primary_school_total" = "#f95d6a", "universities_and_other_higher_educational_institutions_total" ="#9cd365",
                                "upper_secondary_school_total" ="#ffa600"
                                ),
                     labels = c("Doktora Mezunları",
@@ -309,7 +341,7 @@ for (il in iller) {
                                "Lisans Mezunları",
                                "Lise Mezunları"
                                )) +
-    scale_color_manual(values = c("Türkiye" = "#23bc24"), name = "Boşanma Sayısı") +
+    scale_color_manual(values = c("Türkiye" = "brown"), name = "Boşanma Sayısı") +
     scale_y_continuous(
       name = "Kişi Sayısı",
       sec.axis = sec_axis(~ . / coef, name="Boşanma Sayısı",
@@ -339,7 +371,6 @@ Yukarıdaki grafikte de görüldüğü gibi:
 
 Ancak gözlem olarak; lise ve ilkokul mezunlarının sayısının fazla olduğu yıllarda boşanma sayısında da artış olduğu görülmektedir. Eğitim düzeyi yükseldikçe (örneğin üniversite ve üstü), kişi sayısının azalması dikkat çekicidir, ancak boşanma oranına doğrudan etkisi gözlemlenmemektedir.
 
-
 2018 ve 2023 yılları arasında Türkiye’de boşanma oranları illere göre farklılıklar göstermiştir. Daha yorumlanabilir sonuçlar görebilmek umuduyla Türkiye'de legal evlilik yaşı olan 15 yaş üzerine denk gelen ortaokul mezuniyet durumunu baz alarak, eğitim düzeyi en yüksek ve en düşük 3 il belirlenmiştir. Eğitim durumu en yüksek üç il:
 
 - İstanbul
@@ -367,13 +398,13 @@ for (il in iller) {
   print(ggplot(merged_data, aes(x = year, fill = EducationLevel)) +
     geom_bar(aes(y = Total), stat = "identity", position = "dodge", alpha = 1) +
     geom_line(aes(x = year, y = !!sym(il) * coef, group = "bosanma", color = "bosanma"), linewidth = 1) +
-  scale_fill_manual(values = c("doctorate_total" ="#003f5c",
+   scale_fill_manual(values = c("doctorate_total" ="#74a0e3",
                                "illiterate_total" = "#2f4b7c", 
                                "literate_without_diploma_total" = "#665191",
-                               "lower_secondary_school_total" = "#c558a1",
+                               "lower_secondary_school_total" = "#6fd7c4",
                                "master_total" = "#a05195",
                                "primary_education_total" = "#d45087",
-                               "primary_school_total" = "#f95d6a", "universities_and_other_higher_educational_institutions_total" ="#ff7c43",
+                               "primary_school_total" = "#f95d6a", "universities_and_other_higher_educational_institutions_total" ="#9cd365",
                                "upper_secondary_school_total" ="#ffa600"
                                ),
                     labels = c("Doktora Mezunları",
@@ -386,7 +417,7 @@ for (il in iller) {
                                "Lisans Mezunları",
                                "Lise Mezunları"
                                )) +
-    scale_color_manual(values = c("bosanma" = "#23bc24"), name = "Boşanma Sayısı" , labels= c(il)) +
+    scale_color_manual(values = c("bosanma" = "brown"), name = "Boşanma Sayısı" , labels= c(il)) +
     scale_y_continuous(
       name = "Kişi Sayısı",
       sec.axis = sec_axis(~ . / coef, name="Boşanma Sayısı",
@@ -401,10 +432,7 @@ for (il in iller) {
     theme_minimal())
 }
 ```
-
 :::
-
-# Sonuçlar
 
 Eğitim seviyesi arttıkça boşanma oranlarında da artış gözlemleniyor, ancak bu iki değer birebir paralel değildir.Eğitimdeki artış daha belirgin ve hızlı gözükmektedir.
 Bu durum, eğitimle birlikte bireylerin kendi hayatları üzerinde daha fazla söz sahibi olmasının ve bireysel kararlar almasının (örneğin boşanma gibi) artmış olabileceğini düşündürebilir.

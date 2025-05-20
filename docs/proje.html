@@ -606,13 +606,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_void</span>() <span class="sc">+</span></span>
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">paste0</span>(<span class="fu">round</span>((Total <span class="sc">/</span> <span class="fu">sum</span>(Total)) <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">1</span>), <span class="st">"%"</span>)), </span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>              <span class="at">position =</span> <span class="fu">position_stack</span>(<span class="at">vjust =</span> <span class="fl">0.5</span>)) <span class="sc">+</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"doctorate_total"</span> <span class="ot">=</span><span class="st">"#003f5c"</span>,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>      <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"doctorate_total"</span> <span class="ot">=</span><span class="st">"#74a0e3"</span>,</span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"illiterate_total"</span> <span class="ot">=</span> <span class="st">"#2f4b7c"</span>, </span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"literate_without_diploma_total"</span> <span class="ot">=</span> <span class="st">"#665191"</span>,</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"lower_secondary_school_total"</span> <span class="ot">=</span> <span class="st">"#c558a1"</span>,</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"lower_secondary_school_total"</span> <span class="ot">=</span> <span class="st">"#6fd7c4"</span>,</span>
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"master_total"</span> <span class="ot">=</span> <span class="st">"#a05195"</span>,</span>
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"primary_education_total"</span> <span class="ot">=</span> <span class="st">"#d45087"</span>,</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"primary_school_total"</span> <span class="ot">=</span> <span class="st">"#f95d6a"</span>, <span class="st">"universities_and_other_higher_educational_institutions_total"</span> <span class="ot">=</span><span class="st">"#ff7c43"</span>,</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"primary_school_total"</span> <span class="ot">=</span> <span class="st">"#f95d6a"</span>, <span class="st">"universities_and_other_higher_educational_institutions_total"</span> <span class="ot">=</span><span class="st">"#9cd365"</span>,</span>
 <span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"upper_secondary_school_total"</span> <span class="ot">=</span><span class="st">"#ffa600"</span></span>
 <span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>                               ),</span>
 <span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Doktora Mezunları"</span>,</span>
@@ -634,31 +634,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>Çalışmanın bu bölümünde 2018 ve 2023 yılları arasında Türkiye’deki eğitim düzeyine iliskin veriler analiz edilmiştir. 2018 yılında Türkiye genelinde özellikle okuma yazma bilmeyenlerin sayısı yüksek seviyelerdeyken, 2023 yılında bu oranların anlamlı bir şekilde azaldığı dikkat çekmektedir İncelenen dönemde, Türkiye nüfusu genelinde eğitimli bireylerin toplam nüfus içindeki oranı %75’ten %77’ye yükselmiştir.</p>
+<p>Yukarıdaki grafikte eğitim düzeyleri ve bunların toplam içindeki yüzdelik payları yer almaktadır:</p>
+<p><strong>- Lise Mezunları:</strong> Grafikte en büyük dilimi oluşturarak, 15 yaş ve üzeri nüfus içinde en yaygın eğitim düzeyini temsil etmektedir.</p>
+<p><strong>- İlkokul ve İlköğretim Mezunları:</strong> Toplamda önemli bir paya sahip olup, bu da geçmiş yıllarda temel eğitimin yaygınlığını göstermektedir.</p>
+<p><strong>- Lisans ve Yüksek Lisans Mezunları:</strong> Daha küçük dilimler halinde temsil edilmekte, bu da yükseköğretime erişimin sınırlı olduğunu veya yeni yeni arttığını göstermektedir.</p>
+<p><strong>- Okuma Yazma Bilmeyenler ve Okuryazar Olup Okul Bitirmeyenler:</strong> En küçük dilimleri oluşturarak, bu grupların toplum içindeki oranının düşük olduğunu göstermektedir.</p>
+<p>Verilere göre, Türkiye’de ortaöğretim seviyesinin en yaygın eğitim düzeyi olduğunu söylemek mümkündür. Bununla birlikte lisans ve yüksek lisans mezunlarının oranlarının daha düşük olması, yükseköğretime erişimin sınırlı olduğunu veya yeni yeni arttığını göstermektedir. Ayrıca, okuma yazma bilmeyenlerin oranının düşük olması, okuryazarlık kampanyalarının ve yemel eğitimin başarılı olduğunu göstermektedir.</p>
+<p>Çalışmanın bu bölümünde 2018 ve 2023 yılları arasında Türkiye’deki eğitim düzeyine iliskin veriler çubuk grafik gösterimi ile biraz daha detaylandırılmıştır.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">ggplot</span>(bar_data_long, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">fill =</span> EducationLevel)) <span class="sc">+</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> Total), <span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="st">"dodge"</span>, <span class="at">alpha =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"doctorate_total"</span> <span class="ot">=</span><span class="st">"#003f5c"</span>,</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"illiterate_total"</span> <span class="ot">=</span> <span class="st">"#2f4b7c"</span>, </span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"literate_without_diploma_total"</span> <span class="ot">=</span> <span class="st">"#665191"</span>,</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"lower_secondary_school_total"</span> <span class="ot">=</span> <span class="st">"#c558a1"</span>,</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"master_total"</span> <span class="ot">=</span> <span class="st">"#a05195"</span>,</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"primary_education_total"</span> <span class="ot">=</span> <span class="st">"#d45087"</span>,</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"primary_school_total"</span> <span class="ot">=</span> <span class="st">"#f95d6a"</span>, <span class="st">"universities_and_other_higher_educational_institutions_total"</span> <span class="ot">=</span><span class="st">"#ff7c43"</span>,</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"upper_secondary_school_total"</span> <span class="ot">=</span><span class="st">"#ffa600"</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>                               ),</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Doktora Mezunları"</span>,</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Okuma Yazma Bilmeyen"</span>,</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Okur Yazar Olup Okul Bitirmeyen"</span>,</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Ortaokul Mezunları"</span>,</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Yüksek Lisans Mezunları"</span>,</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"İlkokul Mezunları"</span>,</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"İlköğretim Mezunları"</span>,</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Lisans Mezunları"</span>,</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Lise Mezunları"</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>                               )))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Create bar graph through years w/ education data</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">ggplot</span>(bar_data_long, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">fill =</span> EducationLevel)) <span class="sc">+</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> Total), <span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="st">"dodge"</span>, <span class="at">alpha =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"doctorate_total"</span> <span class="ot">=</span><span class="st">"#74a0e3"</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"illiterate_total"</span> <span class="ot">=</span> <span class="st">"#2f4b7c"</span>, </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"literate_without_diploma_total"</span> <span class="ot">=</span> <span class="st">"#665191"</span>,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"lower_secondary_school_total"</span> <span class="ot">=</span> <span class="st">"#6fd7c4"</span>,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"master_total"</span> <span class="ot">=</span> <span class="st">"#a05195"</span>,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"primary_education_total"</span> <span class="ot">=</span> <span class="st">"#d45087"</span>,</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"primary_school_total"</span> <span class="ot">=</span> <span class="st">"#f95d6a"</span>, <span class="st">"universities_and_other_higher_educational_institutions_total"</span> <span class="ot">=</span><span class="st">"#9cd365"</span>,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"upper_secondary_school_total"</span> <span class="ot">=</span><span class="st">"#ffa600"</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>                               ),</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Doktora Mezunları"</span>,</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Okuma Yazma Bilmeyen"</span>,</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Okur Yazar Olup Okul Bitirmeyen"</span>,</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Ortaokul Mezunları"</span>,</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Yüksek Lisans Mezunları"</span>,</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"İlkokul Mezunları"</span>,</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"İlköğretim Mezunları"</span>,</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Lisans Mezunları"</span>,</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Lise Mezunları"</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>                               )) <span class="sc">+</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>        <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Kişi Sayısı"</span>,</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="cf">function</span>(x) <span class="fu">paste</span>(x <span class="sc">/</span> <span class="fl">1e6</span>, <span class="st">"M"</span>),</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>      <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>)</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Years"</span>,</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>      <span class="at">breaks =</span> <span class="dv">2018</span><span class="sc">:</span><span class="dv">2023</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -668,7 +685,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>Çalışmanın bir diğer ana odağı olarak boşanma verileri yine TÜİK tarafından yapılan çalışmadan alınmış olup ilk 10 satır gösterimi aşağıdaki gibidir:</p>
+<p>Grafiğe göre:</p>
+<ul>
+<li>Tüm eğitim düzeylerinde yıllara göre düzenli bir artış gözlemlenmektedir.</li>
+<li>Bu artış, nüfus artışı veya eğitim seviyesindeki iyileşmeyi yansıtıyor olabilir.</li>
+<li>Doktora mezunları ve okuma yazma bilmeyenlerin sayıları görece az ve yıllar içinde de çok değişmemiş gibi görünmektedir.</li>
+<li>İlkokul ve ilköğretim mezunlarının da yüksek oranda temsil edildiği gözlemlenmiştir.</li>
+<li>Lisans ve Yüksek Lisans mezunlarında yıllara göre artış gözlemlenmektedir.</li>
+<li>Yıllara bağlı olarak yükseköğretime erişimin arttığı şeklinde yorumlanabilir.</li>
+</ul>
+<p>Çalışmanın bir diğer ana odağı olarak boşanma verileri yine TÜİK tarafından yapılmış farklı bir çalışmadan alınmış olup 2018-2023 yıllarında illere göre boşanma sayılarını gösteren tablo aşağıdaki gibidir:</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1368,23 +1394,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 </div>
-<p>Türkiye’deki boşanma sayılarında 2018 ile 2023 yılları arasında bir artış gözlemlenmektedir. Yıllara göre boşanma sayılarındaki değişim aşağıdaki grafikte gösterilmektedir:</p>
+<p>Öncelikli olarak Türkiye’nin toplam boşanma sayıları ile bölgelerdeki toplam boşanma sayıları çizgi grafiği ile görselleştirilmiştir. Marmara bölgesi ile Türkiye geneli eğilim çizgilerinin örtüşmesi Marmara Bölgesinde bulunan şehirlerin - özellikle İstanbul - nüfus yoğunluğunun diğer illere göre fazla olmasından kaynaklanmaktadır.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a> <span class="co"># Create line grapfh throught years</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">ggplot</span>(line_data, <span class="fu">aes</span>(<span class="at">x =</span> year)) <span class="sc">+</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> TR, <span class="at">group =</span> <span class="st">"bosanma"</span>), <span class="at">color =</span> <span class="st">"brown"</span>, <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Boşanma Sayısı"</span>,</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="cf">function</span>(x) <span class="fu">paste</span>(x <span class="sc">/</span> <span class="fl">1e3</span>, <span class="st">"K"</span>)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Yıllar"</span>,</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">breaks =</span> <span class="dv">2018</span><span class="sc">:</span><span class="dv">2023</span>  <span class="co"># Step 1 on x-axis</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Yıllara Göre Boşanma Sayısı"</span>) <span class="sc">+</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a> <span class="co">#read region data</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  region_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"./portfolyo/calisma2-veriler/bosanma_bolge.csv"</span>, <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>, <span class="at">sep =</span> <span class="st">";"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a> <span class="co"># Create line graph throught years acc to regions</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">ggplot</span>(region_data, <span class="fu">aes</span>(<span class="at">x =</span> year)) <span class="sc">+</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span>year, <span class="at">y =</span> TR, <span class="at">color =</span><span class="st">"TR"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Akdeniz, <span class="at">color =</span> <span class="st">"Akdeniz"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Guneydogu.Anadolu, <span class="at">color =</span> <span class="st">"Guneydogu.Anadolu"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span>year, <span class="at">y=</span> Ege, <span class="at">color =</span><span class="st">"Ege"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y=</span>Marmara, <span class="at">color =</span><span class="st">"Marmara"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Dogu.Anadolu, <span class="at">color=</span><span class="st">"Dogu.Anadolu"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Ic.Anadolu, <span class="at">color =</span><span class="st">"Ic.Anadolu"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Karadeniz, <span class="at">color =</span><span class="st">"Karadeniz"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>      <span class="fu">scale_color_manual</span>(<span class="at">name =</span> <span class="st">"Bölgeler"</span>,</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>                     <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Akdeniz"</span> <span class="ot">=</span> <span class="st">"#74a0e3"</span>, <span class="st">"Guneydogu.Anadolu"</span> <span class="ot">=</span> <span class="st">"#e8d359"</span>, <span class="st">"Ege"</span> <span class="ot">=</span> <span class="st">"#9cd365"</span> , <span class="st">"Marmara"</span> <span class="ot">=</span> <span class="st">"#db90e9"</span> , <span class="st">"Dogu.Anadolu"</span> <span class="ot">=</span><span class="st">"#6fd7c4"</span> , <span class="st">"TR"</span> <span class="ot">=</span> <span class="st">"brown"</span> , <span class="st">"Ic.Anadolu"</span> <span class="ot">=</span> <span class="st">"#e78480"</span>,<span class="st">"Karadeniz"</span><span class="ot">=</span><span class="st">"#ef9d63"</span>)) <span class="sc">+</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Boşanma Sayısı"</span>,</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="cf">function</span>(x) <span class="fu">paste</span>(x <span class="sc">/</span> <span class="fl">1e3</span>, <span class="st">"K"</span>),</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>      <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Years"</span>,</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>      <span class="at">breaks =</span> <span class="dv">2018</span><span class="sc">:</span><span class="dv">2023</span>  <span class="co"># Step 1 on x-axis</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Bölgelere Göre Boşanma Sayıları"</span>) <span class="sc">+</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -1394,18 +1433,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>2018 ve 2023 yılları arasında Türkiye’deki boşanmalar illere göre farklılıklar göstermiştir. Genel olarak, birçok ilde boşanmada artış yaşanırken bazı büyükşehirlerde belirgin bir düşüş gözlemlenmiştir.</p>
+<p>Marmara Bölgesi dışında kalan bölgelerden en yüksek boşanma sayısına sahip bölgenin İç Anadolu Bölgesi olduğu görülmektedir. En az boşanma sayısı olan bölge ise Doğu Anadolu Bölgesidir. Her iki bölgenin nüfus yoğunlu en fazla olan 2 ili seçilerek yapılan karşılaştırma aşağıdaki grafikte gösterildiği gibidir:</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a> <span class="co"># Create line grapfh throught years</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">ggplot</span>(line_data, <span class="fu">aes</span>(<span class="at">x =</span> year)) <span class="sc">+</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> İstanbul, <span class="at">color =</span> <span class="st">"Istanbul"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Ankara, <span class="at">color =</span> <span class="st">"Ankara"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> İzmir, <span class="at">color =</span> <span class="st">"Izmir"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Ankara, <span class="at">color =</span> <span class="st">"Ankara"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Konya, <span class="at">color =</span> <span class="st">"Konya"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Malatya, <span class="at">color =</span> <span class="st">"Malatya"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span>year, <span class="at">y=</span> Elazığ, <span class="at">color =</span> <span class="st">"Elazığ"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>      <span class="fu">scale_color_manual</span>(<span class="at">name =</span> <span class="st">"İller"</span>,</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>                     <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Istanbul"</span> <span class="ot">=</span> <span class="st">"#c558a1"</span>, <span class="st">"Ankara"</span> <span class="ot">=</span> <span class="st">"#f95d6a"</span>, <span class="st">"Izmir"</span> <span class="ot">=</span> <span class="st">"#665191"</span>)) <span class="sc">+</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>                     <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Ankara"</span> <span class="ot">=</span> <span class="st">"#e78480"</span>, <span class="st">"Konya"</span> <span class="ot">=</span> <span class="st">"#ef9d63"</span>, <span class="st">"Malatya"</span> <span class="ot">=</span> <span class="st">"#6fd7c4"</span>, <span class="st">"Elazığ"</span> <span class="ot">=</span> <span class="st">"#9cd365"</span>)) <span class="sc">+</span></span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(</span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Boşanma Sayısı"</span>,</span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="cf">function</span>(x) <span class="fu">paste</span>(x <span class="sc">/</span> <span class="fl">1e3</span>, <span class="st">"K"</span>),</span>
@@ -1415,7 +1454,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Years"</span>,</span>
 <span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>      <span class="at">breaks =</span> <span class="dv">2018</span><span class="sc">:</span><span class="dv">2023</span>  <span class="co"># Step 1 on x-axis</span></span>
 <span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"3 Büyükşehirde Yıllara Göre Boşanma Sayısı"</span>) <span class="sc">+</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Bazı İllerdeki Boşanma Karşılaştırması"</span>) <span class="sc">+</span></span>
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
@@ -1426,98 +1465,85 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p><strong>BURANIN YORUMLANMASI GEREKİYOR - ALTTAKİ ESKİ YORUM VE YANLIŞ - ORAN DEĞİL BOŞANMA SAYILARI ÜZERİNDEN YORUM YAPILMALI</strong></p>
-<p>*Yukarıdaki grafikte de görüldüğü gibi 2018 yılında İstanbul’un Türkiye toplamındaki boşanmalara göre oranı 2018 yılında %21 civarındayken, 2023’te bu oran %20’nin altına gerilemiştir. Benzer şekilde Ankara ve İzmir şehirlerinde oran %8’den, %7’ye gerilemiştir. Bu düşüşler, büyük şehirlerde boşanmayı etkileyen sosyal ve ekonomik faktörlerin daha zorlu bir hale gelmesi ile açıklanabilir.</p>
-<p>Doğu ve Güneydoğu Anadolu Bölgeleri’ndeki birçok ilde boşanma oranları Türkiye boşanma ortalamasının üzerinde seyretmiştir.*</p>
+<p><strong>Ankara:</strong></p>
+<ul>
+<li><p>Boşanma sayısı tüm yıllarda açık ara en yüksek olan il.</p></li>
+<li><p>2018-2019 arasında artış, 2020’de belirgin bir düşüş görülüyor. Bu muhtemelen COVID-19 pandemisinin doğrudan etkisi (adliyelerin kapalı olması vb.).</p></li>
+<li><p>2020 sonrası tekrar artarak 2022’de zirve yapmış, 2023’te küçük bir düşüşle devam etmiş.</p></li>
+</ul>
+<p><strong>Konya</strong></p>
+<ul>
+<li><p>Boşanma sayısı Ankara’dan çok daha düşük ama diğer iki ile göre yüksek.</p></li>
+<li><p>2018-2020 arasında yatay seyir var, 2021’de belirgin bir sıçrama gözleniyor.</p></li>
+<li><p>2021 sonrası ise hafif düşüşle stabil kalmış.</p></li>
+</ul>
+<p><strong>Malatya &amp; Elazığ</strong></p>
+<ul>
+<li><p>Boşanma sayıları oldukça düşük ve birbirine yakın.</p></li>
+<li><p>2019’da küçük bir artış var, 2020’de düşüş, 2021’de tekrar artış olmuş.</p></li>
+<li><p>2023’te ise her iki ilde de düşüş var; bu durum, bölgesel sosyolojik ya da ekonomik değişimlerden kaynaklanabilir (örneğin göç, afet vb.).</p></li>
+</ul>
+<p>Şu ana kadar sunulan tüm boşanma grafikleri göz önünde bulundurulduğunda, tüm illerde 2020 yılında belirgin bir düşüş görülmektedir. Bu Türkiye genelinde pandeminin yargı süreçlerini ve sosyal hareketliliği sınırlamasının doğal sonucu olarak yorumlanmıştır. Ankara gibi büyükşehirlerde boşanma sayılarının yüksek olması, daha bireysel yaşam tarzlarının, kadınların ekonomik bağımsızlığının ve sosyal kabullerin etkisini yansıtıyor olabilir. Malatya ve Elazığ gibi nispeten daha muhafazakar yapıya sahip illerde boşanma sayılarının düşük olması, kültürel normlara veya evliliğe bakış açılarına işaret edebilir.</p>
+</section>
+<section id="sonuçlar" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Sonuçlar</h1>
+<p>Çalışmanın ilk bölümünde belirtilen eğitim verileri ile, ikinci bölümde özetlenmeye çalışılan boşanma verilerinden anlamlı bir çıkarım yapabilmek çalışmanın sonucunu ve amacını oluşturmaktadır.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a> <span class="co"># Create line grapfh throught years</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">ggplot</span>(line_data, <span class="fu">aes</span>(<span class="at">x =</span> year)) <span class="sc">+</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Ağrı, <span class="at">color =</span> <span class="st">"Agri"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>, <span class="at">show.legend =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Mardin , <span class="at">color =</span> <span class="st">"Mardin"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">scale_color_manual</span>(<span class="at">name =</span> <span class="st">"İller"</span>,</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>                     <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Agri"</span> <span class="ot">=</span> <span class="st">"#003f5c"</span>, <span class="st">"Mardin"</span> <span class="ot">=</span> <span class="st">"#ffa600"</span>)) <span class="sc">+</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Boşanma Sayısı"</span>,</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="cf">function</span>(x) <span class="fu">paste</span>(x <span class="sc">/</span> <span class="fl">1e3</span>, <span class="st">"K"</span>),</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="cn">NA</span>)</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Years"</span>,</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">breaks =</span> <span class="dv">2018</span><span class="sc">:</span><span class="dv">2023</span>  <span class="co"># Step 1 on x-axis</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Yıllara Göre Boşanma Sayısı"</span>) <span class="sc">+</span></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge data to ensure categories are aligned</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>merged_data <span class="ot">&lt;-</span> <span class="fu">merge</span>(bar_data_long, line_data, <span class="at">by =</span> <span class="st">"year"</span>, <span class="at">all.x =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># İl listesini tanımlama</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>iller <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"TR"</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (il <span class="cf">in</span> iller) {</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  max_value <span class="ot">&lt;-</span> <span class="fu">max</span>(merged_data[il])</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  coef <span class="ot">&lt;-</span> <span class="fl">10e6</span><span class="sc">/</span>max_value</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create the dual-axis plot</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">ggplot</span>(merged_data, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">fill =</span> EducationLevel)) <span class="sc">+</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> Total), <span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="st">"dodge"</span>, <span class="at">alpha =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> <span class="sc">!!</span><span class="fu">sym</span>(il) <span class="sc">*</span> coef, <span class="at">group =</span> <span class="st">"bosanma"</span>, <span class="at">color=</span><span class="st">"Türkiye"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>   <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"doctorate_total"</span> <span class="ot">=</span><span class="st">"#74a0e3"</span>,</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"illiterate_total"</span> <span class="ot">=</span> <span class="st">"#2f4b7c"</span>, </span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"literate_without_diploma_total"</span> <span class="ot">=</span> <span class="st">"#665191"</span>,</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"lower_secondary_school_total"</span> <span class="ot">=</span> <span class="st">"#6fd7c4"</span>,</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"master_total"</span> <span class="ot">=</span> <span class="st">"#a05195"</span>,</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"primary_education_total"</span> <span class="ot">=</span> <span class="st">"#d45087"</span>,</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"primary_school_total"</span> <span class="ot">=</span> <span class="st">"#f95d6a"</span>, <span class="st">"universities_and_other_higher_educational_institutions_total"</span> <span class="ot">=</span><span class="st">"#9cd365"</span>,</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"upper_secondary_school_total"</span> <span class="ot">=</span><span class="st">"#ffa600"</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>                               ),</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Doktora Mezunları"</span>,</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Okuma Yazma Bilmeyen"</span>,</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Okur Yazar Olup Okul Bitirmeyen"</span>,</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Ortaokul Mezunları"</span>,</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Yüksek Lisans Mezunları"</span>,</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"İlkokul Mezunları"</span>,</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"İlköğretim Mezunları"</span>,</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Lisans Mezunları"</span>,</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Lise Mezunları"</span></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>                               )) <span class="sc">+</span></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Türkiye"</span> <span class="ot">=</span> <span class="st">"brown"</span>), <span class="at">name =</span> <span class="st">"Boşanma Sayısı"</span>) <span class="sc">+</span></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Kişi Sayısı"</span>,</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>      <span class="at">sec.axis =</span> <span class="fu">sec_axis</span>(<span class="sc">~</span> . <span class="sc">/</span> coef, <span class="at">name=</span><span class="st">"Boşanma Sayısı"</span>,</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>                          <span class="at">labels =</span> <span class="cf">function</span>(x) <span class="fu">paste</span>(x <span class="sc">/</span> <span class="fl">1e3</span>, <span class="st">"K"</span>)),</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="cf">function</span>(x) <span class="fu">paste</span>(x <span class="sc">/</span> <span class="fl">1e6</span>, <span class="st">"M"</span>),</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>      <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>)</span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Years"</span>,</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>      <span class="at">breaks =</span> <span class="dv">2018</span><span class="sc">:</span><span class="dv">2023</span>  <span class="co"># Step 1 on x-axis</span></span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">ifelse</span>(il <span class="sc">==</span> <span class="st">"TR"</span>, <span class="st">"2018-2023 Yılları Arası Turkiye Geneli Eğitim Duzeyleri"</span>, <span class="fu">paste</span>(<span class="st">"2018-2023 Yılları Arası"</span>, il, <span class="st">"Egitim Duzeyleri"</span>)), <span class="at">fill =</span> <span class="st">"Eğitim Durumu"</span>) <span class="sc">+</span></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>())</span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
 <p><img src="proje_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p><strong>BURASI YORUMLANMALI - AŞAĞIGAKİ ESKİ VE YANLIŞ - ORAN DEĞİL SAYILAR ÜZERİNDEN YAPILMALI</strong></p>
-<p>*Örneğin Ağrı’da 2018 yılında %9,37 olan boşanma oranı 2023’te %7,34’e, Mardin’de %10,55’ten %7,78’e gerilemiş olsa da halen yüksek seviyelerdedir.</p>
-<p>Genel olarak, 2018-2023 döneminde Türkiye’nin bazı bölgelerinde boşanma oranları azalırken, ülke genelinde boşanma eğiliminin devam ettiğini söylenebilir. Bu verilere göre, 5 yıl içinde boşanma sayısı yaklaşık olarak %27,8 artış göstermiştir. Bu artış, toplumdaki bireylerin boşanma konusunda daha fazla farkındalık kazandığı şeklinde yorumlanabilir.*</p>
-<p>Bu iki veri seti ile anlamlı bir çıkarım yapabilmek adına öncelikli olarak Türkiye geneli eğitim düzeyleri ile boşanma sayılarının birlikte görselleştirilmesi amaçlanmıştır.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge data to ensure categories are aligned</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>merged_data <span class="ot">&lt;-</span> <span class="fu">merge</span>(bar_data_long, line_data, <span class="at">by =</span> <span class="st">"year"</span>, <span class="at">all.x =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># İl listesini tanımlama</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>iller <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"TR"</span>)</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (il <span class="cf">in</span> iller) {</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  max_value <span class="ot">&lt;-</span> <span class="fu">max</span>(merged_data[il])</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  coef <span class="ot">&lt;-</span> <span class="fl">10e6</span><span class="sc">/</span>max_value</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create the dual-axis plot</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">ggplot</span>(merged_data, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">fill =</span> EducationLevel)) <span class="sc">+</span></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> Total), <span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="st">"dodge"</span>, <span class="at">alpha =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> <span class="sc">!!</span><span class="fu">sym</span>(il) <span class="sc">*</span> coef, <span class="at">group =</span> <span class="st">"bosanma"</span>, <span class="at">color=</span><span class="st">"Türkiye"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"doctorate_total"</span> <span class="ot">=</span><span class="st">"#003f5c"</span>,</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"illiterate_total"</span> <span class="ot">=</span> <span class="st">"#2f4b7c"</span>, </span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"literate_without_diploma_total"</span> <span class="ot">=</span> <span class="st">"#665191"</span>,</span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"lower_secondary_school_total"</span> <span class="ot">=</span> <span class="st">"#c558a1"</span>,</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"master_total"</span> <span class="ot">=</span> <span class="st">"#a05195"</span>,</span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"primary_education_total"</span> <span class="ot">=</span> <span class="st">"#d45087"</span>,</span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"primary_school_total"</span> <span class="ot">=</span> <span class="st">"#f95d6a"</span>, <span class="st">"universities_and_other_higher_educational_institutions_total"</span> <span class="ot">=</span><span class="st">"#ff7c43"</span>,</span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"upper_secondary_school_total"</span> <span class="ot">=</span><span class="st">"#ffa600"</span></span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>                               ),</span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Doktora Mezunları"</span>,</span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Okuma Yazma Bilmeyen"</span>,</span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Okur Yazar Olup Okul Bitirmeyen"</span>,</span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Ortaokul Mezunları"</span>,</span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Yüksek Lisans Mezunları"</span>,</span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"İlkokul Mezunları"</span>,</span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"İlköğretim Mezunları"</span>,</span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Lisans Mezunları"</span>,</span>
-<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Lise Mezunları"</span></span>
-<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>                               )) <span class="sc">+</span></span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Türkiye"</span> <span class="ot">=</span> <span class="st">"#23bc24"</span>), <span class="at">name =</span> <span class="st">"Boşanma Sayısı"</span>) <span class="sc">+</span></span>
-<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(</span>
-<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Kişi Sayısı"</span>,</span>
-<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>      <span class="at">sec.axis =</span> <span class="fu">sec_axis</span>(<span class="sc">~</span> . <span class="sc">/</span> coef, <span class="at">name=</span><span class="st">"Boşanma Sayısı"</span>,</span>
-<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>                          <span class="at">labels =</span> <span class="cf">function</span>(x) <span class="fu">paste</span>(x <span class="sc">/</span> <span class="fl">1e3</span>, <span class="st">"K"</span>)),</span>
-<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="cf">function</span>(x) <span class="fu">paste</span>(x <span class="sc">/</span> <span class="fl">1e6</span>, <span class="st">"M"</span>),</span>
-<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>      <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>)</span>
-<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(</span>
-<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Years"</span>,</span>
-<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>      <span class="at">breaks =</span> <span class="dv">2018</span><span class="sc">:</span><span class="dv">2023</span>  <span class="co"># Step 1 on x-axis</span></span>
-<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">ifelse</span>(il <span class="sc">==</span> <span class="st">"TR"</span>, <span class="st">"2018-2023 Yılları Arası Turkiye Geneli Eğitim Duzeyleri"</span>, <span class="fu">paste</span>(<span class="st">"2018-2023 Yılları Arası"</span>, il, <span class="st">"Egitim Duzeyleri"</span>)), <span class="at">fill =</span> <span class="st">"Eğitim Durumu"</span>) <span class="sc">+</span></span>
-<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>())</span>
-<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="proje_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1549,97 +1575,94 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>iller <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"İstanbul"</span>, <span class="st">"Ankara"</span>, <span class="st">"İzmir"</span>, <span class="st">"Ardahan"</span>, <span class="st">"Bayburt"</span>, <span class="st">"Tunceli"</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (il <span class="cf">in</span> iller) {</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  max_value <span class="ot">&lt;-</span> <span class="fu">max</span>(merged_data[il])</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  coef <span class="ot">&lt;-</span> <span class="fl">10e6</span><span class="sc">/</span>max_value</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create the dual-axis plot</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">ggplot</span>(merged_data, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">fill =</span> EducationLevel)) <span class="sc">+</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> Total), <span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="st">"dodge"</span>, <span class="at">alpha =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> <span class="sc">!!</span><span class="fu">sym</span>(il) <span class="sc">*</span> coef, <span class="at">group =</span> <span class="st">"bosanma"</span>, <span class="at">color =</span> <span class="st">"bosanma"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"doctorate_total"</span> <span class="ot">=</span><span class="st">"#003f5c"</span>,</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"illiterate_total"</span> <span class="ot">=</span> <span class="st">"#2f4b7c"</span>, </span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"literate_without_diploma_total"</span> <span class="ot">=</span> <span class="st">"#665191"</span>,</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"lower_secondary_school_total"</span> <span class="ot">=</span> <span class="st">"#c558a1"</span>,</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"master_total"</span> <span class="ot">=</span> <span class="st">"#a05195"</span>,</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"primary_education_total"</span> <span class="ot">=</span> <span class="st">"#d45087"</span>,</span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"primary_school_total"</span> <span class="ot">=</span> <span class="st">"#f95d6a"</span>, <span class="st">"universities_and_other_higher_educational_institutions_total"</span> <span class="ot">=</span><span class="st">"#ff7c43"</span>,</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"upper_secondary_school_total"</span> <span class="ot">=</span><span class="st">"#ffa600"</span></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>                               ),</span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Doktora Mezunları"</span>,</span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Okuma Yazma Bilmeyen"</span>,</span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Okur Yazar Olup Okul Bitirmeyen"</span>,</span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Ortaokul Mezunları"</span>,</span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Yüksek Lisans Mezunları"</span>,</span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"İlkokul Mezunları"</span>,</span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"İlköğretim Mezunları"</span>,</span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Lisans Mezunları"</span>,</span>
-<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Lise Mezunları"</span></span>
-<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>                               )) <span class="sc">+</span></span>
-<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"bosanma"</span> <span class="ot">=</span> <span class="st">"#23bc24"</span>), <span class="at">name =</span> <span class="st">"Boşanma Sayısı"</span> , <span class="at">labels=</span> <span class="fu">c</span>(il)) <span class="sc">+</span></span>
-<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(</span>
-<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Kişi Sayısı"</span>,</span>
-<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>      <span class="at">sec.axis =</span> <span class="fu">sec_axis</span>(<span class="sc">~</span> . <span class="sc">/</span> coef, <span class="at">name=</span><span class="st">"Boşanma Sayısı"</span>,</span>
-<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>                          <span class="at">labels =</span> <span class="cf">function</span>(x) <span class="fu">paste</span>(x <span class="sc">/</span> <span class="fl">1e3</span>, <span class="st">"K"</span>)),</span>
-<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="cf">function</span>(x) <span class="fu">paste</span>(x <span class="sc">/</span> <span class="fl">1e6</span>, <span class="st">"M"</span>)</span>
-<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(</span>
-<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Years"</span>,</span>
-<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>      <span class="at">breaks =</span> <span class="dv">2018</span><span class="sc">:</span><span class="dv">2023</span>  <span class="co"># Step 1 on x-axis</span></span>
-<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">ifelse</span>(il <span class="sc">==</span> <span class="st">"TR"</span>, <span class="st">"2018-2023 Yılları Arası Turkiye Geneli Eğitim Duzeyleri"</span>, <span class="fu">paste</span>(<span class="st">"2018-2023 Yılları Arası"</span>, il, <span class="st">"Egitim Duzeyleri"</span>)), <span class="at">fill =</span> <span class="st">"Eğitim Durumu"</span>) <span class="sc">+</span></span>
-<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>())</span>
-<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>iller <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"İstanbul"</span>, <span class="st">"Ankara"</span>, <span class="st">"İzmir"</span>, <span class="st">"Ardahan"</span>, <span class="st">"Bayburt"</span>, <span class="st">"Tunceli"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (il <span class="cf">in</span> iller) {</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  max_value <span class="ot">&lt;-</span> <span class="fu">max</span>(merged_data[il])</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  coef <span class="ot">&lt;-</span> <span class="fl">10e6</span><span class="sc">/</span>max_value</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create the dual-axis plot</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">ggplot</span>(merged_data, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">fill =</span> EducationLevel)) <span class="sc">+</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> Total), <span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="st">"dodge"</span>, <span class="at">alpha =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> <span class="sc">!!</span><span class="fu">sym</span>(il) <span class="sc">*</span> coef, <span class="at">group =</span> <span class="st">"bosanma"</span>, <span class="at">color =</span> <span class="st">"bosanma"</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>   <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"doctorate_total"</span> <span class="ot">=</span><span class="st">"#74a0e3"</span>,</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"illiterate_total"</span> <span class="ot">=</span> <span class="st">"#2f4b7c"</span>, </span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"literate_without_diploma_total"</span> <span class="ot">=</span> <span class="st">"#665191"</span>,</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"lower_secondary_school_total"</span> <span class="ot">=</span> <span class="st">"#6fd7c4"</span>,</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"master_total"</span> <span class="ot">=</span> <span class="st">"#a05195"</span>,</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"primary_education_total"</span> <span class="ot">=</span> <span class="st">"#d45087"</span>,</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"primary_school_total"</span> <span class="ot">=</span> <span class="st">"#f95d6a"</span>, <span class="st">"universities_and_other_higher_educational_institutions_total"</span> <span class="ot">=</span><span class="st">"#9cd365"</span>,</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"upper_secondary_school_total"</span> <span class="ot">=</span><span class="st">"#ffa600"</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>                               ),</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Doktora Mezunları"</span>,</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Okuma Yazma Bilmeyen"</span>,</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Okur Yazar Olup Okul Bitirmeyen"</span>,</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Ortaokul Mezunları"</span>,</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Yüksek Lisans Mezunları"</span>,</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"İlkokul Mezunları"</span>,</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"İlköğretim Mezunları"</span>,</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Lisans Mezunları"</span>,</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Lise Mezunları"</span></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>                               )) <span class="sc">+</span></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"bosanma"</span> <span class="ot">=</span> <span class="st">"brown"</span>), <span class="at">name =</span> <span class="st">"Boşanma Sayısı"</span> , <span class="at">labels=</span> <span class="fu">c</span>(il)) <span class="sc">+</span></span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Kişi Sayısı"</span>,</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>      <span class="at">sec.axis =</span> <span class="fu">sec_axis</span>(<span class="sc">~</span> . <span class="sc">/</span> coef, <span class="at">name=</span><span class="st">"Boşanma Sayısı"</span>,</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>                          <span class="at">labels =</span> <span class="cf">function</span>(x) <span class="fu">paste</span>(x <span class="sc">/</span> <span class="fl">1e3</span>, <span class="st">"K"</span>)),</span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="cf">function</span>(x) <span class="fu">paste</span>(x <span class="sc">/</span> <span class="fl">1e6</span>, <span class="st">"M"</span>)</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(</span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"Years"</span>,</span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>      <span class="at">breaks =</span> <span class="dv">2018</span><span class="sc">:</span><span class="dv">2023</span>  <span class="co"># Step 1 on x-axis</span></span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">ifelse</span>(il <span class="sc">==</span> <span class="st">"TR"</span>, <span class="st">"2018-2023 Yılları Arası Turkiye Geneli Eğitim Duzeyleri"</span>, <span class="fu">paste</span>(<span class="st">"2018-2023 Yılları Arası"</span>, il, <span class="st">"Egitim Duzeyleri"</span>)), <span class="at">fill =</span> <span class="st">"Eğitim Durumu"</span>) <span class="sc">+</span></span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>())</span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="proje_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="proje_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="proje_files/figure-html/unnamed-chunk-9-2.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="proje_files/figure-html/unnamed-chunk-8-2.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="proje_files/figure-html/unnamed-chunk-9-3.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="proje_files/figure-html/unnamed-chunk-8-3.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="proje_files/figure-html/unnamed-chunk-9-4.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="proje_files/figure-html/unnamed-chunk-8-4.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="proje_files/figure-html/unnamed-chunk-9-5.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="proje_files/figure-html/unnamed-chunk-8-5.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="proje_files/figure-html/unnamed-chunk-9-6.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="proje_files/figure-html/unnamed-chunk-8-6.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
-</section>
-<section id="sonuçlar" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Sonuçlar</h1>
 <p>Eğitim seviyesi arttıkça boşanma oranlarında da artış gözlemleniyor, ancak bu iki değer birebir paralel değildir.Eğitimdeki artış daha belirgin ve hızlı gözükmektedir. Bu durum, eğitimle birlikte bireylerin kendi hayatları üzerinde daha fazla söz sahibi olmasının ve bireysel kararlar almasının (örneğin boşanma gibi) artmış olabileceğini düşündürebilir.</p>
 
 
