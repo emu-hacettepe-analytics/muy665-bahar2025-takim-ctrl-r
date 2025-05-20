@@ -16,7 +16,7 @@ suppressPackageStartupMessages(library(dplyr))
 suppressPackageStartupMessages(library(tidyr))  # pivot_longer fonksiyonu için
 
 # Read bar data
-bar_data <- read.csv("./portfolyo/calisma2-veriler/veri_edited_en.csv", header = TRUE, encoding = "UTF-8", sep = ";")
+bar_data <- read.csv("./calisma2-veriler/veri_edited_en.csv", header = TRUE, encoding = "UTF-8", sep = ";")
 
 # bar_data ilk 10 satır
 knitr::kable(head(bar_data, 10), caption = "Veri Setinin İlk 10 Satırı")
@@ -93,13 +93,13 @@ print(ggplot(bar_data_long, aes(x = year, fill = EducationLevel)) +
     ))
 
 # Read line data
-line_data <- read.csv("./portfolyo/calisma2-veriler/bosanma_verisi_edited.csv", header = TRUE, encoding = "UTF-8", sep = ";")
+line_data <- read.csv("./calisma2-veriler/bosanma_verisi_edited.csv", header = TRUE, encoding = "UTF-8", sep = ";")
 
 # line_data ilk 10 satır
 knitr::kable(head(line_data, 10), caption = "Veri Setinin İlk 10 Satırı")
 
  #read region data
-  region_data <- read.csv("./portfolyo/calisma2-veriler/bosanma_bolge.csv", header = TRUE, encoding = "UTF-8", sep = ";")
+  region_data <- read.csv("./calisma2-veriler/bosanma_bolge.csv", header = TRUE, encoding = "UTF-8", sep = ";")
 
  # Create line graph throught years acc to regions
   print(ggplot(region_data, aes(x = year)) +
@@ -237,3 +237,4 @@ for (il in iller) {
     labs(title = ifelse(il == "TR", "2018-2023 Yılları Arası Turkiye Geneli Eğitim Duzeyleri", paste("2018-2023 Yılları Arası", il, "Egitim Duzeyleri")), fill = "Eğitim Durumu") +
     theme_minimal())
 }
+```
