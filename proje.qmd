@@ -514,42 +514,53 @@ Ardahan gibi küçük ve kırsal nüfus yoğunluklu illerde boşanmalar düşük
 
 **<u>Eğitim Profili</u>**
 
-- ...
+- Lise mezunları en kalabalık grup; lisans ve ilköğretim mezunları onu takip ediyor.
 
-- ...
+- Diğer eğitim seviyelerinde fazla değişim yok.
 
 **<u>Boşanma Sayıları</u>**
 
-- ...
+- 2020’de düşüş var, ardından tekrar artış gözlemleniyor.
+
+Eğitim seviyelerinde büyük sıçrama gözlemlenmiyor. Boşanma sayıları görece düşük ve dalgalı bir seyir izliyor.
 
 **Tunceli**
 
 **<u>Eğitim Profili</u>**
 
-- ...
+- Lise mezunları baskın; ardından lisans ve ilköğretim mezunları geliyor. 
 
-- ...
+- Yüksek lisans ve doktora gruplarında çok az artış var.
+
 **<u>Boşanma Sayıları</u>**
 
-- ...
+- Artış trendi var ama nispeten düz seyrediyor.
+
+Eğitim düzeyi açısından Bayburt’a benzer bir dağılım söz konusu. Ancak boşanma oranı daha yüksek.
 
 ```{r}
 library(knitr)
 
 data <- data.frame(
-  İl = c("İstanbul", "Ankara", "İzmir", "Ardahan"),
+  İl = c("İstanbul", "Ankara", "İzmir", "Ardahan", "Bayburt", "Tunceli"),
   Eğitim_Düzeyi = c("En yüksek, çeşitlilik fazla",
                     "Akademik yoğunluk belirgin",
                     "Modern, yüksek eğitimli",
-                    "Düşük eğitim, düşük boşanma"),
+                    "Düşük eğitim, düşük boşanma",
+                    "Orta seviye eğitim",
+                    "Orta seviye eğitim"),
   Boşanma_Sayısı = c("En yüksek artış",
                      "Orta düzey artış",
                      "Artan trend",
-                     "En düşük, yeni artış"),
+                     "En düşük, yeni artış",
+                     "Dalgalı",
+                     "Artış Eğilimli"),
   Gözlem = c("Büyükşehir etkisi, bireyselcilik",
              "Memur ve öğrenci yoğunluğu etkisi",
              "Kadın bağımsızlığı ve şehir yaşamı",
-             "Kırsal yapıdan kentselleşmeye geçiş")
+             "Kırsal yapıdan kentselleşmeye geçiş",
+             "Az nüfuslu, düşük boşanma oranı",
+             "Az nüfuslu, nispeten daha yüksek boşanma oranı")
 )
 
 kable(data, format = "markdown")

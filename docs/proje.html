@@ -1723,50 +1723,61 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Bayburt</strong></p>
 <p><strong><u>Eğitim Profili</u></strong></p>
 <ul>
-<li><p>…</p></li>
-<li><p>…</p></li>
+<li><p>Lise mezunları en kalabalık grup; lisans ve ilköğretim mezunları onu takip ediyor.</p></li>
+<li><p>Diğer eğitim seviyelerinde fazla değişim yok.</p></li>
 </ul>
 <p><strong><u>Boşanma Sayıları</u></strong></p>
 <ul>
-<li>…</li>
+<li>2020’de düşüş var, ardından tekrar artış gözlemleniyor.</li>
 </ul>
+<p>Eğitim seviyelerinde büyük sıçrama gözlemlenmiyor. Boşanma sayıları görece düşük ve dalgalı bir seyir izliyor.</p>
 <p><strong>Tunceli</strong></p>
 <p><strong><u>Eğitim Profili</u></strong></p>
 <ul>
-<li><p>…</p></li>
-<li><p>… <strong><u>Boşanma Sayıları</u></strong></p></li>
-<li><p>…</p></li>
+<li><p>Lise mezunları baskın; ardından lisans ve ilköğretim mezunları geliyor.</p></li>
+<li><p>Yüksek lisans ve doktora gruplarında çok az artış var.</p></li>
 </ul>
+<p><strong><u>Boşanma Sayıları</u></strong></p>
+<ul>
+<li>Artış trendi var ama nispeten düz seyrediyor.</li>
+</ul>
+<p>Eğitim düzeyi açısından Bayburt’a benzer bir dağılım söz konusu. Ancak boşanma oranı daha yüksek.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  İ<span class="at">l =</span> <span class="fu">c</span>(<span class="st">"İstanbul"</span>, <span class="st">"Ankara"</span>, <span class="st">"İzmir"</span>, <span class="st">"Ardahan"</span>),</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  İ<span class="at">l =</span> <span class="fu">c</span>(<span class="st">"İstanbul"</span>, <span class="st">"Ankara"</span>, <span class="st">"İzmir"</span>, <span class="st">"Ardahan"</span>, <span class="st">"Bayburt"</span>, <span class="st">"Tunceli"</span>),</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  Eğitim_Düzeyi <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"En yüksek, çeşitlilik fazla"</span>,</span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Akademik yoğunluk belirgin"</span>,</span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Modern, yüksek eğitimli"</span>,</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Düşük eğitim, düşük boşanma"</span>),</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  Boşanma_Sayısı <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"En yüksek artış"</span>,</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"Orta düzey artış"</span>,</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"Artan trend"</span>,</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"En düşük, yeni artış"</span>),</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  Gözlem <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Büyükşehir etkisi, bireyselcilik"</span>,</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Memur ve öğrenci yoğunluğu etkisi"</span>,</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Kadın bağımsızlığı ve şehir yaşamı"</span>,</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Kırsal yapıdan kentselleşmeye geçiş"</span>)</span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(data, <span class="at">format =</span> <span class="st">"markdown"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Düşük eğitim, düşük boşanma"</span>,</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Orta seviye eğitim"</span>,</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Orta seviye eğitim"</span>),</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  Boşanma_Sayısı <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"En yüksek artış"</span>,</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"Orta düzey artış"</span>,</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"Artan trend"</span>,</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"En düşük, yeni artış"</span>,</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"Dalgalı"</span>,</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"Artış Eğilimli"</span>),</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  Gözlem <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Büyükşehir etkisi, bireyselcilik"</span>,</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Memur ve öğrenci yoğunluğu etkisi"</span>,</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Kadın bağımsızlığı ve şehir yaşamı"</span>,</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Kırsal yapıdan kentselleşmeye geçiş"</span>,</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Az nüfuslu, düşük boşanma oranı"</span>,</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Az nüfuslu, nispeten daha yüksek boşanma oranı"</span>)</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(data, <span class="at">format =</span> <span class="st">"markdown"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <colgroup>
-<col style="width: 9%">
-<col style="width: 29%">
-<col style="width: 22%">
-<col style="width: 38%">
+<col style="width: 8%">
+<col style="width: 26%">
+<col style="width: 20%">
+<col style="width: 44%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1800,6 +1811,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Düşük eğitim, düşük boşanma</td>
 <td style="text-align: left;">En düşük, yeni artış</td>
 <td style="text-align: left;">Kırsal yapıdan kentselleşmeye geçiş</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bayburt</td>
+<td style="text-align: left;">Orta seviye eğitim</td>
+<td style="text-align: left;">Dalgalı</td>
+<td style="text-align: left;">Az nüfuslu, düşük boşanma oranı</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tunceli</td>
+<td style="text-align: left;">Orta seviye eğitim</td>
+<td style="text-align: left;">Artış Eğilimli</td>
+<td style="text-align: left;">Az nüfuslu, nispeten daha yüksek boşanma oranı</td>
 </tr>
 </tbody>
 </table>

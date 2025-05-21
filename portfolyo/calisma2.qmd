@@ -237,4 +237,32 @@ for (il in iller) {
     labs(title = ifelse(il == "TR", "2018-2023 Yılları Arası Turkiye Geneli Eğitim Duzeyleri", paste("2018-2023 Yılları Arası", il, "Egitim Duzeyleri")), fill = "Eğitim Durumu") +
     theme_minimal())
 }
+
+library(knitr)
+
+data <- data.frame(
+  İl = c("İstanbul", "Ankara", "İzmir", "Ardahan", "Bayburt", "Tunceli"),
+  Eğitim_Düzeyi = c("En yüksek, çeşitlilik fazla",
+                    "Akademik yoğunluk belirgin",
+                    "Modern, yüksek eğitimli",
+                    "Düşük eğitim, düşük boşanma",
+                    "Orta seviye eğitim",
+                    "Orta seviye eğitim"),
+  Boşanma_Sayısı = c("En yüksek artış",
+                     "Orta düzey artış",
+                     "Artan trend",
+                     "En düşük, yeni artış",
+                     "Dalgalı",
+                     "Artış Eğilimli"),
+  Gözlem = c("Büyükşehir etkisi, bireyselcilik",
+             "Memur ve öğrenci yoğunluğu etkisi",
+             "Kadın bağımsızlığı ve şehir yaşamı",
+             "Kırsal yapıdan kentselleşmeye geçiş",
+             "Az nüfuslu, düşük boşanma oranı",
+             "Az nüfuslu, nispeten daha yüksek boşanma oranı")
+)
+
+kable(data, format = "markdown")
+
+
 ```
